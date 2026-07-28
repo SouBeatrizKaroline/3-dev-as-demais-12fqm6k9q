@@ -1,5 +1,5 @@
-import beatrizImage from '@/assets/image-b6bf9.png'
-import moniqueImage from '@/assets/image-41af5.png'
+import beatrizImage from '@/assets/image-41af5.png'
+import moniqueImage from '@/assets/image-b6bf9.png'
 import soniaImage from '@/assets/image-b6425.png'
 
 export interface TeamMember {
