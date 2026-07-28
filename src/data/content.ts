@@ -1,4 +1,5 @@
 import soniaImage from '@/assets/image-b6425.png'
+import moniqueImage from '@/assets/image-b6bf9.png'
 
 export interface TeamMember {
   id: string
@@ -145,7 +146,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'FastAPI',
     ],
     linkedin: 'https://www.linkedin.com/in/monique-cardoso/',
-    photoUrl: 'https://img.usecurling.com/ppl/large?gender=female&seed=45',
+    photoUrl: moniqueImage,
     badge: 'AI & Data Lead',
     gradient: 'from-purple-500 to-pink-600',
   },
