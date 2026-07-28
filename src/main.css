@@ -169,6 +169,20 @@
     animation: pulse-glow 4s ease-in-out infinite;
   }
 
+  .card-3d-hover {
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .card-3d-hover:hover {
+    transform: perspective(1000px) rotateY(-4deg) rotateX(4deg) scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    .card-3d-hover:hover {
+      transform: none;
+    }
+  }
+
   .animate-line-dash {
     stroke-dasharray: 8 6;
     animation: line-dash 1.5s linear infinite;

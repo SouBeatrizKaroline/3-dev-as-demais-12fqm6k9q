@@ -3,7 +3,7 @@ import { useInView } from '@/hooks/use-in-view'
 import { TEAM_MEMBERS, TeamMember } from '@/data/content'
 import { TeamModal } from '@/components/TeamModal'
 import { ForceMetaphor } from '@/components/ForceMetaphor'
-import { MapPin, Linkedin, ChevronRight } from 'lucide-react'
+import { MapPin, Linkedin, Github, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function TeamSection() {
@@ -29,7 +29,7 @@ export function TeamSection() {
           {TEAM_MEMBERS.map((member, i) => (
             <article
               key={member.id}
-              className={`glass-card glass-card-hover p-5 sm:p-6 rounded-3xl flex flex-col border-white/10 group transition-all duration-700 ${
+              className={`glass-card glass-card-hover card-3d-hover p-5 sm:p-6 rounded-3xl flex flex-col border-white/10 group transition-all duration-700 ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
@@ -86,15 +86,31 @@ export function TeamSection() {
                     <span>LinkedIn</span>
                   </Button>
                 </a>
-                <Button
-                  onClick={() => setSelectedMember(member)}
-                  aria-label={`Conhecer perfil completo de ${member.name}`}
-                  className="flex-1 gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer"
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                  aria-label={`Abrir perfil no GitHub de ${member.name} em nova aba`}
                 >
-                  <span>Conhecer</span>
-                  <ChevronRight className="w-4 h-4" />
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-purple-500/50 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>GitHub</span>
+                  </Button>
+                </a>
               </div>
+
+              <Button
+                onClick={() => setSelectedMember(member)}
+                aria-label={`Conhecer perfil completo de ${member.name}`}
+                className="w-full mt-2 gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer"
+              >
+                <span>Conhecer</span>
+                <ChevronRight className="w-4 h-4" />
+              </Button>
             </article>
           ))}
         </div>

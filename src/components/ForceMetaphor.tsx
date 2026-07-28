@@ -3,7 +3,8 @@ import { useInView } from '@/hooks/use-in-view'
 const CIRCLES = [
   {
     name: 'Beatriz',
-    items: ['Produto', 'UX', 'Estratégia', 'Multidisciplinaridade'],
+    label: 'Produto',
+    items: ['UX', 'Estratégia', 'Design'],
     border: 'border-cyan-500/50',
     bg: 'bg-cyan-500/10',
     text: 'text-cyan-400',
@@ -11,7 +12,8 @@ const CIRCLES = [
   },
   {
     name: 'Monique',
-    items: ['IA', 'Dados', 'LLMs', 'Cloud'],
+    label: 'IA',
+    items: ['Dados', 'LLMs', 'Machine Learning'],
     border: 'border-purple-500/50',
     bg: 'bg-purple-500/10',
     text: 'text-purple-400',
@@ -19,7 +21,8 @@ const CIRCLES = [
   },
   {
     name: 'Sonia',
-    items: ['Full Stack', 'Frontend', 'Backend', 'Arquitetura'],
+    label: 'Engenharia',
+    items: ['Full Stack', 'Frontend', 'Backend'],
     border: 'border-emerald-500/50',
     bg: 'bg-emerald-500/10',
     text: 'text-emerald-400',
@@ -37,7 +40,7 @@ export function ForceMetaphor() {
     >
       <div className="max-w-2xl mx-auto text-center mb-10">
         <span className="text-xs font-bold uppercase tracking-widest text-[#00f0ff] bg-[#00f0ff]/10 px-3 py-1 rounded-full border border-[#00f0ff]/30">
-          Sinergia em Ação
+          Nossa Força
         </span>
         <h3 className="text-2xl md:text-4xl font-extrabold text-white mt-4 font-display">
           Três especialidades. <span className="gradient-heading">Uma equipe.</span>
@@ -54,7 +57,12 @@ export function ForceMetaphor() {
               opacity: isInView ? 1 : 0,
             }}
           >
-            <p className={`text-sm sm:text-base font-bold ${circle.text} mb-2`}>{circle.name}</p>
+            <p className={`text-sm sm:text-base font-bold ${circle.text} mb-1`}>{circle.name}</p>
+            <p
+              className={`text-[10px] sm:text-xs font-bold uppercase tracking-wider ${circle.text} mb-2`}
+            >
+              {circle.label}
+            </p>
             {circle.items.map((item) => (
               <p key={item} className="text-[10px] sm:text-xs text-slate-300 leading-relaxed">
                 {item}
@@ -66,14 +74,20 @@ export function ForceMetaphor() {
 
       <div
         className="text-center mt-6 transition-opacity duration-700"
-        style={{
-          transitionDelay: '600ms',
-          opacity: isInView ? 1 : 0,
-        }}
+        style={{ transitionDelay: '600ms', opacity: isInView ? 1 : 0 }}
       >
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <span className="text-sm font-bold text-cyan-400">Produto</span>
+          <span className="text-slate-500">+</span>
+          <span className="text-sm font-bold text-purple-400">IA</span>
+          <span className="text-slate-500">+</span>
+          <span className="text-sm font-bold text-emerald-400">Engenharia</span>
+          <span className="text-slate-500">=</span>
+          <span className="text-sm font-bold gradient-heading">Soluções Digitais</span>
+        </div>
         <h4 className="text-2xl md:text-3xl font-black text-white font-display">3 Dev.as DemAIs</h4>
         <p className="text-sm text-slate-400 mt-2 max-w-md mx-auto px-4">
-          Diferentes especialidades. Um único objetivo: construir soluções de alto impacto.
+          Diferentes especialidades. Um único propósito: construir tecnologia que gera impacto.
         </p>
       </div>
     </div>

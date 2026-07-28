@@ -1,6 +1,13 @@
 import { useInView } from '@/hooks/use-in-view'
 import { TIMELINE } from '@/data/content'
-import { Calendar, Trophy, Award, Rocket, Sparkles } from 'lucide-react'
+import { Compass, Users, Trophy, Rocket } from 'lucide-react'
+
+const ICON_MAP: Record<string, React.ReactNode> = {
+  '01': <Compass className="w-4 h-4" />,
+  '02': <Users className="w-4 h-4" />,
+  '03': <Trophy className="w-4 h-4 text-amber-400" />,
+  '04': <Rocket className="w-4 h-4" />,
+}
 
 export function TimelineSection() {
   const { ref, isInView } = useInView()
@@ -10,19 +17,14 @@ export function TimelineSection() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#00f0ff] bg-[#00f0ff]/10 px-3 py-1 rounded-full border border-[#00f0ff]/30">
-            Nossa Jornada
+            Nossa História
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4 font-display">
-            A história por trás da <span className="gradient-heading">evolução do time</span>
+            A jornada que nos <span className="gradient-heading">trouxe até aqui</span>
           </h2>
-          <p className="text-slate-400 text-sm mt-3">
-            Do primeiro hackathon à conquista do pódio no Skip Challenge.
-          </p>
         </div>
 
-        {/* Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Glowing Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#00f0ff] via-[#b300ff] to-emerald-400 -translate-x-1/2 opacity-40" />
 
           <div className="flex flex-col gap-12">
@@ -38,27 +40,15 @@ export function TimelineSection() {
                   }`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  {/* Timeline Badge/Dot */}
                   <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10 w-10 h-10 rounded-full bg-[#0f0f1a] border-2 border-[#00f0ff] flex items-center justify-center text-[#00f0ff] shadow-lg shadow-cyan-500/30">
-                    {event.highlight ? (
-                      <Trophy className="w-4 h-4 text-amber-400" />
-                    ) : (
-                      <Calendar className="w-4 h-4" />
-                    )}
+                    {ICON_MAP[event.number]}
                   </div>
 
-                  {/* Card Content */}
                   <div className="ml-12 md:ml-0 md:w-1/2 px-0 md:px-8 w-full">
-                    <div
-                      className={`glass-card p-6 rounded-2xl transition-all hover:border-[#00f0ff]/50 ${
-                        event.highlight
-                          ? 'border-amber-500/40 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent'
-                          : ''
-                      }`}
-                    >
+                    <div className="glass-card glass-card-hover p-6 rounded-2xl">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-xs font-extrabold text-[#00f0ff] font-mono">
-                          {event.year}
+                          {event.number}
                         </span>
                         <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-950/60 px-2.5 py-0.5 rounded-full border border-purple-500/30">
                           {event.tag}

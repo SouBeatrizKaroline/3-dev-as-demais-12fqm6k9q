@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { X, Linkedin, MapPin, Sparkles, CheckCircle, ExternalLink } from 'lucide-react'
+import { X, Linkedin, Github, MapPin, Sparkles, CheckCircle, ExternalLink } from 'lucide-react'
 import { TeamMember } from '@/data/content'
 import { Button } from '@/components/ui/button'
 
@@ -76,7 +76,7 @@ export function TeamModal({ member, onClose }: TeamModalProps) {
               </div>
             </div>
 
-            <div className="w-full mt-8 pt-6 border-t border-white/10">
+            <div className="w-full mt-8 pt-6 border-t border-white/10 flex flex-col gap-2">
               <a
                 href={member.linkedin}
                 target="_blank"
@@ -87,6 +87,22 @@ export function TeamModal({ member, onClose }: TeamModalProps) {
                 <Button className="w-full gradient-btn font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer">
                   <Linkedin className="w-4 h-4" />
                   <span>Perfil no LinkedIn</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                </Button>
+              </a>
+              <a
+                href={member.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+                aria-label={`Abrir perfil no GitHub de ${member.name} em nova aba`}
+              >
+                <Button
+                  variant="outline"
+                  className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-[#00f0ff]/50 font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>GitHub</span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-80" />
                 </Button>
               </a>

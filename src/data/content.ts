@@ -1,6 +1,6 @@
+import beatrizImage from '@/assets/image-b6bf9.png'
+import moniqueImage from '@/assets/image-41af5.png'
 import soniaImage from '@/assets/image-b6425.png'
-import moniqueImage from '@/assets/image-b6bf9.png'
-import beatrizImage from '@/assets/image-41af5.png'
 
 export interface TeamMember {
   id: string
@@ -14,7 +14,7 @@ export interface TeamMember {
   actuation: string[]
   technologies: string[]
   linkedin: string
-  github?: string
+  github: string
   photoUrl: string
   badge: string
   gradient: string
@@ -25,6 +25,10 @@ export interface Project {
   title: string
   description: string
   longDescription: string
+  challenge: string
+  solution: string
+  results: string
+  learnings: string
   award?: string
   tags: string[]
   metric?: string
@@ -42,10 +46,9 @@ export interface StatItem {
 }
 
 export interface TimelineEvent {
-  year: string
+  number: string
   title: string
   description: string
-  highlight?: boolean
   tag: string
 }
 
@@ -83,8 +86,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Beatriz Karoline',
     role: 'Produto • UX • Estratégia • Tecnologia',
     state: 'Pernambuco',
-    city: 'Recife / PE',
-    bio: 'Atua conectando diferentes áreas do conhecimento para transformar problemas complexos em soluções digitais centradas no usuário.',
+    city: 'Recife • Pernambuco',
+    bio: 'Conecta tecnologia, design e inovação para transformar ideias em soluções digitais centradas nas pessoas.',
     fullBio:
       'Beatriz atua conectando diferentes áreas do conhecimento para transformar problemas complexos em soluções digitais. Sua experiência multidisciplinar reúne tecnologia, design, engenharia, gestão de projetos e inovação, contribuindo para a construção de produtos centrados no usuário e MVPs desenvolvidos em equipe.',
     specialty: [
@@ -110,6 +113,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Analytics',
     ],
     linkedin: 'https://www.linkedin.com/in/beatrizkcs/',
+    github: 'https://github.com/SouBeatrizKaroline',
     photoUrl: beatrizImage,
     badge: 'Produto & UX',
     gradient: 'from-cyan-500 to-blue-600',
@@ -119,8 +123,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Monique Cardoso',
     role: 'Inteligência Artificial • Ciência de Dados • Machine Learning',
     state: 'Rio de Janeiro',
-    city: 'Rio de Janeiro / RJ',
-    bio: 'Transforma grandes volumes de dados e modelos de IA em soluções práticas, inteligíveis e automatizadas para desafios reais.',
+    city: 'Rio de Janeiro • RJ',
+    bio: 'Especialista em IA Generativa, Machine Learning e Ciência de Dados, desenvolvendo soluções inteligentes para problemas complexos.',
     fullBio:
       'Monique trabalha com modelos de aprendizado de máquina e processamento de linguagem natural para transformar grandes volumes de dados em soluções inteligíveis e automatizadas. Sua atuação inclui pipelines de dados, análise preditiva e sistemas com IA generativa, sempre em colaboração com a equipe.',
     specialty: [
@@ -147,6 +151,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'FastAPI',
     ],
     linkedin: 'https://www.linkedin.com/in/monique-cardoso21/',
+    github: 'https://github.com/moniquecardoso25',
     photoUrl: moniqueImage,
     badge: 'IA & Dados',
     gradient: 'from-purple-500 to-pink-600',
@@ -156,8 +161,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Sonia Janara',
     role: 'Desenvolvimento Full Stack • Arquitetura de Software',
     state: 'Distrito Federal',
-    city: 'Brasília / DF',
-    bio: 'Constrói sistemas resilientes, APIs escaláveis e frontends modernos, transformando conceitos em código de alta performance.',
+    city: 'Brasília • DF',
+    bio: 'Desenvolvedora Full Stack focada em aplicações modernas, APIs escaláveis e arquitetura de software.',
     fullBio:
       'Sonia atua no desenvolvimento de sistemas resilientes, APIs escaláveis e frontends modernos. Sua experiência abrange desde protótipos de alta velocidade até a consolidação de arquiteturas de software, transformando conceitos em código de alta performance através de trabalho colaborativo.',
     specialty: [
@@ -184,6 +189,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Cloud APIs',
     ],
     linkedin: 'https://www.linkedin.com/in/jhaysavi/',
+    github: 'https://github.com/Jhaysavi',
     photoUrl: soniaImage,
     badge: 'Full Stack',
     gradient: 'from-cyan-400 to-emerald-500',
@@ -259,40 +265,31 @@ export const STATS: StatItem[] = [
 
 export const TIMELINE: TimelineEvent[] = [
   {
-    year: '2022',
-    title: 'O Primeiro Passo',
+    number: '01',
+    title: 'Descobrindo a inovação',
     description:
-      'Beatriz participa de seu primeiro hackathon, descobrindo a paixão por prototipação ágil de produtos.',
+      'Foi nos hackathons que encontramos um ambiente onde criatividade, colaboração e tecnologia caminham juntas.',
     tag: 'Início',
   },
   {
-    year: '2023',
-    title: 'Conexão NASA Space Apps',
+    number: '02',
+    title: 'Construindo conexões',
     description:
-      'A equipe se une para o NASA Space Apps Challenge, conquistando a posição de finalistas globais com solução focada em clima.',
-    tag: 'Finalistas NASA',
-    highlight: true,
+      'Mesmo em estados diferentes, aprendemos a transformar distância em proximidade através da colaboração.',
+    tag: 'Conexão',
   },
   {
-    year: '2024',
-    title: 'Maratona Nacional e Internacional',
+    number: '03',
+    title: 'Gerando impacto',
     description:
-      'Participação intensiva em mais de 10 hackathons de inteligência artificial, impacto social e GovTech.',
-    tag: 'Consolidação',
+      'Projetos premiados, soluções desenvolvidas e experiências que fortaleceram nossa forma de construir tecnologia.',
+    tag: 'Impacto',
   },
   {
-    year: '2025',
-    title: '3º Lugar no Skip Challenge',
+    number: '04',
+    title: 'O próximo desafio',
     description:
-      'Pódio com o projeto DestinAI — única equipe 100% feminina entre as finalistas da maior competição de inovação.',
-    tag: 'Pódio Skip Challenge',
-    highlight: true,
-  },
-  {
-    year: '2025+',
-    title: 'Expansão & Parcerias Estratégicas',
-    description:
-      'Aceleração de projetos próprios, serviços de consultoria técnica para startups e criação de novos MVPs.',
+      'Continuamos evoluindo, aprendendo e criando soluções capazes de gerar impacto real.',
     tag: 'Futuro',
   },
 ]
@@ -339,7 +336,15 @@ export const PROJECTS: Project[] = [
     description:
       'Sistema inteligente com IA para redução do desperdício de hortaliças, conectando produtores, compradores e logística.',
     longDescription:
-      'Desenvolvido durante o Skip Challenge, o DestinAI utiliza inteligência artificial preditiva e integração logística em tempo real para redistribuir excedentes agrícolas antes da deterioração. Conquistou o 3º lugar na competição como única equipe 100% feminina no pódio.',
+      'Desenvolvido durante o Skip Challenge, o DestinAI utiliza inteligência artificial preditiva e integração logística em tempo real para redistribuir excedentes agrícolas antes da deterioração.',
+    challenge:
+      'O desperdício de hortaliças no Brasil alcança níveis alarmantes, gerando perdas econômicas e ambientais em toda a cadeia de suprimentos agrícola.',
+    solution:
+      'Sistema inteligente com IA preditiva que conecta produtores, compradores e logística em tempo real, redistribuindo excedentes agrícolas antes da deterioração.',
+    results:
+      'Redução de até 40% no desperdício agrosocial. 3º lugar no Skip Challenge como única equipe 100% feminina no pódio.',
+    learnings:
+      'A combinação de IA preditiva com logística em tempo real pode transformar não apenas a eficiência agrícola, mas também o impacto social da tecnologia.',
     award: '3º Lugar no Skip Challenge',
     tags: ['IA Preditiva', 'Sustentabilidade', 'AgroTech', 'Logística', 'Full Stack'],
     metric: '-40% Desperdício Agrosocial',
@@ -352,7 +357,15 @@ export const PROJECTS: Project[] = [
     description:
       'Assistente inteligente que desmistifica a legislação do Cadastro Ambiental Rural (CAR) com suporte via WhatsApp e Web.',
     longDescription:
-      'Plataforma GovTech com agente de IA conversacional para traduzir termos jurídicos e técnicos complexos sobre regulamentação ambiental em orientação simples para pequenos produtores rurais.',
+      'Plataforma GovTech com agente de IA conversacional para traduzir termos jurídicos e técnicos complexos sobre regulamentação ambiental.',
+    challenge:
+      'A legislação do Cadastro Ambiental Rural (CAR) é complexa e técnica, dificultando o acesso de pequenos produtores rurais a informações essenciais sobre regulamentação ambiental.',
+    solution:
+      'Plataforma GovTech com agente de IA conversacional que traduz termos jurídicos e técnicos complexos em orientação simples e acessível via WhatsApp e Web.',
+    results:
+      'Atendimento 24/7 a produtores rurais, democratizando o acesso à informação ambiental e reduzindo barreiras burocráticas.',
+    learnings:
+      'Tecnologia conversacional pode ser uma ponte poderosa entre complexidade regulatória e cidadãos, especialmente em contextos rurais.',
     award: 'Projeto Destaque GovTech',
     tags: ['IA Conversacional', 'GovTech', 'PLN', 'WhatsApp API', 'Sustentabilidade'],
     metric: 'Atendimento 24/7',
@@ -365,7 +378,15 @@ export const PROJECTS: Project[] = [
     description:
       'Plataforma interativa baseada em dados abertos da NASA para conscientização e mitigação de mudanças climáticas.',
     longDescription:
-      'Aplicação web imersiva com visualizações de dados de satélite da NASA, projetada para engajar escolas e comunidades locais na identificação de ilhas de calor e riscos climáticos.',
+      'Aplicação web imersiva com visualizações de dados de satélite da NASA, projetada para engajar escolas e comunidades locais.',
+    challenge:
+      'Dados climáticos abertos da NASA são ricos em informação, mas difíceis de interpretar para comunidades locais e escolas que precisam agir diante das mudanças climáticas.',
+    solution:
+      'Aplicação web imersiva com visualizações interativas de dados de satélite da NASA, projetada para engajar escolas e comunidades na identificação de ilhas de calor e riscos climáticos.',
+    results:
+      'Finalistas globais no NASA Space Apps Challenge, com solução reconhecida por tornar dados climáticos complexos acessíveis e acionáveis.',
+    learnings:
+      'Visualização de dados eficaz pode transformar conjuntos massivos de informações científicas em ferramentas de conscientização e ação comunitária.',
     award: 'Finalistas Globais NASA Space Apps',
     tags: ['NASA Open Data', 'Data Viz', 'Clima', 'Educação', 'React'],
     metric: 'Finalista Global',
@@ -378,7 +399,15 @@ export const PROJECTS: Project[] = [
     description:
       'API e chatbot para triagem primária inteligente e otimização de filas no atendimento público e privado de saúde.',
     longDescription:
+      'Sistema de pré-atendimento com recomendação clínica automatizada baseada em algoritmos de decisão rápida.',
+    challenge:
+      'O tempo de espera em atendimentos de saúde pública e privada é uma barreira significativa, impactando diretamente a qualidade do atendimento ao paciente.',
+    solution:
       'Sistema de pré-atendimento com recomendação clínica automatizada baseada em algoritmos de decisão rápida, agilizando o encaminhamento de pacientes aos centros adequados.',
+    results:
+      'Redução de 35% no tempo de espera, com triagem primária inteligente otimizando o fluxo de pacientes.',
+    learnings:
+      'Automação inteligente em saúde pode aliviar pressão sobre sistemas sobrecarregados sem comprometer a qualidade do cuidado.',
     award: 'Premiação de Inovação em Saúde',
     tags: ['HealthTech', 'APIs REST', 'Triagem Inteligente', 'FastAPI'],
     metric: 'Redução de 35% no tempo de espera',

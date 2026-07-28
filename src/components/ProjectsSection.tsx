@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { useInView } from '@/hooks/use-in-view'
-import { PROJECTS } from '@/data/content'
+import { PROJECTS, Project } from '@/data/content'
+import { ProjectCaseModal } from '@/components/ProjectCaseModal'
 import { Trophy, Sprout, ShieldCheck, Globe, Activity, ExternalLink, Sparkles } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Sprout: <Sprout className="w-7 h-7 text-emerald-400" />,
@@ -11,6 +14,13 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export function ProjectsSection() {
   const { ref, isInView } = useInView()
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const openModal = (project: Project) => {
+    setSelectedProject(project)
+    setModalOpen(true)
+  }
 
   return (
     <section id="projetos" ref={ref} className="py-24 bg-[#0f0f1a] relative">
@@ -22,6 +32,9 @@ export function ProjectsSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4 font-display">
             Soluções premiadas que <span className="gradient-heading">geram impacto real</span>
           </h2>
+          <p className="text-slate-400 text-sm mt-3">
+            Clique em "Ver Case Completo" para conhecer o desafio, solução e resultados.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -38,7 +51,6 @@ export function ProjectsSection() {
                   <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
                     {ICON_MAP[project.iconName] || <Sparkles className="w-7 h-7 text-[#00f0ff]" />}
                   </div>
-
                   {project.award && (
                     <div className="flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
                       <Trophy className="w-3.5 h-3.5" />
@@ -57,7 +69,7 @@ export function ProjectsSection() {
               </div>
 
               <div>
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
@@ -67,11 +79,22 @@ export function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+
+                <Button
+                  onClick={() => openModal(project)}
+                  aria-label={`Ver case completo do projeto ${project.title}`}
+                  className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Ver Case Completo
+                </Button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <ProjectCaseModal project={selectedProject} open={modalOpen} onOpenChange={setModalOpen} />
     </section>
   )
 }

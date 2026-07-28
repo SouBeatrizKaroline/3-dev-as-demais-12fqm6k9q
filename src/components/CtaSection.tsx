@@ -1,76 +1,76 @@
-import { useState } from 'react'
-import { Mail, Linkedin, Github, MessageSquare, ArrowRight, Sparkles } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { ContactFormModal } from '@/components/ContactFormModal'
+import { TEAM_MEMBERS } from '@/data/content'
+import { Linkedin, Github, MapPin, Sparkles } from 'lucide-react'
 
 export function CtaSection() {
-  const [modalOpen, setModalOpen] = useState(false)
-
   return (
     <section id="contato" className="py-28 bg-[#0f0f1a] relative overflow-hidden">
-      {/* Glow Effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#00f0ff]/10 via-[#b300ff]/10 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-[#14142b] to-[#0a0a14] p-8 md:p-14 rounded-3xl border border-cyan-500/30 text-center shadow-2xl shadow-cyan-950/40">
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-cyan-500/30 text-xs font-bold text-[#00f0ff] mb-6">
             <Sparkles className="w-4 h-4" />
             <span>Vamos Inovar Juntos</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white font-display leading-tight mb-6">
-            Vamos construir a próxima <span className="gradient-heading">solução juntos?</span>
+            Vamos construir algo <span className="gradient-heading">incrível?</span>
           </h2>
 
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-            Estamos sempre abertas a novos desafios, colaborações, hackathons, projetos de
-            inteligência artificial, pesquisas, parcerias e oportunidades de inovação.
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Estamos abertas a novos desafios, desenvolvimento de produtos, projetos de inteligência
+            artificial, pesquisa, inovação, hackathons e parcerias estratégicas.
           </p>
+        </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              onClick={() => setModalOpen(true)}
-              className="w-full sm:w-auto gradient-btn font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer text-sm"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {TEAM_MEMBERS.map((member) => (
+            <div
+              key={member.id}
+              className="glass-card glass-card-hover p-6 rounded-3xl border-white/10 flex flex-col items-center text-center"
             >
-              <MessageSquare className="w-4 h-4" />
-              <span>Entrar em Contato</span>
-              <ArrowRight className="w-4 h-4" />
-            </Button>
+              <div className="relative mb-4">
+                <div className="w-24 h-24 rounded-2xl overflow-hidden p-[2px] bg-gradient-to-tr from-[#00f0ff] via-[#b300ff] to-[#00f0ff]">
+                  <img
+                    src={member.photoUrl}
+                    alt={`Foto de ${member.name}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </div>
+              </div>
 
-            <a
-              href="https://www.linkedin.com/in/beatrizkaroline/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                variant="outline"
-                className="w-full sm:w-auto glass-card hover:bg-white/10 text-white border-white/20 hover:border-[#00f0ff] font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer text-sm"
-              >
-                <Linkedin className="w-4 h-4 text-[#00f0ff]" />
-                <span>LinkedIn da Equipe</span>
-              </Button>
-            </a>
+              <h3 className="text-lg font-bold text-white font-display">{member.name}</h3>
 
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                variant="ghost"
-                className="w-full sm:w-auto text-slate-300 hover:text-white hover:bg-white/5 font-bold px-6 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer text-sm"
-              >
-                <Github className="w-4 h-4" />
-                <span>GitHub</span>
-              </Button>
-            </a>
-          </div>
+              <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-1 mb-4">
+                <MapPin className="w-3.5 h-3.5 text-purple-400" />
+                <span>{member.city}</span>
+              </div>
+
+              <div className="flex items-center gap-3 mt-auto">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
+                  aria-label={`Abrir LinkedIn de ${member.name} em nova aba`}
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
+                  aria-label={`Abrir GitHub de ${member.name} em nova aba`}
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <ContactFormModal open={modalOpen} onOpenChange={setModalOpen} />
     </section>
   )
 }

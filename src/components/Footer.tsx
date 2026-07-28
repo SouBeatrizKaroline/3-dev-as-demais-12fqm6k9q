@@ -1,12 +1,12 @@
-import { Sparkles, Linkedin, Github, Mail, MapPin } from 'lucide-react'
+import { Sparkles, Linkedin, Github, MapPin } from 'lucide-react'
+import { TEAM_MEMBERS } from '@/data/content'
 
 export function Footer() {
   return (
     <footer className="bg-[#0a0a12] border-t border-white/10 pt-16 pb-12 text-slate-400 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
-          {/* Brand Info */}
-          <div className="md:col-span-5 flex flex-col gap-4">
+          <div className="md:col-span-4 flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#00f0ff] to-[#b300ff] p-[1px]">
                 <div className="w-full h-full bg-[#0f0f1a] rounded-[7px] flex items-center justify-center">
@@ -21,38 +21,44 @@ export function Footer() {
               Transformando ideias em impacto através da tecnologia, inteligência artificial e
               colaboração sem fronteiras.
             </p>
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href="https://www.linkedin.com/in/beatrizkaroline/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:contato@3devasdemais.dev"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
-          {/* Regional Connection Map Display */}
-          <div className="md:col-span-7 flex flex-col justify-center gap-4 bg-white/[0.02] p-6 rounded-2xl border border-white/5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {TEAM_MEMBERS.map((member) => (
+              <div key={member.id} className="flex flex-col gap-2">
+                <h4 className="text-xs font-bold text-white">{member.name}</h4>
+                <div className="flex items-center gap-1.5 text-[11px] text-slate-500">
+                  <MapPin className="w-3 h-3" />
+                  <span>{member.city}</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
+                    aria-label={`Abrir LinkedIn de ${member.name} em nova aba`}
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#00f0ff] hover:border-[#00f0ff]/50 hover:bg-[#00f0ff]/10 transition-all cursor-pointer"
+                    aria-label={`Abrir GitHub de ${member.name} em nova aba`}
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 border-b border-white/10">
+          <div className="md:col-span-12">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2 mb-4">
               <MapPin className="w-4 h-4 text-[#00f0ff]" />
               Conexão Interregional sem Barreiras
             </h4>
@@ -75,7 +81,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} 3 Dev.as DemAIs. Todos os direitos reservados.</p>
           <p className="flex items-center gap-1">

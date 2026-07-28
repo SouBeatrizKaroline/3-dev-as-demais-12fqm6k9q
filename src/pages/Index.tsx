@@ -3,6 +3,7 @@ import { AboutSection } from '@/components/AboutSection'
 import { ComoTrabalhamosSection } from '@/components/ComoTrabalhamosSection'
 import { TimelineSection } from '@/components/TimelineSection'
 import { StatsSection } from '@/components/StatsSection'
+import { BeyondHackathonsSection } from '@/components/BeyondHackathonsSection'
 import { PhilosophySection } from '@/components/PhilosophySection'
 import { TeamSection } from '@/components/TeamSection'
 import { CapabilitiesSection } from '@/components/CapabilitiesSection'
@@ -20,6 +21,7 @@ export default function Index() {
       <ComoTrabalhamosSection />
       <TimelineSection />
       <StatsSection />
+      <BeyondHackathonsSection />
       <PhilosophySection />
       <TeamSection />
       <CapabilitiesSection />
