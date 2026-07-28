@@ -1,6 +1,6 @@
 import { HeroSection } from '@/components/HeroSection'
 import { AboutSection } from '@/components/AboutSection'
-import { FeaturedProfileSection } from '@/components/FeaturedProfileSection'
+import { ComoTrabalhamosSection } from '@/components/ComoTrabalhamosSection'
 import { TimelineSection } from '@/components/TimelineSection'
 import { StatsSection } from '@/components/StatsSection'
 import { PhilosophySection } from '@/components/PhilosophySection'
@@ -17,7 +17,7 @@ export default function Index() {
     <div className="w-full overflow-hidden">
       <HeroSection />
       <AboutSection />
-      <FeaturedProfileSection />
+      <ComoTrabalhamosSection />
       <TimelineSection />
       <StatsSection />
       <PhilosophySection />

@@ -1,99 +1,81 @@
-import { useState } from 'react'
-import { Sparkles, Cpu, Layers, BrainCircuit } from 'lucide-react'
+import { useInView } from '@/hooks/use-in-view'
+
+const CIRCLES = [
+  {
+    name: 'Beatriz',
+    items: ['Produto', 'UX', 'Estratégia', 'Multidisciplinaridade'],
+    border: 'border-cyan-500/50',
+    bg: 'bg-cyan-500/10',
+    text: 'text-cyan-400',
+    position: 'left-[28%] top-[5%]',
+  },
+  {
+    name: 'Monique',
+    items: ['IA', 'Dados', 'LLMs', 'Cloud'],
+    border: 'border-purple-500/50',
+    bg: 'bg-purple-500/10',
+    text: 'text-purple-400',
+    position: 'left-[72%] top-[5%]',
+  },
+  {
+    name: 'Sonia',
+    items: ['Full Stack', 'Frontend', 'Backend', 'Arquitetura'],
+    border: 'border-emerald-500/50',
+    bg: 'bg-emerald-500/10',
+    text: 'text-emerald-400',
+    position: 'left-[50%] top-[52%]',
+  },
+]
 
 export function ForceMetaphor() {
-  const [merged, setMerged] = useState(false)
+  const { ref, isInView } = useInView()
 
   return (
-    <div className="w-full bg-gradient-to-b from-[#0f0f1a] via-[#14142b] to-[#0f0f1a] py-16 px-6 rounded-3xl border border-white/10 relative overflow-hidden text-center my-12">
-      <div className="max-w-2xl mx-auto mb-10">
+    <div
+      ref={ref}
+      className="w-full py-16 px-4 rounded-3xl border border-white/10 relative overflow-hidden bg-gradient-to-b from-[#0f0f1a] via-[#14142b] to-[#0f0f1a] my-12"
+    >
+      <div className="max-w-2xl mx-auto text-center mb-10">
         <span className="text-xs font-bold uppercase tracking-widest text-[#00f0ff] bg-[#00f0ff]/10 px-3 py-1 rounded-full border border-[#00f0ff]/30">
           Sinergia em Ação
         </span>
-        <h3 className="text-3xl md:text-4xl font-extrabold text-white mt-4 font-display">
-          Três mentes. Três regiões. <span className="neon-text-cyan">Uma só força.</span>
+        <h3 className="text-2xl md:text-4xl font-extrabold text-white mt-4 font-display">
+          Três especialidades. <span className="gradient-heading">Uma equipe.</span>
         </h3>
-        <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-          Passe o mouse ou clique abaixo para ver como as visões individuais de produto,
-          inteligência artificial e arquitetura se fundem na força do time.
+      </div>
+
+      <div className="relative w-full max-w-xl mx-auto h-[340px] sm:h-[400px] md:h-[440px]">
+        {CIRCLES.map((circle, i) => (
+          <div
+            key={circle.name}
+            className={`absolute ${circle.position} -translate-x-1/2 w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full border-2 ${circle.border} ${circle.bg} backdrop-blur-md flex flex-col items-center justify-center p-3 sm:p-4 text-center transition-opacity duration-700 ease-out`}
+            style={{
+              transitionDelay: `${i * 200}ms`,
+              opacity: isInView ? 1 : 0,
+            }}
+          >
+            <p className={`text-sm sm:text-base font-bold ${circle.text} mb-2`}>{circle.name}</p>
+            {circle.items.map((item) => (
+              <p key={item} className="text-[10px] sm:text-xs text-slate-300 leading-relaxed">
+                {item}
+              </p>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div
+        className="text-center mt-6 transition-opacity duration-700"
+        style={{
+          transitionDelay: '600ms',
+          opacity: isInView ? 1 : 0,
+        }}
+      >
+        <h4 className="text-2xl md:text-3xl font-black text-white font-display">3 Dev.as DemAIs</h4>
+        <p className="text-sm text-slate-400 mt-2 max-w-md mx-auto px-4">
+          Diferentes especialidades. Um único objetivo: construir soluções de alto impacto.
         </p>
       </div>
-
-      {/* Interactive Fusion Diagram */}
-      <div
-        className="relative w-full max-w-lg mx-auto h-[320px] flex items-center justify-center cursor-pointer group"
-        onMouseEnter={() => setMerged(true)}
-        onMouseLeave={() => setMerged(false)}
-        onClick={() => setMerged(!merged)}
-      >
-        {/* Central Orb when merged */}
-        <div
-          className={`absolute z-20 w-48 h-48 rounded-full bg-gradient-to-tr from-[#00f0ff] via-[#b300ff] to-[#10b981] p-[2px] transition-all duration-700 ease-out shadow-2xl ${
-            merged
-              ? 'scale-125 opacity-100 shadow-cyan-500/50'
-              : 'scale-50 opacity-0 pointer-events-none'
-          }`}
-        >
-          <div className="w-full h-full bg-[#0a0a14] rounded-full flex flex-col items-center justify-center p-4">
-            <Sparkles className="w-8 h-8 text-[#00f0ff] animate-spin-slow mb-1" />
-            <h4 className="text-xl font-black text-white font-display">3 Dev.as DemAIs</h4>
-            <p className="text-[11px] font-bold text-[#00f0ff] mt-0.5">
-              Equipe Completa e De Alto Impacto
-            </p>
-          </div>
-        </div>
-
-        {/* Outer Node 1: Beatriz */}
-        <div
-          className={`absolute transition-all duration-700 ease-out flex flex-col items-center gap-2 p-4 rounded-2xl glass-card border-cyan-500/40 w-40 ${
-            merged
-              ? 'translate-x-0 translate-y-0 opacity-20 scale-75'
-              : '-translate-x-32 -translate-y-20 opacity-100 hover:scale-105'
-          }`}
-        >
-          <div className="w-10 h-10 rounded-full bg-[#00f0ff]/20 flex items-center justify-center text-[#00f0ff]">
-            <Layers className="w-5 h-5" />
-          </div>
-          <span className="text-xs font-bold text-white">Beatriz Karoline</span>
-          <span className="text-[10px] text-cyan-400">Visão Multidisciplinar</span>
-        </div>
-
-        {/* Outer Node 2: Monique */}
-        <div
-          className={`absolute transition-all duration-700 ease-out flex flex-col items-center gap-2 p-4 rounded-2xl glass-card border-purple-500/40 w-40 ${
-            merged
-              ? 'translate-x-0 translate-y-0 opacity-20 scale-75'
-              : 'translate-x-32 -translate-y-20 opacity-100 hover:scale-105'
-          }`}
-        >
-          <div className="w-10 h-10 rounded-full bg-[#b300ff]/20 flex items-center justify-center text-[#b300ff]">
-            <BrainCircuit className="w-5 h-5" />
-          </div>
-          <span className="text-xs font-bold text-white">Monique Cardoso</span>
-          <span className="text-[10px] text-purple-400">IA & Ciência de Dados</span>
-        </div>
-
-        {/* Outer Node 3: Sonia */}
-        <div
-          className={`absolute transition-all duration-700 ease-out flex flex-col items-center gap-2 p-4 rounded-2xl glass-card border-emerald-500/40 w-40 ${
-            merged
-              ? 'translate-x-0 translate-y-0 opacity-20 scale-75'
-              : 'translate-y-28 opacity-100 hover:scale-105'
-          }`}
-        >
-          <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
-            <Cpu className="w-5 h-5" />
-          </div>
-          <span className="text-xs font-bold text-white">Sonia Janara</span>
-          <span className="text-[10px] text-emerald-400">Desenvolvimento Full Stack</span>
-        </div>
-      </div>
-
-      <p className="text-xs text-slate-500 font-medium mt-4">
-        {merged
-          ? '✨ Fusão ativada: Soluções completas do ideômetro ao deploy!'
-          : '💡 Interaja com o diagrama acima para unificar o time'}
-      </p>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import soniaImage from '@/assets/image-b6425.png'
 import moniqueImage from '@/assets/image-b6bf9.png'
+import beatrizImage from '@/assets/image-41af5.png'
 
 export interface TeamMember {
   id: string
@@ -80,12 +81,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'beatriz',
     name: 'Beatriz Karoline',
-    role: 'Visão Multidisciplinar & Estratégia',
+    role: 'Produto • UX • Estratégia • Tecnologia',
     state: 'Pernambuco',
     city: 'Recife / PE',
-    bio: 'Especialista em unir design centrado no usuário, estratégia de negócios e validação ágil de produtos.',
+    bio: 'Atua conectando diferentes áreas do conhecimento para transformar problemas complexos em soluções digitais centradas no usuário.',
     fullBio:
-      'Com forte atuação na ideação e prototipação de soluções, Beatriz garante que os projetos resolvam dores reais com excelente experiência do usuário e comunicação estratégica de alto impacto.',
+      'Beatriz atua conectando diferentes áreas do conhecimento para transformar problemas complexos em soluções digitais. Sua experiência multidisciplinar reúne tecnologia, design, engenharia, gestão de projetos e inovação, contribuindo para a construção de produtos centrados no usuário e MVPs desenvolvidos em equipe.',
     specialty: [
       'Prototipação',
       'Product Design (UI/UX)',
@@ -108,20 +109,20 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Pitch Deck',
       'Analytics',
     ],
-    linkedin: 'https://www.linkedin.com/in/beatrizkaroline/',
-    photoUrl: 'https://img.usecurling.com/ppl/large?gender=female&seed=22',
-    badge: 'Product & UX',
+    linkedin: 'https://www.linkedin.com/in/beatrizkcs/',
+    photoUrl: beatrizImage,
+    badge: 'Produto & UX',
     gradient: 'from-cyan-500 to-blue-600',
   },
   {
     id: 'monique',
     name: 'Monique Cardoso',
-    role: 'Inteligência Artificial & Ciência de Dados',
+    role: 'Inteligência Artificial • Ciência de Dados • Machine Learning',
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro / RJ',
-    bio: 'Especialista em modelos de aprendizado de máquina, PLN e arquitetura de dados aplicados à inovação.',
+    bio: 'Transforma grandes volumes de dados e modelos de IA em soluções práticas, inteligíveis e automatizadas para desafios reais.',
     fullBio:
-      'Focada em transformar grandes volumes de dados e modelos avançados de IA Generativa em soluções inteligíveis e automatizadas para desafios complexos do mercado.',
+      'Monique trabalha com modelos de aprendizado de máquina e processamento de linguagem natural para transformar grandes volumes de dados em soluções inteligíveis e automatizadas. Sua atuação inclui pipelines de dados, análise preditiva e sistemas com IA generativa, sempre em colaboração com a equipe.',
     specialty: [
       'Inteligência Artificial',
       'Processamento de Linguagem Natural',
@@ -145,20 +146,20 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Data Viz',
       'FastAPI',
     ],
-    linkedin: 'https://www.linkedin.com/in/monique-cardoso/',
+    linkedin: 'https://www.linkedin.com/in/monique-cardoso21/',
     photoUrl: moniqueImage,
-    badge: 'AI & Data Lead',
+    badge: 'IA & Dados',
     gradient: 'from-purple-500 to-pink-600',
   },
   {
     id: 'sonia',
     name: 'Sonia Janara',
-    role: 'Desenvolvimento Full Stack & Arquitetura',
+    role: 'Desenvolvimento Full Stack • Arquitetura de Software',
     state: 'Distrito Federal',
     city: 'Brasília / DF',
-    bio: 'Engenheira de software focada em construção de sistemas resilientes, APIs escaláveis e frontends modernos.',
+    bio: 'Constrói sistemas resilientes, APIs escaláveis e frontends modernos, transformando conceitos em código de alta performance.',
     fullBio:
-      'Com vasta experiência na criação de protótipos de alta velocidade e arquiteturas de software consolidadas, transforma conceitos abstratos em código de alta performance.',
+      'Sonia atua no desenvolvimento de sistemas resilientes, APIs escaláveis e frontends modernos. Sua experiência abrange desde protótipos de alta velocidade até a consolidação de arquiteturas de software, transformando conceitos em código de alta performance através de trabalho colaborativo.',
     specialty: [
       'Frontend React/TS',
       'Backend Node.js & APIs',
@@ -182,9 +183,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Git',
       'Cloud APIs',
     ],
-    linkedin: 'https://www.linkedin.com/in/soniajanara/',
+    linkedin: 'https://www.linkedin.com/in/jhaysavi/',
     photoUrl: soniaImage,
-    badge: 'Full Stack Tech Lead',
+    badge: 'Full Stack',
     gradient: 'from-cyan-400 to-emerald-500',
   },
 ]
