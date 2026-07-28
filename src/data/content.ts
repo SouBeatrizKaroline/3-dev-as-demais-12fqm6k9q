@@ -1,3 +1,5 @@
+import soniaImage from '@/assets/image-b6425.png'
+
 export interface TeamMember {
   id: string
   name: string
@@ -180,7 +182,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Cloud APIs',
     ],
     linkedin: 'https://www.linkedin.com/in/soniajanara/',
-    photoUrl: 'https://img.usecurling.com/ppl/large?gender=female&seed=88',
+    photoUrl: soniaImage,
     badge: 'Full Stack Tech Lead',
     gradient: 'from-cyan-400 to-emerald-500',
   },
