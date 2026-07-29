@@ -8,6 +8,17 @@ export function useInView(options?: IntersectionObserverInit) {
     const element = ref.current
     if (!element) return
 
+    const checkVisible = () => {
+      const rect = element.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        setIsInView(true)
+        return true
+      }
+      return false
+    }
+
+    if (checkVisible()) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,7 +26,7 @@ export function useInView(options?: IntersectionObserverInit) {
           observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.1, ...options },
+      { threshold: 0, rootMargin: '0px 0px -50px 0px', ...options },
     )
 
     observer.observe(element)
