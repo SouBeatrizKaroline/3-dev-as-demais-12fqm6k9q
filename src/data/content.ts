@@ -19,6 +19,7 @@ export interface TeamMember {
   photoUrl: string
   badge: string
   gradient: string
+  technologyGroups?: { category: string; items: string[] }[]
 }
 
 export interface Project {
@@ -146,38 +147,57 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Inteligência Artificial • Ciência de Dados • IA Generativa',
     state: 'Rio de Janeiro',
     city: 'Duque de Caxias • RJ',
-    bio: 'Monique atua no desenvolvimento de soluções baseadas em Inteligência Artificial, Ciência de Dados e modelos inteligentes, utilizando análise de dados, Machine Learning e IA Generativa para transformar desafios reais em soluções tecnológicas.',
+    bio: 'Monique é Cientista de Dados com foco em Inteligência Artificial Generativa, análise de dados e desenvolvimento de soluções baseadas em LLMs.',
     fullBio:
-      'Monique trabalha com Inteligência Artificial Generativa, Ciência de Dados e Machine Learning para transformar grandes volumes de dados em soluções inteligentes e automatizadas. Sua atuação inclui modelos de linguagem (LLMs), agentes de IA, pipelines de dados, análise preditiva e provas de conceito, sempre em colaboração com a equipe para entregar soluções tecnológicas inovadoras.',
+      'Monique é Cientista de Dados com foco em Inteligência Artificial Generativa, análise de dados e desenvolvimento de soluções baseadas em LLMs. Possui experiência na criação de provas de conceito (POCs), chatbots inteligentes e soluções orientadas por dados para apoiar processos de tomada de decisão. Atua utilizando Python, ferramentas de Inteligência Artificial e tecnologias de dados para desenvolver soluções escaláveis, transformar dados em informações estratégicas e colaborar com equipes multidisciplinares na construção de soluções inovadoras.',
     specialty: [
-      'Inteligência Artificial Generativa',
       'Ciência de Dados',
-      'Machine Learning',
+      'Inteligência Artificial Generativa',
+      'Agentes de IA',
       'Análise de Dados',
-      'Modelos de Linguagem (LLMs)',
-      'Engenharia de Prompts',
+      'Machine Learning',
     ],
     actuation: [
-      'Modelos de IA & LLMs',
+      'Modelos de IA (LLMs)',
       'Agentes de IA',
-      'Pipeline de Dados',
       'Análise Preditiva',
+      'Pipeline de Dados',
       'Dashboards e Visualização de Dados',
       'Provas de Conceito (POCs)',
     ],
     technologies: [
       'Python',
-      'Análise de Dados',
-      'Agentes de IA',
-      'LLMs',
-      'Ferramentas de IA Generativa',
+      'SQL',
+      'Jupyter Notebook',
+      'AWS',
+      'Google Cloud',
+      'Microsoft Azure',
+      'Docker',
+      'Power BI',
+      'LlamaIndex',
+      'Langflow',
+      'IBM watsonx',
+      'Git',
+      'GitHub',
+    ],
+    technologyGroups: [
+      { category: 'Linguagens e Dados', items: ['Python', 'SQL', 'Jupyter Notebook'] },
+      {
+        category: 'Cloud e Infraestrutura',
+        items: ['AWS', 'Google Cloud', 'Microsoft Azure', 'Docker'],
+      },
+      { category: 'Dados e Analytics', items: ['Power BI'] },
+      { category: 'IA Generativa e LLMs', items: ['LlamaIndex', 'Langflow', 'IBM watsonx'] },
+      { category: 'Desenvolvimento e Colaboração', items: ['Git', 'GitHub'] },
     ],
     tags: [
-      'Python',
-      'Análise de Dados',
-      'Agentes de IA',
-      'Machine Learning',
+      'Ciência de Dados',
       'Inteligência Artificial Generativa',
+      'Agentes de IA',
+      'Análise de Dados',
+      'Machine Learning',
+      'LLMs',
+      'Python',
     ],
     linkedin: 'https://www.linkedin.com/in/monique-cardoso21/',
     github: 'https://github.com/moniquecardoso25',

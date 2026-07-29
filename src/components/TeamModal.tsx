@@ -155,16 +155,38 @@ export function TeamModal({ member, onClose }: TeamModalProps) {
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
                 Tecnologias & Ferramentas
               </h4>
-              <div className="flex flex-wrap gap-2">
-                {member.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="text-xs font-mono font-semibold text-[#00f0ff] bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              {member.technologyGroups ? (
+                <div className="flex flex-col gap-3">
+                  {member.technologyGroups.map((group, i) => (
+                    <div key={i}>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-purple-400 mb-1.5">
+                        {group.category}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {group.items.map((tech, j) => (
+                          <span
+                            key={j}
+                            className="text-xs font-mono font-semibold text-[#00f0ff] bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {member.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs font-mono font-semibold text-[#00f0ff] bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-3 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
