@@ -1,53 +1,83 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Sparkles, ChevronRight } from 'lucide-react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { Menu, X, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useScrollSpy } from '@/hooks/use-scroll-spy'
+import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
-  { label: 'Início', href: '#hero' },
-  { label: 'Quem Somos', href: '#quem-somos' },
-  { label: 'História', href: '#historia' },
-  { label: 'Estatísticas', href: '#estatisticas' },
-  { label: 'Filosofia', href: '#filosofia' },
-  { label: 'Equipe', href: '#equipe' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Início', section: 'hero' },
+  { label: 'Sobre', section: 'quem-somos' },
+  { label: 'Projetos', section: 'projetos' },
+  { label: 'Conquistas', section: 'conquistas' },
+  { label: 'Equipe', section: 'equipe' },
+  { label: 'Contato', section: 'contato' },
 ]
+
+const SECTION_IDS = NAV_LINKS.map((l) => l.section)
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const isMainPage = location.pathname === '/'
+  const activeSection = useScrollSpy(SECTION_IDS)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
+  useEffect(() => {
     setMobileMenuOpen(false)
-    const target = document.querySelector(href)
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' })
+  }, [location.pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
     }
+  }, [mobileMenuOpen])
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [mobileMenuOpen])
+
+  const goToSection = (section: string) => {
+    setMobileMenuOpen(false)
+    if (isMainPage) {
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate(`/?scrollTo=${section}`)
+    }
+  }
+
+  const handleNavClick = (e: React.MouseEvent, section: string) => {
+    e.preventDefault()
+    goToSection(section)
   }
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] flex items-center ${
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] flex items-center',
         scrolled
           ? 'bg-[#0f0f1a]/85 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40'
-          : 'bg-transparent border-b border-transparent'
-      }`}
+          : 'bg-transparent border-b border-transparent',
+      )}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
         <a
           href="#hero"
-          onClick={(e) => scrollToSection(e, '#hero')}
-          className="flex items-center gap-2 group cursor-pointer"
+          onClick={(e) => handleNavClick(e, 'hero')}
+          className="flex items-center gap-2 group cursor-pointer shrink-0"
         >
           <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#00f0ff] to-[#b300ff] p-[1px] shadow-sm shadow-cyan-500/30 group-hover:shadow-cyan-500/60 transition-all">
             <div className="w-full h-full bg-[#0f0f1a] rounded-[11px] flex items-center justify-center">
@@ -59,62 +89,64 @@ export function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium text-slate-300 hover:text-[#00f0ff] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#00f0ff] hover:after:w-full after:transition-all"
+              key={link.section}
+              href={`#${link.section}`}
+              onClick={(e) => handleNavClick(e, link.section)}
+              className={cn(
+                'text-sm font-medium transition-colors relative py-1 after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#00f0ff] after:transition-all',
+                isMainPage && activeSection === link.section
+                  ? 'text-[#00f0ff] after:w-full'
+                  : 'text-slate-300 hover:text-[#00f0ff] after:w-0 hover:after:w-full',
+              )}
             >
               {link.label}
             </a>
           ))}
           <Button
-            onClick={() => {
-              const el = document.querySelector('#contato')
-              el?.scrollIntoView({ behavior: 'smooth' })
-            }}
+            onClick={() => goToSection('contato')}
             className="gradient-btn text-xs font-semibold px-5 py-2 rounded-full cursor-pointer"
           >
             Falar Conosco
           </Button>
         </nav>
 
-        {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none cursor-pointer"
-          aria-label="Abrir menu de navegação"
+          className="lg:hidden w-11 h-11 flex items-center justify-center text-slate-300 hover:text-white focus:outline-none cursor-pointer"
+          aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'}
         >
           {mobileMenuOpen ? <X className="w-6 h-6 text-[#00f0ff]" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[70px] bg-[#0f0f1a]/95 backdrop-blur-xl z-40 lg:hidden flex flex-col justify-between p-6 animate-fade-in">
-          <div className="flex flex-col gap-4 mt-4">
+        <div
+          className="fixed inset-0 top-[70px] bg-[#0f0f1a]/95 backdrop-blur-xl z-40 lg:hidden flex flex-col p-6 animate-fade-in overflow-y-auto"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div className="flex flex-col gap-2 mt-4">
             {NAV_LINKS.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="flex items-center justify-between text-lg font-semibold text-slate-200 hover:text-[#00f0ff] border-b border-white/5 pb-3 transition-colors"
+                key={link.section}
+                href={`#${link.section}`}
+                onClick={(e) => handleNavClick(e, link.section)}
+                className={cn(
+                  'flex items-center text-lg font-semibold py-3 px-4 rounded-xl transition-colors',
+                  isMainPage && activeSection === link.section
+                    ? 'text-[#00f0ff] bg-[#00f0ff]/5'
+                    : 'text-slate-200 hover:text-[#00f0ff] hover:bg-white/5',
+                )}
               >
-                <span>{link.label}</span>
-                <ChevronRight className="w-5 h-5 text-slate-500" />
+                {link.label}
               </a>
             ))}
           </div>
-
-          <div className="pt-6 border-t border-white/10">
+          <div className="pt-6 mt-auto">
             <Button
-              onClick={() => {
-                setMobileMenuOpen(false)
-                document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' })
-              }}
+              onClick={() => goToSection('contato')}
               className="w-full gradient-btn py-3 rounded-xl font-bold text-sm"
             >
               Falar Conosco

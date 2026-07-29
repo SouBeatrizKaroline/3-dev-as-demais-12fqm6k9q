@@ -59,6 +59,10 @@
     overflow-x: hidden;
   }
 
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   /* Custom dark scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -145,6 +149,14 @@
 
   .gradient-btn:hover {
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+  }
+
+  .gradient-btn:active {
+    transform: scale(0.97);
+  }
+
+  .glass-card-hover:active {
+    transform: translateY(-2px) scale(0.99);
   }
 
   @keyframes pulse-glow {

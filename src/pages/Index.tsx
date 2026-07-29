@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { HeroSection } from '@/components/HeroSection'
 import { AboutSection } from '@/components/AboutSection'
 import { ComoTrabalhamosSection } from '@/components/ComoTrabalhamosSection'
@@ -14,6 +15,19 @@ import { QuoteSection } from '@/components/QuoteSection'
 import { CtaSection } from '@/components/CtaSection'
 
 export default function Index() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const scrollTo = params.get('scrollTo')
+    if (!scrollTo) return
+    requestAnimationFrame(() => {
+      const target = document.getElementById(scrollTo)
+      if (target) {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' })
+      }
+      window.history.replaceState({}, '', '/')
+    })
+  }, [])
+
   return (
     <div className="w-full overflow-hidden">
       <HeroSection />

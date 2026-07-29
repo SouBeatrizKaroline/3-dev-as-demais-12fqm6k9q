@@ -22,7 +22,7 @@ export function HeroSection() {
           <span>Equipe Multidisciplinar de Inovação & IA</span>
         </div>
 
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-4 font-display drop-shadow-2xl">
+        <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-4 font-display drop-shadow-2xl">
           3 Dev.as <span className="gradient-heading">DemAIs</span>
         </h1>
 
@@ -40,7 +40,7 @@ export function HeroSection() {
           <Button
             onClick={() => scrollTo('#equipe')}
             aria-label="Conheça a equipe"
-            className="w-full sm:w-auto gradient-btn text-sm font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto gradient-btn text-sm font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer active:scale-95 transition-transform"
           >
             <Users className="w-4 h-4" />
             Conheça a equipe
@@ -50,7 +50,7 @@ export function HeroSection() {
             onClick={() => scrollTo('#projetos')}
             variant="outline"
             aria-label="Ver projetos"
-            className="w-full sm:w-auto glass-card hover:bg-white/10 text-white border-white/20 hover:border-[#00f0ff] text-sm font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer transition-all"
+            className="w-full sm:w-auto glass-card hover:bg-white/10 text-white border-white/20 hover:border-[#00f0ff] text-sm font-bold px-8 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-95"
           >
             <Rocket className="w-4 h-4 text-[#00f0ff]" />
             Projetos
@@ -60,7 +60,7 @@ export function HeroSection() {
             onClick={() => scrollTo('#contato')}
             variant="ghost"
             aria-label="Entre em contato"
-            className="w-full sm:w-auto text-slate-300 hover:text-[#00f0ff] hover:bg-white/5 text-sm font-bold px-6 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto text-slate-300 hover:text-[#00f0ff] hover:bg-white/5 text-sm font-bold px-6 py-6 rounded-full flex items-center justify-center gap-2 cursor-pointer active:scale-95 transition-transform"
           >
             <Mail className="w-4 h-4" />
             Entre em contato

@@ -21,7 +21,7 @@ export function TeamModal({ member, onClose }: TeamModalProps) {
       setTimeout(() => closeButtonRef.current?.focus(), 100)
     }
     return () => {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = ''
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [member, onClose])

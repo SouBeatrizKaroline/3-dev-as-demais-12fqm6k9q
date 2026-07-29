@@ -54,7 +54,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCardProps) {
   return (
     <div
-      className={`glass-card glass-card-hover p-8 rounded-3xl border-white/10 flex flex-col justify-between transition-all duration-700 relative overflow-hidden group ${
+      className={`glass-card glass-card-hover p-8 rounded-3xl border-white/10 flex flex-col justify-between transition-all duration-700 relative overflow-hidden group active:opacity-90 ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -106,7 +106,7 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
           <Button
             asChild
             aria-label={`Ver case completo do projeto ${project.title}`}
-            className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full gradient-btn text-xs font-bold py-3 min-h-[48px] rounded-xl flex items-center justify-center gap-2 cursor-pointer active:scale-95 transition-transform"
           >
             <Link to={project.casePageRoute}>
               <ExternalLink className="w-4 h-4" />
@@ -117,7 +117,7 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
           <Button
             onClick={() => onOpenModal(project)}
             aria-label={`Ver case completo do projeto ${project.title}`}
-            className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full gradient-btn text-xs font-bold py-3 min-h-[48px] rounded-xl flex items-center justify-center gap-2 cursor-pointer active:scale-95 transition-transform"
           >
             <ExternalLink className="w-4 h-4" />
             Ver Case Completo
