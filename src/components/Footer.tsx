@@ -1,11 +1,11 @@
-import { Sparkles, Linkedin, Github, MapPin, ExternalLink } from 'lucide-react'
+import { Sparkles, Linkedin, Github, MapPin, Globe } from 'lucide-react'
 import { TEAM_MEMBERS } from '@/data/content'
 
-const PORTFOLIOS = [
-  { name: 'Beatriz Karoline', url: 'https://soubeatrizkaroline.goskip.app/' },
-  { name: 'Monique Cardoso', url: 'https://moniquecardoso.goskip.app/' },
-  { name: 'Sonia Janara', url: 'https://jhay.goskip.app/' },
-]
+const PORTFOLIO_URLS: Record<string, string> = {
+  'Beatriz Karoline': 'https://soubeatrizkaroline.goskip.app/',
+  'Monique Cardoso': 'https://moniquecardoso.goskip.app/',
+  'Sonia Janara': 'https://jhay.goskip.app/',
+}
 
 export function Footer() {
   return (
@@ -59,34 +59,20 @@ export function Footer() {
                   >
                     <Github className="w-4 h-4" />
                   </a>
+                  {PORTFOLIO_URLS[member.name] && (
+                    <a
+                      href={PORTFOLIO_URLS[member.name]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#a78bfa] hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 transition-all cursor-pointer"
+                      aria-label={`Abrir portfólio de ${member.name} em nova aba`}
+                    >
+                      <Globe className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 border-b border-white/8">
-          <div className="md:col-span-12">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2 mb-4">
-              <ExternalLink className="w-4 h-4 text-[#a78bfa]" />
-              Portfólios
-            </h4>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-              {PORTFOLIOS.map((portfolio) => (
-                <a
-                  key={portfolio.url}
-                  href={portfolio.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 text-sm text-slate-400 hover:text-[#a78bfa] transition-all cursor-pointer"
-                >
-                  <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#8b5cf6]/50 group-hover:bg-[#8b5cf6]/10 transition-all">
-                    <ExternalLink className="w-4 h-4" />
-                  </span>
-                  <span className="font-medium">{portfolio.name}</span>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
