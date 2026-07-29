@@ -69,7 +69,7 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
               {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-1.5 bg-amber-500/12 border border-amber-500/35 text-amber-300 text-xs font-bold px-3 py-1 rounded-full"
+                  className="flex items-center gap-1.5 bg-[#F4C542]/10 border border-[#F4C542]/30 text-[#F4C542] text-xs font-bold px-3 py-1 rounded-full"
                 >
                   <Trophy className="w-3.5 h-3.5 shrink-0" />
                   <span>{award}</span>

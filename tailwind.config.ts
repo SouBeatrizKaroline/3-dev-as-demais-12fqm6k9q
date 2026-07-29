@@ -26,8 +26,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
-        display: ['Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Plus Jakarta Sans', 'Manrope', 'system-ui', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'Manrope', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -79,6 +79,11 @@ export default {
           3: 'hsl(var(--chart-3))',
           4: 'hsl(var(--chart-4))',
           5: 'hsl(var(--chart-5))',
+        },
+        gold: {
+          DEFAULT: '#F4C542',
+          light: '#FCD34D',
+          dark: '#D4A82C',
         },
       },
       borderRadius: {

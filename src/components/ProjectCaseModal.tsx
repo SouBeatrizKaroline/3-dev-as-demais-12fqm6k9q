@@ -46,7 +46,7 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
             {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 bg-amber-500/12 border border-amber-500/35 text-amber-300 text-xs font-bold px-4 py-2 rounded-full w-fit"
+                className="flex items-center gap-2 bg-[#F4C542]/10 border border-[#F4C542]/30 text-[#F4C542] text-xs font-bold px-4 py-2 rounded-full w-fit"
               >
                 <Trophy className="w-3.5 h-3.5" />
                 <span>{award}</span>
