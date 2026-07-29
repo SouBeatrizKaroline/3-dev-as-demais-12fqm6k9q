@@ -94,7 +94,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Beatriz Karoline',
     role: 'Produto • UX • Estratégia • Tecnologia',
     state: 'Pernambuco',
-    city: 'Recife • Pernambuco',
+    city: 'Jaboatão dos Guararapes • PE',
     bio: 'Conecta tecnologia, design e inovação para transformar ideias em soluções digitais centradas nas pessoas.',
     fullBio:
       'Beatriz atua conectando diferentes áreas do conhecimento para transformar problemas complexos em soluções digitais. Sua experiência multidisciplinar reúne tecnologia, design, engenharia, gestão de projetos e inovação, contribuindo para a construção de produtos centrados no usuário e MVPs desenvolvidos em equipe.',
@@ -131,8 +131,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Monique Cardoso',
     role: 'Inteligência Artificial • Ciência de Dados • Machine Learning',
     state: 'Rio de Janeiro',
-    city: 'Rio de Janeiro • RJ',
-    bio: 'Especialista em IA Generativa, Machine Learning e Ciência de Dados, desenvolvendo soluções inteligentes para problemas complexos.',
+    city: 'Duque de Caxias • RJ',
+    bio: 'Atua no desenvolvimento de soluções baseadas em Inteligência Artificial, Ciência de Dados e Machine Learning, utilizando dados e modelos inteligentes para transformar desafios reais em soluções tecnológicas.',
     fullBio:
       'Monique trabalha com modelos de aprendizado de máquina e processamento de linguagem natural para transformar grandes volumes de dados em soluções inteligíveis e automatizadas. Sua atuação inclui pipelines de dados, análise preditiva e sistemas com IA generativa, sempre em colaboração com a equipe.',
     specialty: [
@@ -148,16 +148,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       'Automações Inteligentes',
       'Fine-tuning & RAG',
     ],
-    technologies: [
-      'Python',
-      'PyTorch',
-      'OpenAI',
-      'LLMs',
-      'Scikit-learn',
-      'Pandas',
-      'Data Viz',
-      'FastAPI',
-    ],
+    technologies: ['Python', 'Análise de Dados', 'Agentes de IA', 'Machine Learning'],
     linkedin: 'https://www.linkedin.com/in/monique-cardoso21/',
     github: 'https://github.com/moniquecardoso25',
     photoUrl: moniqueImage,
