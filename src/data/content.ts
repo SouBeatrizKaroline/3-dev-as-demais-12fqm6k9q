@@ -904,7 +904,7 @@ export const PROJECTS: Project[] = [
       'Semifinalista Continental Brasil na categoria SBT da GameJamPlus 24/25, reconhecido pela criatividade, narrativa envolvente e experiência lúdica construída durante a competição.',
     learnings:
       'O desenvolvimento de jogos em game jams exige equilíbrio entre criatividade, escopo viável e execução técnica. A experiência demonstrou como narrativa, design de fases e mecânicas de gameplay podem se unir para criar uma experiência memorável em tempo recorde.',
-    award: '🏆 Semifinalista Continental Brasil – Categoria SBT',
+    award: '🏆 Top 3 da Categoria SBT na GameJamPlus 24/25',
     isAwarded: true,
     tags: ['Game Development', 'GameJamPlus', 'Jogos', 'Game Design', 'Narrativa Interativa'],
     technologies: ['Game Development', 'Game Design', 'Prototipação', 'Narrativa Interativa'],
@@ -913,13 +913,13 @@ export const PROJECTS: Project[] = [
     iconName: 'Gamepad2',
     links: [
       {
-        title: '🎮 Jogue o jogo:',
+        title: '🎮 Jogue o jogo',
         icon: 'globe',
         url: 'https://soubeatrizkaroline.itch.io/greens',
       },
-      { title: '🎤 Pitch:', icon: 'youtube', url: 'https://www.youtube.com/watch?v=a_whtO1U2s4' },
+      { title: '🎤 Pitch', icon: 'youtube', url: 'https://www.youtube.com/watch?v=a_whtO1U2s4' },
       {
-        title: '▶️ Demonstração:',
+        title: '▶️ Demonstração',
         icon: 'youtube',
         url: 'https://www.youtube.com/watch?v=wLFgBpOJBKA',
       },

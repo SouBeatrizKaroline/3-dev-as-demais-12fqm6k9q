@@ -1,6 +1,6 @@
 import { Project } from '@/data/content'
 
-const PINNED_IDS = ['destinai', 'giro']
+const PINNED_IDS = ['destinai', 'earth-connections', 'giro', 'lazurus', 'os-greens', 'connectgreen']
 
 const YEAR_OVERRIDES: Record<string, number> = {
   reclapp: 2025,
