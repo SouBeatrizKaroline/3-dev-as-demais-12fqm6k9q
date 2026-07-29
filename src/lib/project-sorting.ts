@@ -1,24 +1,26 @@
 import { Project } from '@/data/content'
 
-const PINNED_IDS = ['destinai', 'earth-connections', 'giro', 'lazurus', 'os-greens', 'connectgreen']
-
 const YEAR_OVERRIDES: Record<string, number> = {
   reclapp: 2025,
   greenhat: 2021,
 }
 
 function getAwardTier(project: Project): number {
+  if (project.id === 'destinai') return 0
+
   const awards = project.awards ?? (project.award ? [project.award] : [])
   const text = awards.join(' ').toLowerCase()
 
-  if (text.includes('1º lugar') || text.includes('winner')) return 1
+  if (text.includes('1º lugar') || text.includes('ganhador')) return 1
   if (text.includes('2º lugar')) return 2
   if (text.includes('3º lugar')) return 3
   if (text.includes('menção honrosa')) return 4
-  if (text.includes('finalista') && !text.includes('global nominee')) return 5
-  if (text.includes('global nominee')) return 6
-  if (text.includes('top')) return 7
-  return 8
+  if (text.includes('winner')) return 5
+  if (text.includes('top 3')) return 6
+  if (text.includes('top 10')) return 7
+  if (text.includes('top 15')) return 8
+  if (text.includes('global nominee')) return 9
+  return 10
 }
 
 function getAwardYear(project: Project): number {
@@ -30,19 +32,7 @@ function getAwardYear(project: Project): number {
 }
 
 export function sortProjects(projects: Project[]): Project[] {
-  const pinned: Project[] = []
-  const rest: Project[] = []
-
-  for (const id of PINNED_IDS) {
-    const p = projects.find((proj) => proj.id === id)
-    if (p) pinned.push(p)
-  }
-
-  for (const p of projects) {
-    if (!PINNED_IDS.includes(p.id)) rest.push(p)
-  }
-
-  rest.sort((a, b) => {
+  return [...projects].sort((a, b) => {
     const tierA = getAwardTier(a)
     const tierB = getAwardTier(b)
     if (tierA !== tierB) return tierA - tierB
@@ -53,6 +43,4 @@ export function sortProjects(projects: Project[]): Project[] {
 
     return 0
   })
-
-  return [...pinned, ...rest]
 }

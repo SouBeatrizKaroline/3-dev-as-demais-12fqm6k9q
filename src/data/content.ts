@@ -482,7 +482,7 @@ export const PROJECTS: Project[] = [
       '1º lugar no Hack Frost NL 2.0, com solução reconhecida por unir educação ambiental, gamificação e experiência do usuário em um MVP acessível e engajador.',
     learnings:
       'Gamificação pode ser uma ferramenta poderosa para transformar hábitos sustentáveis em ações cotidianas, especialmente quando combinada com educação e design centrado no usuário. A simplicidade do protótipo demonstrou que pequenos desafios podem gerar grande engajamento.',
-    award: '🏆 1º Lugar – Hack Frost NL 2.0',
+    award: '🥇 1º Lugar — Hack Frost NL 2.0',
     isAwarded: true,
     tags: ['Figma', 'UX/UI', 'Sustentabilidade', 'Gamificação', 'Educação Ambiental'],
     metric: '1º Lugar',
@@ -529,7 +529,7 @@ export const PROJECTS: Project[] = [
       'O Girô foi desenvolvido durante o Hackathon GiraLab e evoluiu para uma plataforma publicada, disponibilizando um acervo digital voltado à educação antirracista e decolonial. O projeto demonstrou como tecnologia, cultura e colaboração podem ampliar o acesso ao conhecimento e fortalecer comunidades de aprendizagem.',
     learnings:
       'O desenvolvimento do Girô evidenciou a importância do design centrado no usuário em projetos de impacto social e cultural. A experiência reforçou o valor da construção colaborativa, da acessibilidade à informação e do uso da tecnologia como ferramenta para democratizar o conhecimento e promover espaços de diálogo e aprendizagem contínua.',
-    award: 'Desenvolvido durante o Hackathon GiraLab, iniciativa do Intermuseus.',
+    award: 'Ganhador do Hackathon GiraLab.',
     isAwarded: true,
     tags: ['Educação', 'UX/UI', 'Comunidade', 'Cultura', 'Web Platform'],
     technologies: [
@@ -578,7 +578,7 @@ export const PROJECTS: Project[] = [
       'O Infinitour conquistou o 2º lugar no Hackatour Cataratas 2022, destacando-se pela proposta de tornar a comunicação turística mais acessível por meio da adaptação de conteúdos para diferentes públicos e faixas etárias.',
     learnings:
       'O projeto demonstrou que acessibilidade também significa adaptar a comunicação e a forma como o conhecimento é apresentado. Desenvolver experiências inclusivas envolve considerar diferentes idades, níveis de compreensão e formas de consumir informação, tornando o turismo mais acolhedor para todos os visitantes.',
-    award: '🥈 2º Lugar – Hackatour Cataratas (2022)',
+    award: '🥈 2º Lugar — Hackatour Cataratas (2022)',
     isAwarded: true,
     tags: ['Turismo', 'UX/UI', 'Acessibilidade', 'Figma', 'Educação'],
     technologies: ['Figma', 'UX/UI Design', 'Prototipação'],
@@ -619,7 +619,7 @@ export const PROJECTS: Project[] = [
       'O ium conquistou o 2º lugar na categoria UI/UX Design do Hacka Pride 2023, sendo reconhecido pela criação de uma experiência digital inclusiva, empática e centrada nas necessidades da comunidade trans.',
     learnings:
       'O desenvolvimento do ium reforçou a importância do design centrado nas pessoas, principalmente na criação de soluções para públicos historicamente pouco representados na tecnologia. O projeto demonstrou como UX pode ser uma ferramenta de inclusão, acolhimento e transformação social.',
-    award: '🥈 2º Lugar – Hacka Pride (2023)',
+    award: '🥈 2º Lugar — Hacka Pride (2023)',
     isAwarded: true,
     tags: ['UX', 'UI', 'Design', 'Saúde Digital', 'HealthTech', 'Inclusão', 'Design Social'],
     technologies: ['UX Design', 'UI Design', 'Prototipação', 'Design Centrado no Usuário'],
@@ -660,7 +660,7 @@ export const PROJECTS: Project[] = [
       '2º lugar no Potência Hack (2023), reconhecido pela proposta de utilizar tecnologia como instrumento de inclusão digital e impacto social, ampliando o acesso à educação tecnológica para pessoas em situação de vulnerabilidade.',
     learnings:
       'A inclusão digital vai muito além do acesso à internet — ela exige que pessoas tenham dispositivos adequados para estudar, se qualificar e participar ativamente da sociedade. Projetos que conectam recursos ociosos a quem deles necessita demonstram como a tecnologia pode ser uma ferramenta poderosa de transformação social e educacional quando orientada por empatia e propósito.',
-    award: '🥈 2º Lugar – Potência Hack (2023)',
+    award: '🥈 2º Lugar — Potência Hack (2023)',
     isAwarded: true,
     tags: ['UX', 'Produto', 'Impacto Social', 'Educação', 'Inclusão Digital'],
     metric: '2º Lugar',
@@ -738,7 +738,7 @@ export const PROJECTS: Project[] = [
       'Reconhecido como Most Courageous Hack #1 no TechTogether Miami, destacando-se pela coragem de abordar a inclusão financeira feminina no universo das criptomoedas através de um MVP educacional centrado na experiência do usuário.',
     learnings:
       'Educação financeira combinada com design centrado no usuário pode ser uma ferramenta poderosa para quebrar barreiras culturais e democratizar o acesso a investimentos. O desenvolvimento de um MVP focado em aprendizagem demonstrou que a confiança é o primeiro passo antes da ação.',
-    award: '🏆 Winner – Most Courageous Hack #1 • TechTogether Miami',
+    award: 'Winner – Most Courageous Hack #1 • TechTogether Miami',
     isAwarded: true,
     tags: ['Figma', 'UX/UI', 'FinTech', 'Educação Financeira', 'Prototipação'],
     metric: 'Most Courageous Hack',
@@ -785,7 +785,7 @@ export const PROJECTS: Project[] = [
       'Top 10 no iHack2Green (2022), destacando-se por conectar tecnologia e sustentabilidade na transição energética.',
     learnings:
       'Plataformas de conexão podem acelerar a transição para energias limpas quando combinam dados, transparência e facilitação de negócios.',
-    award: '🎖 Top 10 — iHack2Green (2022)',
+    award: 'Top 10 — iHack2Green (2022)',
     isAwarded: true,
     tags: ['GreenTech', 'Energia', 'Sustentabilidade'],
     metric: 'Top 10',
@@ -864,7 +864,7 @@ export const PROJECTS: Project[] = [
       'Top 15 na Hackatona ADE Sampa (2022), reconhecido por abordar um tema negligenciado com empatia e tecnologia.',
     learnings:
       'Tecnologia para a terceira idade exige acessibilidade, empatia e coragem para abordar temas tabu — o impacto social compensa o desafio.',
-    award: '🎖 Top 15 — Hackatona ADE Sampa (2022)',
+    award: 'Top 15 — Hackatona ADE Sampa (2022)',
     isAwarded: true,
     tags: ['HealthTech', 'UX', 'Mobile'],
     metric: 'Top 15',
@@ -904,7 +904,7 @@ export const PROJECTS: Project[] = [
       'Semifinalista Continental Brasil na categoria SBT da GameJamPlus 24/25, reconhecido pela criatividade, narrativa envolvente e experiência lúdica construída durante a competição.',
     learnings:
       'O desenvolvimento de jogos em game jams exige equilíbrio entre criatividade, escopo viável e execução técnica. A experiência demonstrou como narrativa, design de fases e mecânicas de gameplay podem se unir para criar uma experiência memorável em tempo recorde.',
-    award: '🏆 Top 3 da Categoria SBT na GameJamPlus 24/25',
+    award: 'Top 3 — GameJamPlus 24/25',
     isAwarded: true,
     tags: ['Game Development', 'GameJamPlus', 'Jogos', 'Game Design', 'Narrativa Interativa'],
     technologies: ['Game Development', 'Game Design', 'Prototipação', 'Narrativa Interativa'],
@@ -997,10 +997,7 @@ export const PROJECTS: Project[] = [
       'Reconhecida como Global Nominee no NASA Space Apps Challenge 2024 e finalista regional em Barueri/SP, destacando-se por tornar conteúdos científicos complexos acessíveis ao público jovem.',
     learnings:
       'A comunicação científica pode ser transformada em experiências educacionais engajadoras quando combinada com design centrado no público infantojuvenil e interatividade. A arquitetura preparada para futura integração com dados da NASA mostra o caminho para a evolução do MVP.',
-    awards: [
-      '🏆 Global Nominee – NASA Space Apps Challenge 2024',
-      '⭐ Finalista Regional – NASA Space Apps Challenge (Barueri/SP)',
-    ],
+    awards: ['Global Nominee – NASA Space Apps Challenge 2024 — Finalista Regional Barueri/SP'],
     isAwarded: true,
     tags: ['NASA Science', 'React', 'Vite', 'Figma', 'Educação Ambiental'],
     technologies: [
@@ -1109,7 +1106,7 @@ export const PROJECTS: Project[] = [
       'Reconhecida como Global Nominee no NASA Space Apps Challenge 2025, democratizando o acesso à pesquisa de exoplanetas através de IA e Ciência Cidadã.',
     learnings:
       'A combinação de Inteligência Artificial e participação humana pode transformar processos científicos complexos em experiências acessíveis, ampliando significativamente a participação da sociedade na pesquisa científica.',
-    award: '🏆 Global Nominee — NASA Space Apps Challenge 2025',
+    award: 'Global Nominee — NASA Space Apps Challenge 2025',
     isAwarded: true,
     tags: [
       'IA',
@@ -1190,7 +1187,7 @@ export const PROJECTS: Project[] = [
       '🏆 1º Lugar — Impulso Regional • Rotas de Integração – Centro-Oeste (2024). O RaízesGo foi reconhecido como a melhor solução do desafio, destacando-se pela pesquisa de campo, inovação tecnológica e impacto potencial no fortalecimento da economia regional.',
     learnings:
       'A combinação de pesquisa de campo profunda com tecnologia acessível pode transformar cadeias produtivas inteiras. O contato direto com produtores, compradores e instituições revelou que a tecnologia deve ser simples, acessível e adaptada à realidade local para gerar adoção e impacto real.',
-    award: '🏆 1º Lugar — Impulso Regional • Rotas de Integração – Centro-Oeste (2024)',
+    award: '🥇 1º Lugar — Impulso Regional • Rotas de Integração – Centro-Oeste (2024)',
     isAwarded: true,
     tags: [
       'React',
@@ -1262,7 +1259,7 @@ export const PROJECTS: Project[] = [
       'Projeto vencedor desenvolvido para fortalecer comunidades quilombolas, promover o uso sustentável dos recursos naturais, preservar o Cerrado e ampliar oportunidades de comercialização por meio de uma plataforma digital integrada.',
     learnings:
       'A tecnologia pode ser uma ferramenta poderosa para fortalecer comunidades tradicionais, preservar biomas e conectar produtores a novas oportunidades de mercado quando aliada à valorização cultural e ao desenvolvimento sustentável.',
-    award: '🏆 1º Lugar — Hackathon Desafio Governo de Goiás (2024)',
+    award: '🥇 1º Lugar — Hackathon Desafio Governo de Goiás (2024)',
     isAwarded: true,
     tags: [
       'React',
