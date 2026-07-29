@@ -285,12 +285,12 @@ export const STATS: StatItem[] = [
   },
   {
     id: '4',
-    label: 'Projetos Finalistas',
+    label: 'Projetos Internacionais Apresentados',
     value: 7,
-    suffix: '',
+    suffix: '+',
     icon: 'Sparkles',
     description:
-      'Projetos finalistas em competições de inovação, com participação presencial e viagens para diferentes estados do Brasil para apresentar soluções.',
+      'Participação em desafios e competições internacionais de tecnologia e inovação, levando soluções desenvolvidas pela equipe para diferentes comunidades e ecossistemas globais.',
   },
   {
     id: '5',
