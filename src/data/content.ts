@@ -287,7 +287,7 @@ export const STATS: StatItem[] = [
     id: '4',
     label: 'Projetos Internacionais',
     value: 7,
-    suffix: '',
+    suffix: '+',
     icon: 'MapPin',
     description: 'Participação em desafios globais de inovação com soluções tecnológicas.',
   },
