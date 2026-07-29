@@ -60,7 +60,7 @@ export function TeamSection() {
               <p className="text-sm text-slate-300 leading-relaxed mb-4">{member.bio}</p>
 
               <div className="flex flex-wrap gap-1.5 mb-5">
-                {member.technologies.slice(0, 4).map((tech) => (
+                {member.tags.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
                     className="text-[10px] font-mono font-semibold text-[#00f0ff] bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-2.5 py-1 rounded-full"
