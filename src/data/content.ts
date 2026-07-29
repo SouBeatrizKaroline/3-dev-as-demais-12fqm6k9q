@@ -539,42 +539,42 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'potencia-hack',
-    title: 'Potência Hack',
+    title: 'Equipa Tech',
     description:
-      'Reconhecimento na categoria UI/UX Design pelo desenvolvimento de uma solução focada em acessibilidade, experiência do usuário e impacto social.',
+      'Plataforma de inclusão digital criada para ampliar o acesso à educação tecnológica por meio do empréstimo de equipamentos para estudantes em situação de vulnerabilidade.',
     longDescription:
-      'Solução focada em acessibilidade e UX reconhecida no Potência Hack, combinando design de qualidade e impacto social.',
+      'Projeto premiado no Potência Hack 2023, desenvolvido para reduzir barreiras de acesso a computadores, dispositivos móveis e conectividade para pessoas em busca de qualificação.',
     overview:
-      'Potência Hack é uma solução digital reconhecida na categoria UI/UX Design pelo desenvolvimento de uma interface focada em acessibilidade, experiência do usuário e impacto social, demonstrando que design inclusivo gera resultados reais.',
+      'Equipa Tech é uma proposta de plataforma de inclusão digital idealizada para ampliar o acesso à educação tecnológica por meio do empréstimo de equipamentos — como computadores e dispositivos móveis — para estudantes em situação de vulnerabilidade social. A solução foi concebida durante o Potência Hack 2023 com o objetivo de reduzir barreiras que impedem pessoas em busca de qualificação de participar plenamente do ecossistema digital e educacional.',
     challenge:
-      'Problemas sociais complexos exigem soluções digitais que sejam acessíveis, intuitivas e capazes de gerar impacto real na vida das pessoas.',
+      'A exclusão digital permanece um obstáculo significativo para estudantes em situação de vulnerabilidade social. Muitas pessoas que buscam qualificação tecnológica e educacional não possuem computadores ou dispositivos móveis adequados, nem acesso estável à conectividade, o que limita suas oportunidades de aprendizado, desenvolvimento profissional e inserção no mercado de trabalho. O desafio consistia em idealizar uma solução que aproximasse equipamentos ociosos de quem deles necessita para estudar e se qualificar.',
     solution:
-      'Solução digital com foco em acessibilidade e UX, desenvolvida para maximizar o impacto social através de uma experiência de usuário excepcional.',
+      'A solução idealizada consiste em uma plataforma conceitual de inclusão digital que conecta doadores, instituições parceiras e estudantes em situação de vulnerabilidade por meio de um sistema de empréstimo de equipamentos. A proposta prevê o cadastro de dispositivos disponíveis, a gestão de empréstimos e devoluções, e o acompanhamento do impacto social gerado pelo uso dos equipamentos em trajetórias educacionais e de qualificação.',
     features: [
-      'Interface acessível seguindo WCAG',
-      'Jornada do usuário otimizada',
-      'Design responsivo mobile-first',
-      'Componentes de alta usabilidade',
-      'Foco em inclusão digital',
+      'Cadastro e gestão de equipamentos disponíveis para empréstimo',
+      'Sistema de solicitação e devolução de dispositivos',
+      'Matching entre estudantes e equipamentos compatíveis com suas necessidades',
+      'Acompanhamento do impacto social e educacional gerado pelos empréstimos',
+      'Painel de gestão para instituições e mediadores da iniciativa',
     ],
     teamRole:
-      'Beatriz liderou o design UI/UX e a estratégia de produto, Monique contribuiu com análise de dados e validação, e Sonia implementou o frontend acessível.',
+      'Beatriz liderou o design UX/UI e a estratégia de produto da plataforma, Monique contribuiu com a análise de dados e a estruturação do modelo de impacto social, e Sonia implementou o protótipo da plataforma web e a arquitetura técnica da proposta.',
     contributions: [
-      'Design UI/UX e estratégia de produto',
-      'Interface acessível seguindo WCAG',
-      'Análise de dados e validação',
-      'Frontend responsivo mobile-first',
-      'Foco em inclusão digital',
+      'Design UX/UI e estratégia de produto centrada em inclusão digital',
+      'Estruturação do modelo de empréstimo e gestão de equipamentos',
+      'Análise de dados e mapeamento de impacto social',
+      'Protótipo de plataforma web para conexão entre doadores e estudantes',
+      'Proposta de jornada do usuário voltada à qualificação educacional',
     ],
     results:
-      '2º lugar no Potência Hack (2023) na categoria UI/UX Design, destacando-se pela acessibilidade e impacto social.',
+      '2º lugar no Potência Hack (2023), reconhecido pela proposta de utilizar tecnologia como instrumento de inclusão digital e impacto social, ampliando o acesso à educação tecnológica para pessoas em situação de vulnerabilidade.',
     learnings:
-      'Acessibilidade e boa experiência de usuário não são diferenciais — são requisitos fundamentais para qualquer solução de impacto social.',
-    award: '🥈 2º Lugar — Potência Hack (2023)',
+      'A inclusão digital vai muito além do acesso à internet — ela exige que pessoas tenham dispositivos adequados para estudar, se qualificar e participar ativamente da sociedade. Projetos que conectam recursos ociosos a quem deles necessita demonstram como a tecnologia pode ser uma ferramenta poderosa de transformação social e educacional quando orientada por empatia e propósito.',
+    award: '🥈 2º Lugar – Potência Hack (2023)',
     isAwarded: true,
-    tags: ['UX', 'Produto', 'Design', 'Acessibilidade'],
+    tags: ['UX', 'Produto', 'Impacto Social', 'Educação', 'Inclusão Digital'],
     metric: '2º Lugar',
-    category: 'UX/UI Design',
+    category: 'SocialTech • EdTech • Inclusão Digital • Impacto Social',
     iconName: 'Zap',
   },
   {
