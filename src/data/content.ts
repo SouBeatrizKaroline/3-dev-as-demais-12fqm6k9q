@@ -285,12 +285,11 @@ export const STATS: StatItem[] = [
   },
   {
     id: '4',
-    label: 'Projetos Internacionais Apresentados',
+    label: 'Projetos Internacionais',
     value: 7,
-    suffix: '+',
-    icon: 'Sparkles',
-    description:
-      'Participação em desafios e competições internacionais de tecnologia e inovação, levando soluções desenvolvidas pela equipe para diferentes comunidades e ecossistemas globais.',
+    suffix: '',
+    icon: 'MapPin',
+    description: 'Participação em desafios globais de inovação com soluções tecnológicas.',
   },
   {
     id: '5',
