@@ -16,6 +16,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 function StatCard({ stat, trigger }: { stat: StatItem; trigger: boolean }) {
   const count = useAnimatedCounter(stat.value, trigger, 2200)
+  const isTextValue = !!stat.textValue
 
   return (
     <div className="glass-card glass-card-hover p-6 rounded-2xl flex flex-col justify-between border-white/10 group">
@@ -27,8 +28,14 @@ function StatCard({ stat, trigger }: { stat: StatItem; trigger: boolean }) {
 
       <div>
         <div className="text-4xl sm:text-5xl font-black text-white font-mono tracking-tight font-display">
-          {count}
-          <span className="text-[#00f0ff]">{stat.suffix}</span>
+          {isTextValue ? (
+            stat.textValue
+          ) : (
+            <>
+              {count}
+              <span className="text-[#00f0ff]">{stat.suffix}</span>
+            </>
+          )}
         </div>
         <h3 className="text-sm font-bold text-slate-200 mt-2">{stat.label}</h3>
         <p className="text-xs text-slate-400 mt-1 leading-snug">{stat.description}</p>

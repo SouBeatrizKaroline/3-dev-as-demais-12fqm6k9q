@@ -46,6 +46,7 @@ export interface StatItem {
   label: string
   value: number
   suffix?: string
+  textValue?: string
   icon: string
   description: string
 }
