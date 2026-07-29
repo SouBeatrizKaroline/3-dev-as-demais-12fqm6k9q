@@ -6,7 +6,18 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog'
 import { Project } from '@/data/content'
-import { Target, Lightbulb, TrendingUp, GraduationCap, Trophy, Cpu } from 'lucide-react'
+import {
+  Trophy,
+  Target,
+  Lightbulb,
+  TrendingUp,
+  GraduationCap,
+  Cpu,
+  Eye,
+  ListChecks,
+  Users,
+  CheckCircle2,
+} from 'lucide-react'
 
 interface ProjectCaseModalProps {
   project: Project | null
@@ -39,6 +50,13 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
         <div className="flex flex-col gap-5 mt-2">
           <div className="glass-card p-4 rounded-xl">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#00f0ff] flex items-center gap-2 mb-2">
+              <Eye className="w-4 h-4" /> Visão Geral
+            </h4>
+            <p className="text-sm text-slate-300 leading-relaxed">{project.overview}</p>
+          </div>
+
+          <div className="glass-card p-4 rounded-xl">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#00f0ff] flex items-center gap-2 mb-2">
               <Target className="w-4 h-4" /> O Desafio
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.challenge}</p>
@@ -49,6 +67,20 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
               <Lightbulb className="w-4 h-4" /> Nossa Solução
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.solution}</p>
+          </div>
+
+          <div className="glass-card p-4 rounded-xl">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 mb-3">
+              <ListChecks className="w-4 h-4" /> Funcionalidades Principais
+            </h4>
+            <ul className="space-y-2">
+              {project.features.map((feature, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="glass-card p-4 rounded-xl">
@@ -68,8 +100,15 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
           </div>
 
           <div className="glass-card p-4 rounded-xl">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-2 mb-2">
+              <Users className="w-4 h-4" /> Nossa Atuação Durante o Projeto
+            </h4>
+            <p className="text-sm text-slate-300 leading-relaxed">{project.teamRole}</p>
+          </div>
+
+          <div className="glass-card p-4 rounded-xl">
             <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2 mb-2">
-              <TrendingUp className="w-4 h-4" /> Resultados
+              <TrendingUp className="w-4 h-4" /> Resultado
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.results}</p>
           </div>
