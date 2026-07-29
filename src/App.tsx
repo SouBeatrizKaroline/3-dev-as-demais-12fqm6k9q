@@ -4,6 +4,7 @@ import { Toaster as Sonner } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import Index from './pages/Index'
 import NotFound from './pages/NotFound'
+import ProjectLazurus from './pages/ProjectLazurus'
 import Layout from './components/Layout'
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Index />} />
+          <Route path="/projetos/lazurus" element={<ProjectLazurus />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

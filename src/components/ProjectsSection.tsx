@@ -17,6 +17,7 @@ const PROJECT_ORDER = [
   'pegabot-extension',
   'dionisa',
   'earth-connections',
+  'lazurus',
   'siscar',
   'saude-express',
 ]

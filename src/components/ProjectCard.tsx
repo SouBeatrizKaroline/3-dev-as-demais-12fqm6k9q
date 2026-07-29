@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Project } from '@/data/content'
 import { Button } from '@/components/ui/button'
 import {
@@ -18,6 +19,7 @@ import {
   Leaf,
   Bot,
   HeartPulse,
+  Orbit,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -35,6 +37,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Leaf: <Leaf className="w-7 h-7 text-lime-400" />,
   Bot: <Bot className="w-7 h-7 text-cyan-400" />,
   HeartPulse: <HeartPulse className="w-7 h-7 text-red-400" />,
+  Orbit: <Orbit className="w-7 h-7 text-indigo-400" />,
 }
 
 interface ProjectCardProps {
@@ -89,14 +92,27 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
           ))}
         </div>
 
-        <Button
-          onClick={() => onOpenModal(project)}
-          aria-label={`Ver case completo do projeto ${project.title}`}
-          className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
-        >
-          <ExternalLink className="w-4 h-4" />
-          Ver Case Completo
-        </Button>
+        {project.casePageRoute ? (
+          <Button
+            asChild
+            aria-label={`Ver case completo do projeto ${project.title}`}
+            className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <Link to={project.casePageRoute}>
+              <ExternalLink className="w-4 h-4" />
+              Ver Case Completo
+            </Link>
+          </Button>
+        ) : (
+          <Button
+            onClick={() => onOpenModal(project)}
+            aria-label={`Ver case completo do projeto ${project.title}`}
+            className="w-full gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Ver Case Completo
+          </Button>
+        )}
       </div>
     </div>
   )

@@ -43,6 +43,7 @@ export interface Project {
   metric?: string
   category: string
   iconName: string
+  casePageRoute?: string
 }
 
 export interface StatItem {
@@ -970,6 +971,75 @@ export const PROJECTS: Project[] = [
     metric: 'Redução de 35% no tempo de espera',
     category: 'HealthTech',
     iconName: 'Activity',
+  },
+  {
+    id: 'lazurus',
+    title: 'Lazurus',
+    description:
+      'Plataforma educacional com Inteligência Artificial e Ciência Cidadã para democratizar a identificação de exoplanetas utilizando dados oficiais da NASA.',
+    longDescription:
+      'O Lazurus transforma um processo científico complexo em uma experiência acessível e interativa. A plataforma utiliza um modelo de IA baseado em LightGBM para pré-classificar candidatos a exoplanetas a partir de dados públicos da NASA e permite que qualquer pessoa participe da análise das curvas de luz, contribuindo com feedback em uma abordagem de Ciência Cidadã. A solução combina Inteligência Artificial, gamificação e visualização de dados astronômicos para tornar a exploração espacial mais acessível, incentivando educação científica e participação colaborativa na pesquisa de exoplanetas.',
+    overview:
+      'Lazurus é uma plataforma educacional e colaborativa que utiliza Inteligência Artificial para filtrar candidatos a exoplanetas e permite que qualquer pessoa participe da análise das curvas de luz através de uma interface intuitiva, unindo IA, gamificação, visualização científica e Ciência Cidadã.',
+    challenge:
+      'A descoberta de exoplanetas normalmente exige conhecimento técnico avançado e análise manual de grandes volumes de dados astronômicos, tornando a participação limitada a pesquisadores especializados. Mesmo com milhares de observações produzidas pelas missões espaciais da NASA, grande parte desse processo ainda é complexa para o público geral.',
+    solution:
+      'Criamos uma plataforma educacional e colaborativa que utiliza Inteligência Artificial para filtrar candidatos a exoplanetas e permite que qualquer pessoa participe da análise das curvas de luz através de uma interface intuitiva. A proposta une IA, gamificação, visualização científica e Ciência Cidadã para ampliar a participação da sociedade na exploração espacial.',
+    features: [
+      'IA baseada em LightGBM para pré-classificação de exoplanetas',
+      'Análise colaborativa de curvas de luz',
+      'Gamificação e educação científica',
+      'Visualização interativa de dados astronômicos da NASA',
+      'Arquitetura escalável com Docker',
+    ],
+    teamRole:
+      'A equipe 3 Dev.as DemAIs atuou em todas as frentes do projeto: design de produto, desenvolvimento frontend e backend, modelagem de IA e integração com APIs da NASA.',
+    contributions: [
+      'Inteligência Artificial para identificação de exoplanetas',
+      'Ciência Cidadã',
+      'Interface acessível',
+      'Visualização interativa de curvas de luz',
+      'Gamificação',
+      'Educação científica',
+      'Dados oficiais da NASA',
+      'Arquitetura escalável',
+    ],
+    results:
+      'Reconhecida como Global Nominee no NASA Space Apps Challenge 2025, democratizando o acesso à pesquisa de exoplanetas através de IA e Ciência Cidadã.',
+    learnings:
+      'A combinação de Inteligência Artificial e participação humana pode transformar processos científicos complexos em experiências acessíveis, ampliando significativamente a participação da sociedade na pesquisa científica.',
+    award: '🏆 Global Nominee — NASA Space Apps Challenge 2025',
+    isAwarded: true,
+    tags: [
+      'IA',
+      'Machine Learning',
+      'Python',
+      'Flask',
+      'React',
+      'Next.js',
+      'LightGBM',
+      'NASA APIs',
+      'Tailwind',
+      'Docker',
+    ],
+    technologies: [
+      'Python',
+      'Flask',
+      'React',
+      'Next.js',
+      'Tailwind',
+      'LightGBM',
+      'Lightkurve',
+      'Docker',
+      'GitHub',
+      'Figma',
+      'NASA APIs',
+      'Machine Learning',
+    ],
+    metric: 'Global Nominee',
+    category: 'SpaceTech • AI • Citizen Science',
+    iconName: 'Orbit',
+    casePageRoute: '/projetos/lazurus',
   },
 ]
 
