@@ -74,8 +74,16 @@ export function InteractiveMap() {
             <circle cx="490" cy="190" r="14" fill="rgba(0,240,255,0.2)" />
             <circle cx="490" cy="190" r="8" fill="#00f0ff" className="animate-pulse" />
             <circle cx="490" cy="190" r="3" fill="#ffffff" />
-            <text x="510" y="195" fill="#ffffff" fontSize="13" fontWeight="bold" fontFamily="Inter">
-              Pernambuco (Recife)
+            <text
+              x="478"
+              y="195"
+              fill="#ffffff"
+              fontSize="10"
+              fontWeight="bold"
+              fontFamily="Inter"
+              textAnchor="end"
+            >
+              Jaboatão dos Guararapes • PE
             </text>
           </g>
 
@@ -88,8 +96,8 @@ export function InteractiveMap() {
             <circle cx="400" cy="340" r="14" fill="rgba(179,0,255,0.2)" />
             <circle cx="400" cy="340" r="8" fill="#b300ff" className="animate-pulse" />
             <circle cx="400" cy="340" r="3" fill="#ffffff" />
-            <text x="415" y="360" fill="#ffffff" fontSize="13" fontWeight="bold" fontFamily="Inter">
-              Rio de Janeiro
+            <text x="415" y="360" fill="#ffffff" fontSize="12" fontWeight="bold" fontFamily="Inter">
+              Duque de Caxias • RJ
             </text>
           </g>
 
@@ -116,8 +124,8 @@ export function InteractiveMap() {
             activePin === 'pe' ? 'bg-[#00f0ff]/20 border border-[#00f0ff]' : 'hover:bg-white/5'
           }`}
         >
-          <div className="text-[10px] uppercase font-bold text-[#00f0ff] flex items-center justify-center gap-1">
-            <MapPin className="w-3 h-3" /> Pernambuco
+          <div className="text-[9px] uppercase font-bold text-[#00f0ff] flex items-center justify-center gap-1 leading-tight">
+            <MapPin className="w-3 h-3 shrink-0" /> Jaboatão dos Guararapes • PE
           </div>
           <div className="text-xs font-bold text-white mt-0.5">Beatriz Karoline</div>
         </div>
@@ -127,8 +135,8 @@ export function InteractiveMap() {
             activePin === 'rj' ? 'bg-[#b300ff]/20 border border-[#b300ff]' : 'hover:bg-white/5'
           }`}
         >
-          <div className="text-[10px] uppercase font-bold text-[#b300ff] flex items-center justify-center gap-1">
-            <MapPin className="w-3 h-3" /> Rio de Janeiro
+          <div className="text-[9px] uppercase font-bold text-[#b300ff] flex items-center justify-center gap-1 leading-tight">
+            <MapPin className="w-3 h-3 shrink-0" /> Duque de Caxias • RJ
           </div>
           <div className="text-xs font-bold text-white mt-0.5">Monique Cardoso</div>
         </div>
@@ -138,8 +146,8 @@ export function InteractiveMap() {
             activePin === 'df' ? 'bg-emerald-500/20 border border-emerald-500' : 'hover:bg-white/5'
           }`}
         >
-          <div className="text-[10px] uppercase font-bold text-emerald-400 flex items-center justify-center gap-1">
-            <MapPin className="w-3 h-3" /> Brasília (DF)
+          <div className="text-[9px] uppercase font-bold text-emerald-400 flex items-center justify-center gap-1 leading-tight">
+            <MapPin className="w-3 h-3 shrink-0" /> Brasília (DF)
           </div>
           <div className="text-xs font-bold text-white mt-0.5">Sonia Janara</div>
         </div>
