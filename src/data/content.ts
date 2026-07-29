@@ -1041,6 +1041,80 @@ export const PROJECTS: Project[] = [
     iconName: 'Orbit',
     casePageRoute: '/projetos/lazurus',
   },
+  {
+    id: 'raizesgo',
+    title: 'RaízesGo',
+    description:
+      'Plataforma digital que conecta produtores rurais, compradores institucionais e logística para fortalecer cadeias produtivas e ampliar as compras públicas no Centro-Oeste.',
+    longDescription:
+      'RaízesGo é uma plataforma digital que conecta produtores rurais, compradores institucionais e logística para fortalecer cadeias produtivas e ampliar as compras públicas no Centro-Oeste. Desenvolvida durante o Hackathon Impulso Regional, a solução conquistou o 1º lugar no Desafio 2 – Rotas de Integração – Centro-Oeste, unindo tecnologia, pesquisa de campo e inovação para transformar a economia regional.',
+    overview:
+      'RaízesGo é uma plataforma digital que conecta produtores rurais, compradores institucionais e logística em um ecossistema integrado. A solução combina marketplace rural, chatbot inteligente no WhatsApp, logística otimizada, pagamentos seguros e painéis analíticos para fortalecer cadeias produtivas e ampliar as compras públicas no Centro-Oeste.',
+    challenge:
+      'Produtores rurais do Centro-Oeste enfrentam desafios como dependência de distribuidores, dificuldade de contato direto com compradores, problemas logísticos, oscilação de preços, falta de rastreabilidade, pouca transparência nas negociações e limitação de acesso a programas de compra pública.',
+    solution:
+      'RaízesGo é uma plataforma digital que conecta produtores rurais, compradores institucionais e logística em um ecossistema integrado. A solução combina marketplace rural, chatbot inteligente no WhatsApp, logística otimizada, pagamentos seguros e painéis analíticos para fortalecer cadeias produtivas e ampliar as compras públicas no Centro-Oeste.',
+    features: [
+      'Marketplace Rural para conexão direta entre produtores e compradores',
+      'Chatbot ManGo no WhatsApp para atendimento e suporte automatizado',
+      'Logística Inteligente com otimização de rotas e entregas',
+      'Sistema de Pagamentos seguro e integrado',
+      'Gestão de Pedidos centralizada e intuitiva',
+      'Geolocalização para mapeamento de produtores e compradores',
+      'Painéis Analíticos com métricas e indicadores em tempo real',
+      'Módulo de Compras Públicas para acesso a programas institucionais',
+    ],
+    teamRole:
+      'O RaízesGo foi idealizado por um time 100% feminino durante o Hackathon Impulso Regional, conquistando o 1º lugar no Desafio 2 – Rotas de Integração – Centro-Oeste. Posteriormente, o projeto evoluiu com novos integrantes para continuidade do desenvolvimento e participação em edital de inovação.',
+    contributions: [
+      'Pesquisa de campo em três estados do Centro-Oeste',
+      'Entrevistas com restaurantes, mercados, compradores institucionais e produtores rurais',
+      'Marketplace rural para comercialização direta',
+      'Chatbot inteligente para automação de atendimento',
+      'Logística integrada com otimização de rotas',
+      'Módulo de compras públicas para acesso institucional',
+      'Painéis analíticos para tomada de decisão',
+      'Plataforma escalável com arquitetura preparada para expansão nacional',
+    ],
+    results:
+      '🏆 1º Lugar — Impulso Regional • Rotas de Integração – Centro-Oeste (2024). O RaízesGo foi reconhecido como a melhor solução do desafio, destacando-se pela pesquisa de campo, inovação tecnológica e impacto potencial no fortalecimento da economia regional.',
+    learnings:
+      'A combinação de pesquisa de campo profunda com tecnologia acessível pode transformar cadeias produtivas inteiras. O contato direto com produtores, compradores e instituições revelou que a tecnologia deve ser simples, acessível e adaptada à realidade local para gerar adoção e impacto real.',
+    award: '🏆 1º Lugar — Impulso Regional • Rotas de Integração – Centro-Oeste (2024)',
+    isAwarded: true,
+    tags: [
+      'React',
+      'TypeScript',
+      'Python',
+      'PostgreSQL',
+      'Docker',
+      'Chatbot',
+      'WhatsApp',
+      'UX/UI',
+      'Figma',
+      'GovTech',
+      'AgroTech',
+    ],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Python',
+      'PostgreSQL',
+      'Docker',
+      'Figma',
+      'WhatsApp',
+      'Chatbot',
+      'GovTech',
+      'AgroTech',
+      'UX/UI',
+      'Marketplace',
+      'Logística',
+    ],
+    metric: '1º Lugar',
+    category: 'GovTech • AgroTech • Marketplace',
+    iconName: 'Trees',
+    casePageRoute: '/projetos/raizesgo',
+  },
 ]
 
 PROJECTS.forEach((p) => {

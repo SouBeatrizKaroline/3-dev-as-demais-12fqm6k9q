@@ -20,6 +20,7 @@ import {
   Bot,
   HeartPulse,
   Orbit,
+  Trees,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -38,6 +39,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Bot: <Bot className="w-7 h-7 text-cyan-400" />,
   HeartPulse: <HeartPulse className="w-7 h-7 text-red-400" />,
   Orbit: <Orbit className="w-7 h-7 text-indigo-400" />,
+  Trees: <Trees className="w-7 h-7 text-green-500" />,
 }
 
 interface ProjectCardProps {

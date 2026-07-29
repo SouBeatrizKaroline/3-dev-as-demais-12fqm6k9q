@@ -29,6 +29,7 @@ import {
   Bot,
   HeartPulse,
   Orbit,
+  Trees,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, ReactNode> = {
@@ -47,6 +48,7 @@ const ICON_MAP: Record<string, ReactNode> = {
   Bot: <Bot className="w-8 h-8 text-cyan-400" />,
   HeartPulse: <HeartPulse className="w-8 h-8 text-red-400" />,
   Orbit: <Orbit className="w-8 h-8 text-indigo-400" />,
+  Trees: <Trees className="w-8 h-8 text-green-500" />,
 }
 
 function CaseCard({
