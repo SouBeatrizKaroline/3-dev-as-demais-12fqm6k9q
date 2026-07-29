@@ -53,14 +53,21 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div>
-        <div className="flex items-center justify-between mb-4">
-          <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+        <div className="flex items-start justify-between mb-4 gap-2">
+          <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 shrink-0">
             {ICON_MAP[project.iconName] || <Sparkles className="w-7 h-7 text-[#00f0ff]" />}
           </div>
-          {project.award && (
-            <div className="flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
-              <Trophy className="w-3.5 h-3.5" />
-              <span>{project.award}</span>
+          {(project.awards?.length ?? (project.award ? 1 : 0)) > 0 && (
+            <div className="flex flex-col gap-1.5 items-end max-w-[60%]">
+              {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  <Trophy className="w-3.5 h-3.5 shrink-0" />
+                  <span>{award}</span>
+                </div>
+              ))}
             </div>
           )}
         </div>

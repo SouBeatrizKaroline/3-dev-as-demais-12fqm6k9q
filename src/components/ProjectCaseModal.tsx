@@ -40,10 +40,17 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
           </DialogDescription>
         </DialogHeader>
 
-        {project.award && (
-          <div className="flex items-center gap-2 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-4 py-2 rounded-full w-fit">
-            <Trophy className="w-3.5 h-3.5" />
-            <span>{project.award}</span>
+        {(project.awards?.length ?? (project.award ? 1 : 0)) > 0 && (
+          <div className="flex flex-col gap-2 w-fit">
+            {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-2 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-4 py-2 rounded-full w-fit"
+              >
+                <Trophy className="w-3.5 h-3.5" />
+                <span>{award}</span>
+              </div>
+            ))}
           </div>
         )}
 
@@ -88,7 +95,7 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
               <Cpu className="w-4 h-4" /> Tecnologias Utilizadas
             </h4>
             <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, idx) => (
+              {(project.technologies ?? project.tags).map((tag, idx) => (
                 <span
                   key={idx}
                   className="text-xs font-mono text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg"

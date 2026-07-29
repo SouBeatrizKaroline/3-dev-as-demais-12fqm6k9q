@@ -34,6 +34,8 @@ export interface Project {
   results: string
   learnings: string
   award?: string
+  awards?: string[]
+  technologies?: string[]
   isAwarded: boolean
   tags: string[]
   metric?: string
@@ -817,40 +819,52 @@ export const PROJECTS: Project[] = [
     id: 'earth-connections',
     title: 'Earth Connections',
     description:
-      'Plataforma interativa baseada em dados abertos da NASA para conscientização e mitigação de mudanças climáticas.',
+      'Plataforma educacional interativa inspirada em dados e conteúdos científicos da NASA para tornar as mudanças climáticas mais acessíveis ao público jovem.',
     longDescription:
-      'Aplicação web imersiva com visualizações de dados de satélite da NASA, projetada para engajar escolas e comunidades locais. Reconhecida como finalista regional no NASA Space Apps Challenge em Barueri/SP.',
+      'MVP desenvolvido durante o NASA Space Apps Challenge 2024 que utiliza experiências interativas, simulações e recursos educativos para explicar como diferentes sistemas da Terra estão conectados.',
     overview:
-      'Earth Connections é uma plataforma interativa baseada em dados abertos da NASA que oferece visualizações imersivas de dados de satélite para conscientização sobre mudanças climáticas, engajando escolas e comunidades na identificação de ilhas de calor e riscos ambientais.',
+      'Earth Connections é uma plataforma educacional interativa inspirada em dados e conteúdos científicos da NASA, desenvolvida para tornar as mudanças climáticas mais acessíveis ao público jovem. O MVP utiliza experiências interativas, simulações e recursos educativos para explicar como diferentes sistemas da Terra estão conectados.',
     challenge:
-      'Dados climáticos abertos da NASA são ricos em informação, mas difíceis de interpretar para comunidades locais e escolas que precisam agir diante das mudanças climáticas.',
+      'Dados climáticos e científicos da NASA são ricos em informação, mas difíceis de interpretar para crianças e adolescentes. A falta de ferramentas educacionais engajadoras dificulta a conscientização sobre mudanças climáticas entre o público jovem.',
     solution:
-      'Aplicação web imersiva com visualizações interativas de dados de satélite da NASA, projetada para engajar escolas e comunidades na identificação de ilhas de calor e riscos climáticos.',
+      'Plataforma educacional interativa que utiliza experiências interativas, simulações e recursos educativos para explicar como diferentes sistemas da Terra estão conectados, tornando as mudanças climáticas mais acessíveis e compreensíveis para crianças e adolescentes.',
     features: [
-      'Visualizações interativas de dados de satélite da NASA',
-      'Mapa de ilhas de calor urbanas',
-      'Identificação de riscos climáticos locais',
-      'Módulo educativo para escolas',
-      'Dashboard de indicadores ambientais',
+      'Exploração interativa dos sistemas da Terra',
+      'Conteúdo sobre incêndios florestais, desmatamento e degelo polar',
+      'Simulador do impacto do CO₂ na temperatura global',
+      'Quiz educativo',
+      'Interface desenvolvida para crianças e adolescentes',
     ],
     teamRole:
-      'Beatriz liderou o design UX/UI e as visualizações, Monique desenvolveu o processamento de dados climáticos, e Sonia implementou a aplicação web e integração com APIs da NASA.',
+      'Beatriz liderou o design UX/UI e as visualizações, Monique desenvolveu o processamento de conteúdo educativo, e Sonia implementou a aplicação web em React e Vite.',
     contributions: [
-      'Design UX/UI e visualizações interativas de dados',
-      'Processamento de dados climáticos de satélite',
-      'Aplicação web e integração com APIs da NASA',
-      'Mapa de ilhas de calor urbanas',
-      'Módulo educativo para escolas e comunidades',
+      'Experiência educacional baseada em interatividade',
+      'UX/UI desenvolvida para o público infantojuvenil',
+      'Protótipo navegável de alta fidelidade',
+      'Comunicação científica simplificada',
+      'Arquitetura preparada para futura integração com dados da NASA',
     ],
     results:
-      'Finalista regional no NASA Space Apps Challenge (Barueri/SP), com solução reconhecida por tornar dados climáticos complexos acessíveis e acionáveis.',
+      'Reconhecida como Global Nominee no NASA Space Apps Challenge 2024 e finalista regional em Barueri/SP, destacando-se por tornar conteúdos científicos complexos acessíveis ao público jovem.',
     learnings:
-      'Visualização de dados eficaz pode transformar conjuntos massivos de informações científicas em ferramentas de conscientização e ação comunitária.',
-    award: '⭐ Finalista Regional – NASA Space Apps Challenge (Barueri/SP)',
+      'A comunicação científica pode ser transformada em experiências educacionais engajadoras quando combinada com design centrado no público infantojuvenil e interatividade. A arquitetura preparada para futura integração com dados da NASA mostra o caminho para a evolução do MVP.',
+    awards: [
+      '🏆 Global Nominee – NASA Space Apps Challenge 2024',
+      '⭐ Finalista Regional – NASA Space Apps Challenge (Barueri/SP)',
+    ],
     isAwarded: true,
-    tags: ['NASA Open Data', 'Data Viz', 'Clima', 'Educação', 'React'],
-    metric: 'Finalista Regional',
-    category: 'ClimateTech',
+    tags: ['NASA Science', 'React', 'Vite', 'Figma', 'Educação Ambiental'],
+    technologies: [
+      'React.js',
+      'Vite',
+      'Figma',
+      'GitHub',
+      'NASA Science',
+      'NASA Earth Observatory',
+      'NASA My NASA Data',
+    ],
+    metric: 'Global Nominee',
+    category: 'ClimateTech • EdTech',
     iconName: 'Globe',
   },
   {
