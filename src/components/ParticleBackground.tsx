@@ -31,26 +31,25 @@ export function ParticleBackground() {
       alpha: number
     }> = []
 
-    const numParticles = Math.min(Math.floor(width / 20), 60)
-    const colors = ['#00f0ff', '#b300ff', '#3b82f6', '#8b5cf6']
+    const numParticles = Math.min(Math.floor(width / 22), 50)
+    const colors = ['#8b5cf6', '#c4b5fd', '#a78bfa', '#7c3aed']
 
     for (let i = 0; i < numParticles; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        size: Math.random() * 2 + 1,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
+        size: Math.random() * 1.8 + 0.8,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
         color: colors[Math.floor(Math.random() * colors.length)],
-        alpha: Math.random() * 0.6 + 0.2,
+        alpha: Math.random() * 0.4 + 0.1,
       })
     }
 
     const render = () => {
       ctx.clearRect(0, 0, width, height)
 
-      // Draw subtle grid lines
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)'
+      ctx.strokeStyle = 'rgba(139, 92, 246, 0.02)'
       ctx.lineWidth = 1
       const gridSize = 80
       for (let x = 0; x < width; x += gridSize) {
@@ -66,11 +65,9 @@ export function ParticleBackground() {
         ctx.stroke()
       }
 
-      // Render and update particles
       particles.forEach((p) => {
         p.x += p.vx
         p.y += p.vy
-
         if (p.x < 0) p.x = width
         if (p.x > width) p.x = 0
         if (p.y < 0) p.y = height
@@ -79,7 +76,7 @@ export function ParticleBackground() {
         ctx.save()
         ctx.globalAlpha = p.alpha
         ctx.fillStyle = p.color
-        ctx.shadowBlur = 10
+        ctx.shadowBlur = 8
         ctx.shadowColor = p.color
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
@@ -87,18 +84,16 @@ export function ParticleBackground() {
         ctx.restore()
       })
 
-      // Connect nearby particles with lines
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x
           const dy = particles[i].y - particles[j].y
           const dist = Math.sqrt(dx * dx + dy * dy)
-
-          if (dist < 130) {
+          if (dist < 120) {
             ctx.save()
-            ctx.globalAlpha = (1 - dist / 130) * 0.15
-            ctx.strokeStyle = '#00f0ff'
-            ctx.lineWidth = 0.8
+            ctx.globalAlpha = (1 - dist / 120) * 0.1
+            ctx.strokeStyle = '#8b5cf6'
+            ctx.lineWidth = 0.6
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)

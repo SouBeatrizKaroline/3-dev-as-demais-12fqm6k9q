@@ -26,18 +26,18 @@ import {
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Sprout: <Sprout className="w-7 h-7 text-emerald-400" />,
-  ShieldCheck: <ShieldCheck className="w-7 h-7 text-[#00f0ff]" />,
+  ShieldCheck: <ShieldCheck className="w-7 h-7 text-[#a78bfa]" />,
   Globe: <Globe className="w-7 h-7 text-blue-400" />,
   Activity: <Activity className="w-7 h-7 text-pink-400" />,
   Recycle: <Recycle className="w-7 h-7 text-green-400" />,
   Heart: <Heart className="w-7 h-7 text-rose-400" />,
   Plane: <Plane className="w-7 h-7 text-sky-400" />,
-  Palette: <Palette className="w-7 h-7 text-purple-400" />,
+  Palette: <Palette className="w-7 h-7 text-violet-400" />,
   Zap: <Zap className="w-7 h-7 text-amber-400" />,
   Users: <Users className="w-7 h-7 text-indigo-400" />,
   TrendingUp: <TrendingUp className="w-7 h-7 text-emerald-400" />,
   Leaf: <Leaf className="w-7 h-7 text-lime-400" />,
-  Bot: <Bot className="w-7 h-7 text-cyan-400" />,
+  Bot: <Bot className="w-7 h-7 text-violet-400" />,
   HeartPulse: <HeartPulse className="w-7 h-7 text-red-400" />,
   Orbit: <Orbit className="w-7 h-7 text-indigo-400" />,
   Trees: <Trees className="w-7 h-7 text-green-500" />,
@@ -54,22 +54,22 @@ interface ProjectCardProps {
 export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCardProps) {
   return (
     <div
-      className={`glass-card glass-card-hover p-8 rounded-3xl border-white/10 flex flex-col justify-between transition-all duration-700 relative overflow-hidden group active:opacity-90 ${
+      className={`glass-card glass-card-hover p-8 rounded-2xl border-violet-500/8 flex flex-col justify-between transition-all duration-500 relative overflow-hidden group active:opacity-90 ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
-      style={{ transitionDelay: `${index * 150}ms` }}
+      style={{ transitionDelay: `${index * 120}ms` }}
     >
       <div>
         <div className="flex items-start justify-between mb-4 gap-2">
-          <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 shrink-0">
-            {ICON_MAP[project.iconName] || <Sparkles className="w-7 h-7 text-[#00f0ff]" />}
+          <div className="p-3.5 rounded-xl bg-white/5 border border-violet-500/10 shrink-0">
+            {ICON_MAP[project.iconName] || <Sparkles className="w-7 h-7 text-[#a78bfa]" />}
           </div>
           {(project.awards?.length ?? (project.award ? 1 : 0)) > 0 && (
             <div className="flex flex-col gap-1.5 items-end max-w-[60%]">
               {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full"
+                  className="flex items-center gap-1.5 bg-amber-500/12 border border-amber-500/35 text-amber-300 text-xs font-bold px-3 py-1 rounded-full"
                 >
                   <Trophy className="w-3.5 h-3.5 shrink-0" />
                   <span>{award}</span>
@@ -80,24 +80,25 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
         </div>
 
         {project.recognitionBadge && (
-          <div className="inline-flex items-center gap-1.5 bg-violet-500/15 border border-violet-500/40 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 bg-violet-500/12 border border-violet-500/35 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
             <span>{project.recognitionBadge}</span>
           </div>
         )}
 
-        <h3 className="text-2xl font-black text-white mb-2 font-display">{project.title}</h3>
-        <p className="text-sm font-semibold text-[#00f0ff] mb-3">{project.description}</p>
+        <h3 className="text-2xl font-bold text-white mb-2 font-display">{project.title}</h3>
+        <p className="text-sm font-semibold text-[#a78bfa] mb-3">{project.description}</p>
         <p className="text-sm text-slate-300 leading-relaxed mb-6">{project.longDescription}</p>
       </div>
 
       <div>
-        <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10 mb-4">
+        <div className="flex flex-wrap gap-2 pt-4 border-t border-violet-500/8 mb-4">
           {project.tags.map((tag, idx) => (
             <span
               key={idx}
-              className="text-[11px] font-mono text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg"
+              className="tech-badge text-[11px] font-mono text-slate-300 bg-violet-500/5 border border-violet-500/15 px-2.5 py-1 rounded-lg relative overflow-hidden"
             >
-              {tag}
+              <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#8b5cf6] to-[#c4b5fd] opacity-50" />
+              <span className="relative pl-1">{tag}</span>
             </span>
           ))}
         </div>

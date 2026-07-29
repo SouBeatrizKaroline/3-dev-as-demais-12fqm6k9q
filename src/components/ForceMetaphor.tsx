@@ -5,27 +5,27 @@ const CIRCLES = [
     name: 'Beatriz',
     label: 'Produto',
     items: ['UX', 'Estratégia', 'Design'],
-    border: 'border-cyan-500/50',
-    bg: 'bg-cyan-500/10',
-    text: 'text-cyan-400',
+    border: 'border-violet-500/50',
+    bg: 'bg-violet-500/10',
+    text: 'text-violet-400',
     position: 'left-[28%] top-[5%]',
   },
   {
     name: 'Monique',
     label: 'IA',
     items: ['Dados', 'LLMs', 'Machine Learning'],
-    border: 'border-purple-500/50',
-    bg: 'bg-purple-500/10',
-    text: 'text-purple-400',
+    border: 'border-[#c4b5fd]/50',
+    bg: 'bg-[#c4b5fd]/10',
+    text: 'text-[#c4b5fd]',
     position: 'left-[72%] top-[5%]',
   },
   {
     name: 'Sonia',
     label: 'Engenharia',
     items: ['Full Stack', 'Frontend', 'Backend'],
-    border: 'border-emerald-500/50',
-    bg: 'bg-emerald-500/10',
-    text: 'text-emerald-400',
+    border: 'border-rose-400/50',
+    bg: 'bg-rose-400/10',
+    text: 'text-rose-400',
     position: 'left-[50%] top-[52%]',
   },
 ]
@@ -36,13 +36,13 @@ export function ForceMetaphor() {
   return (
     <div
       ref={ref}
-      className="w-full py-16 px-4 rounded-3xl border border-white/10 relative overflow-hidden bg-gradient-to-b from-[#0f0f1a] via-[#14142b] to-[#0f0f1a] my-12"
+      className="w-full py-16 px-4 rounded-2xl border border-violet-500/10 relative overflow-hidden bg-gradient-to-b from-[#0a0b14] via-[#11122a] to-[#0a0b14] my-12"
     >
       <div className="max-w-2xl mx-auto text-center mb-10">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#00f0ff] bg-[#00f0ff]/10 px-3 py-1 rounded-full border border-[#00f0ff]/30">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#a78bfa] bg-[#8b5cf6]/10 px-3 py-1 rounded-full border border-[#8b5cf6]/30">
           Nossa Força
         </span>
-        <h3 className="text-2xl md:text-4xl font-extrabold text-white mt-4 font-display">
+        <h3 className="text-2xl md:text-4xl font-bold text-white mt-4 font-display tracking-tight">
           Três especialidades. <span className="gradient-heading">Uma equipe.</span>
         </h3>
       </div>
@@ -51,11 +51,8 @@ export function ForceMetaphor() {
         {CIRCLES.map((circle, i) => (
           <div
             key={circle.name}
-            className={`absolute ${circle.position} -translate-x-1/2 w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full border-2 ${circle.border} ${circle.bg} backdrop-blur-md flex flex-col items-center justify-center p-3 sm:p-4 text-center transition-opacity duration-700 ease-out`}
-            style={{
-              transitionDelay: `${i * 200}ms`,
-              opacity: isInView ? 1 : 0,
-            }}
+            className={`absolute ${circle.position} -translate-x-1/2 w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full border-2 ${circle.border} ${circle.bg} backdrop-blur-md flex flex-col items-center justify-center p-3 sm:p-4 text-center transition-opacity duration-500 ease-out`}
+            style={{ transitionDelay: `${i * 200}ms`, opacity: isInView ? 1 : 0 }}
           >
             <p className={`text-sm sm:text-base font-bold ${circle.text} mb-1`}>{circle.name}</p>
             <p
@@ -73,19 +70,19 @@ export function ForceMetaphor() {
       </div>
 
       <div
-        className="text-center mt-6 transition-opacity duration-700"
+        className="text-center mt-6 transition-opacity duration-500"
         style={{ transitionDelay: '600ms', opacity: isInView ? 1 : 0 }}
       >
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <span className="text-sm font-bold text-cyan-400">Produto</span>
+        <div className="flex items-center justify-center gap-3 mb-2 flex-wrap">
+          <span className="text-sm font-bold text-violet-400">Produto</span>
           <span className="text-slate-500">+</span>
-          <span className="text-sm font-bold text-purple-400">IA</span>
+          <span className="text-sm font-bold text-[#c4b5fd]">IA</span>
           <span className="text-slate-500">+</span>
-          <span className="text-sm font-bold text-emerald-400">Engenharia</span>
+          <span className="text-sm font-bold text-rose-400">Engenharia</span>
           <span className="text-slate-500">=</span>
           <span className="text-sm font-bold gradient-heading">Soluções Digitais</span>
         </div>
-        <h4 className="text-2xl md:text-3xl font-black text-white font-display">3 Dev.as DemAIs</h4>
+        <h4 className="text-2xl md:text-3xl font-bold text-white font-display">3 Dev.as DemAIs</h4>
         <p className="text-sm text-slate-400 mt-2 max-w-md mx-auto px-4">
           Diferentes especialidades. Um único propósito: construir tecnologia que gera impacto.
         </p>

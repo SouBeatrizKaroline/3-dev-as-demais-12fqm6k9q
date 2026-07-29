@@ -24,7 +24,6 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
@@ -37,7 +36,7 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-[#121222] border border-cyan-500/30 text-white max-w-lg rounded-2xl">
+      <DialogContent className="bg-[#11122a] border border-violet-500/25 text-white max-w-lg rounded-2xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold font-display text-white">
             Fale com a 3 Dev.as DemAIs
@@ -49,7 +48,7 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
 
         {submitted ? (
           <div className="py-8 flex flex-col items-center text-center gap-4">
-            <CheckCircle2 className="w-16 h-16 text-[#00f0ff] animate-bounce" />
+            <CheckCircle2 className="w-16 h-16 text-[#a78bfa] animate-bounce" />
             <h3 className="text-xl font-bold text-white">Mensagem recebida!</h3>
             <p className="text-sm text-slate-300">
               Obrigado pelo contato. Responderemos o mais rápido possível no seu e-mail.
@@ -59,7 +58,7 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
                 setSubmitted(false)
                 onOpenChange(false)
               }}
-              className="gradient-btn px-6 py-2 rounded-xl text-xs font-bold"
+              className="gradient-btn px-6 py-2 rounded-xl text-xs font-bold min-h-[44px]"
             >
               Fechar
             </Button>
@@ -73,10 +72,9 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
               <Input
                 required
                 placeholder="Ex: Maria Silva • Startup X"
-                className="bg-white/5 border-white/10 text-white placeholder:text-slate-500 rounded-xl text-sm"
+                className="bg-white/5 border-violet-500/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
               />
             </div>
-
             <div>
               <label className="text-xs font-semibold text-slate-300 mb-1 block">
                 E-mail de Contato
@@ -85,19 +83,17 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
                 required
                 type="email"
                 placeholder="exemplo@empresa.com"
-                className="bg-white/5 border-white/10 text-white placeholder:text-slate-500 rounded-xl text-sm"
+                className="bg-white/5 border-violet-500/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
               />
             </div>
-
             <div>
               <label className="text-xs font-semibold text-slate-300 mb-1 block">Assunto</label>
               <Input
                 required
                 placeholder="Hackathon, Projeto de IA, Parceria..."
-                className="bg-white/5 border-white/10 text-white placeholder:text-slate-500 rounded-xl text-sm"
+                className="bg-white/5 border-violet-500/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
               />
             </div>
-
             <div>
               <label className="text-xs font-semibold text-slate-300 mb-1 block">
                 Sua Mensagem
@@ -106,14 +102,13 @@ export function ContactFormModal({ open, onOpenChange }: ContactFormModalProps) 
                 required
                 rows={4}
                 placeholder="Descreva brevemente o projeto, desafio ou oportunidade..."
-                className="bg-white/5 border-white/10 text-white placeholder:text-slate-500 rounded-xl text-sm"
+                className="bg-white/5 border-violet-500/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
               />
             </div>
-
             <Button
               type="submit"
               disabled={loading}
-              className="gradient-btn font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-2 cursor-pointer"
+              className="gradient-btn font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-2 cursor-pointer min-h-[44px]"
             >
               <Send className="w-4 h-4" />
               <span>{loading ? 'Enviando...' : 'Enviar Mensagem'}</span>

@@ -69,7 +69,7 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] flex items-center',
         scrolled
-          ? 'bg-[#0f0f1a]/85 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40'
+          ? 'bg-[#0a0b14]/85 backdrop-blur-md border-b border-violet-500/10 shadow-lg shadow-black/40'
           : 'bg-transparent border-b border-transparent',
       )}
     >
@@ -79,9 +79,9 @@ export function Navbar() {
           onClick={(e) => handleNavClick(e, 'hero')}
           className="flex items-center gap-2 group cursor-pointer shrink-0"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#00f0ff] to-[#b300ff] p-[1px] shadow-sm shadow-cyan-500/30 group-hover:shadow-cyan-500/60 transition-all">
-            <div className="w-full h-full bg-[#0f0f1a] rounded-[11px] flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-[#00f0ff] group-hover:rotate-12 transition-transform" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#7c3aed] to-[#c4b5fd] p-[1px] shadow-sm shadow-violet-500/30 group-hover:shadow-violet-500/60 transition-all">
+            <div className="w-full h-full bg-[#0a0b14] rounded-[11px] flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-[#a78bfa] group-hover:rotate-12 transition-transform" />
             </div>
           </div>
           <span className="text-xl font-extrabold tracking-tight text-white font-display">
@@ -96,10 +96,10 @@ export function Navbar() {
               href={`#${link.section}`}
               onClick={(e) => handleNavClick(e, link.section)}
               className={cn(
-                'text-sm font-medium transition-colors relative py-1 after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#00f0ff] after:transition-all',
+                'text-sm font-medium transition-colors relative py-1 after:content-[""] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#a78bfa] after:transition-all',
                 isMainPage && activeSection === link.section
-                  ? 'text-[#00f0ff] after:w-full'
-                  : 'text-slate-300 hover:text-[#00f0ff] after:w-0 hover:after:w-full',
+                  ? 'text-[#a78bfa] after:w-full'
+                  : 'text-slate-300 hover:text-[#a78bfa] after:w-0 hover:after:w-full',
               )}
             >
               {link.label}
@@ -107,7 +107,7 @@ export function Navbar() {
           ))}
           <Button
             onClick={() => goToSection('contato')}
-            className="gradient-btn text-xs font-semibold px-5 py-2 rounded-full cursor-pointer"
+            className="gradient-btn text-xs font-semibold px-5 py-2 rounded-full cursor-pointer min-h-[44px]"
           >
             Falar Conosco
           </Button>
@@ -115,16 +115,16 @@ export function Navbar() {
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden w-11 h-11 flex items-center justify-center text-slate-300 hover:text-white focus:outline-none cursor-pointer"
+          className="lg:hidden w-11 h-11 flex items-center justify-center text-slate-300 hover:text-white focus:outline-none cursor-pointer min-h-[44px] min-w-[44px]"
           aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'}
         >
-          {mobileMenuOpen ? <X className="w-6 h-6 text-[#00f0ff]" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-6 h-6 text-[#a78bfa]" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 top-[70px] bg-[#0f0f1a]/95 backdrop-blur-xl z-40 lg:hidden flex flex-col p-6 animate-fade-in overflow-y-auto"
+          className="fixed inset-0 top-[70px] bg-[#0a0b14]/95 backdrop-blur-xl z-40 lg:hidden flex flex-col p-6 animate-fade-in overflow-y-auto"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div className="flex flex-col gap-2 mt-4">
@@ -136,8 +136,8 @@ export function Navbar() {
                 className={cn(
                   'flex items-center text-lg font-semibold py-3 px-4 rounded-xl transition-colors',
                   isMainPage && activeSection === link.section
-                    ? 'text-[#00f0ff] bg-[#00f0ff]/5'
-                    : 'text-slate-200 hover:text-[#00f0ff] hover:bg-white/5',
+                    ? 'text-[#a78bfa] bg-[#8b5cf6]/5'
+                    : 'text-slate-200 hover:text-[#a78bfa] hover:bg-white/5',
                 )}
               >
                 {link.label}
@@ -147,7 +147,7 @@ export function Navbar() {
           <div className="pt-6 mt-auto">
             <Button
               onClick={() => goToSection('contato')}
-              className="w-full gradient-btn py-3 rounded-xl font-bold text-sm"
+              className="w-full gradient-btn py-3 rounded-xl font-bold text-sm min-h-[44px]"
             >
               Falar Conosco
             </Button>

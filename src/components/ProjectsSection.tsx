@@ -18,14 +18,14 @@ export function ProjectsSection() {
   const sortedProjects = sortProjects(PROJECTS)
 
   return (
-    <section id="projetos" className="py-24 bg-[#0f0f1a] relative">
+    <section id="projetos" className="py-24 bg-[#0a0b14] relative">
       <div className="container mx-auto px-4 md:px-8">
         <div ref={ref}>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30">
               Principais Projetos
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4 font-display">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 font-display tracking-tight">
               Soluções que <span className="gradient-heading">geram impacto real</span>
             </h2>
             <p className="text-slate-400 text-sm mt-3">

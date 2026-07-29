@@ -30,9 +30,9 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-[#121222] border border-cyan-500/30 text-white max-w-2xl rounded-2xl max-h-[85vh] overflow-y-auto">
+      <DialogContent className="bg-[#11122a] border border-violet-500/25 text-white max-w-2xl rounded-2xl max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-black font-display text-white">
+          <DialogTitle className="text-2xl font-bold font-display text-white">
             {project.title}
           </DialogTitle>
           <DialogDescription className="text-slate-400 text-sm">
@@ -45,7 +45,7 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
             {(project.awards ?? (project.award ? [project.award] : [])).map((award, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold px-4 py-2 rounded-full w-fit"
+                className="flex items-center gap-2 bg-amber-500/12 border border-amber-500/35 text-amber-300 text-xs font-bold px-4 py-2 rounded-full w-fit"
               >
                 <Trophy className="w-3.5 h-3.5" />
                 <span>{award}</span>
@@ -56,28 +56,28 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
 
         <div className="flex flex-col gap-5 mt-2">
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#00f0ff] flex items-center gap-2 mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#a78bfa] flex items-center gap-2 mb-2">
               <Eye className="w-4 h-4" /> Visão Geral
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.overview}</p>
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#00f0ff] flex items-center gap-2 mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#a78bfa] flex items-center gap-2 mb-2">
               <Target className="w-4 h-4" /> O Desafio
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.challenge}</p>
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-purple-400 flex items-center gap-2 mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#c4b5fd] flex items-center gap-2 mb-2">
               <Lightbulb className="w-4 h-4" /> Nossa Solução
             </h4>
             <p className="text-sm text-slate-300 leading-relaxed">{project.solution}</p>
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 mb-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-300 flex items-center gap-2 mb-3">
               <ListChecks className="w-4 h-4" /> Funcionalidades Principais
             </h4>
             <ul className="space-y-2">
@@ -91,14 +91,14 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-300 flex items-center gap-2 mb-2">
               <Cpu className="w-4 h-4" /> Tecnologias Utilizadas
             </h4>
             <div className="flex flex-wrap gap-2">
               {(project.technologies ?? project.tags).map((tag, idx) => (
                 <span
                   key={idx}
-                  className="text-xs font-mono text-slate-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg"
+                  className="tech-badge text-xs font-mono text-slate-300 bg-violet-500/5 border border-violet-500/15 px-2.5 py-1 rounded-lg"
                 >
                   {tag}
                 </span>
@@ -107,7 +107,7 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 mb-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-300 flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4" /> Destaques da Solução
             </h4>
             <ul className="space-y-2">

@@ -11,13 +11,13 @@ export function TeamSection() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
 
   return (
-    <section id="equipe" ref={ref} className="py-20 sm:py-24 bg-[#0f0f1a] relative">
+    <section id="equipe" ref={ref} className="py-20 sm:py-24 bg-[#0a0b14] relative">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#00f0ff] bg-[#00f0ff]/10 px-3 py-1 rounded-full border border-[#00f0ff]/30">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#a78bfa] bg-[#8b5cf6]/10 px-3 py-1 rounded-full border border-[#8b5cf6]/30">
             Nossa Equipe
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4 font-display">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 font-display tracking-tight">
             As três mentes por trás da <span className="gradient-heading">3 Dev.as DemAIs</span>
           </h2>
           <p className="text-slate-400 text-sm mt-3">
@@ -29,32 +29,36 @@ export function TeamSection() {
           {TEAM_MEMBERS.map((member, i) => (
             <article
               key={member.id}
-              className={`glass-card glass-card-hover card-3d-hover p-5 sm:p-6 rounded-3xl flex flex-col border-white/10 group transition-all duration-700 ${
+              className={`glass-card glass-card-hover card-3d-hover p-5 sm:p-6 rounded-2xl border-violet-500/8 group transition-all duration-500 ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${i * 150}ms` }}
+              style={{ transitionDelay: `${i * 120}ms` }}
             >
-              <div className="relative mb-5 overflow-hidden rounded-2xl mx-auto w-full max-w-[240px] aspect-square">
-                <img
-                  src={member.photoUrl}
-                  alt={`Foto de ${member.name}, especialista em ${member.role}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 will-change-transform"
-                />
-                <div className="absolute top-3 right-3 bg-[#0f0f1a]/80 backdrop-blur-md border border-cyan-500/40 text-[#00f0ff] text-xs font-bold px-3 py-1 rounded-full">
+              <div className="relative mb-5 overflow-hidden rounded-xl mx-auto w-full max-w-[240px] aspect-square">
+                <div className="absolute inset-0 photo-ring rounded-xl p-[2px]">
+                  <div className="w-full h-full rounded-[10px] overflow-hidden">
+                    <img
+                      src={member.photoUrl}
+                      alt={`Foto de ${member.name}, especialista em ${member.role}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
+                    />
+                  </div>
+                </div>
+                <div className="absolute top-3 right-3 bg-[#0a0b14]/80 backdrop-blur-md border border-violet-500/40 text-[#a78bfa] text-xs font-bold px-3 py-1 rounded-full">
                   {member.badge}
                 </div>
               </div>
 
               <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1.5">
-                <MapPin className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-[#c4b5fd] shrink-0" />
                 <span>{member.city}</span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-1">
                 {member.name}
               </h3>
-              <p className="text-xs font-semibold text-[#00f0ff] mb-3 leading-relaxed">
+              <p className="text-xs font-semibold text-[#a78bfa] mb-3 leading-relaxed">
                 {member.role}
               </p>
               <p className="text-sm text-slate-300 leading-relaxed mb-4">{member.bio}</p>
@@ -63,7 +67,7 @@ export function TeamSection() {
                 {member.tags.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className="text-[10px] font-mono font-semibold text-[#00f0ff] bg-[#00f0ff]/10 border border-[#00f0ff]/30 px-2.5 py-1 rounded-full"
+                    className="tech-badge text-[10px] font-mono font-semibold text-[#a78bfa] bg-[#8b5cf6]/8 border border-[#8b5cf6]/20 px-2.5 py-1 rounded-full"
                   >
                     {tech}
                   </span>
@@ -80,7 +84,7 @@ export function TeamSection() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-[#00f0ff]/50 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-[#8b5cf6]/50 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer min-h-[44px]"
                   >
                     <Linkedin className="w-4 h-4" />
                     <span>LinkedIn</span>
@@ -95,7 +99,7 @@ export function TeamSection() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-purple-500/50 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    className="w-full bg-white/5 hover:bg-white/10 text-white border-white/10 hover:border-[#c4b5fd]/50 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer min-h-[44px]"
                   >
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>
@@ -106,7 +110,7 @@ export function TeamSection() {
               <Button
                 onClick={() => setSelectedMember(member)}
                 aria-label={`Conhecer perfil completo de ${member.name}`}
-                className="w-full mt-2 gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="w-full mt-2 gradient-btn text-xs font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer min-h-[44px]"
               >
                 <span>Conhecer</span>
                 <ChevronRight className="w-4 h-4" />
