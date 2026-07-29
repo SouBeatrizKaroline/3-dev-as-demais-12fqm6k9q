@@ -16,6 +16,7 @@ export interface TeamMember {
   tags: string[]
   linkedin: string
   github: string
+  portfolio?: string
   photoUrl: string
   badge: string
   gradient: string
@@ -146,6 +147,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/beatrizkcs/',
     github: 'https://github.com/SouBeatrizKaroline',
+    portfolio: 'https://soubeatrizkaroline.goskip.app/',
     photoUrl: beatrizImage,
     badge: 'Tecnologia & Inovação',
     gradient: 'from-cyan-500 to-blue-600',
@@ -210,6 +212,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/monique-cardoso21/',
     github: 'https://github.com/moniquecardoso25',
+    portfolio: 'https://moniquecardoso.goskip.app/',
     photoUrl: moniqueImage,
     badge: 'IA & Dados',
     gradient: 'from-purple-500 to-pink-600',
@@ -258,6 +261,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     linkedin: 'https://www.linkedin.com/in/jhaysavi/',
     github: 'https://github.com/Jhaysavi',
+    portfolio: 'https://jhay.goskip.app/',
     photoUrl: soniaImage,
     badge: 'Tecnologia & Estratégia',
     gradient: 'from-cyan-400 to-emerald-500',

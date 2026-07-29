@@ -1,5 +1,5 @@
 import { TEAM_MEMBERS } from '@/data/content'
-import { Linkedin, Github, MapPin, Sparkles } from 'lucide-react'
+import { Linkedin, Github, Globe, MapPin, Sparkles } from 'lucide-react'
 
 export function CtaSection() {
   return (
@@ -66,6 +66,17 @@ export function CtaSection() {
                 >
                   <Github className="w-5 h-5" />
                 </a>
+                {member.portfolio && (
+                  <a
+                    href={member.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#a78bfa] hover:border-[#8b5cf6]/50 hover:bg-[#8b5cf6]/10 transition-all cursor-pointer"
+                    aria-label={`Abrir portfólio de ${member.name} em nova aba`}
+                  >
+                    <Globe className="w-5 h-5" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
