@@ -1043,6 +1043,10 @@ export const PROJECTS: Project[] = [
   },
 ]
 
+PROJECTS.forEach((p) => {
+  if (!p.casePageRoute) p.casePageRoute = `/projetos/${p.id}`
+})
+
 export const CAPABILITIES: Capability[] = [
   {
     id: '1',
