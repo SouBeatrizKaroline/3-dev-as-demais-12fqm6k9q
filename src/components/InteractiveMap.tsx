@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MapPin, Users, Compass, Rocket } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import { useInView } from '@/hooks/use-in-view'
 
 interface MapMember {
@@ -7,7 +7,7 @@ interface MapMember {
   name: string
   location: string
   shortLocation: string
-  expertise: string
+  specialties: string
   color: string
   bgColor: string
   ringColor: string
@@ -15,19 +15,13 @@ interface MapMember {
   svgY: number
 }
 
-interface MapHighlight {
-  icon: string
-  title: string
-  description: string
-}
-
 const MEMBERS: MapMember[] = [
   {
     id: 'pe',
     name: 'Beatriz Karoline',
-    location: 'Jaboatão dos Guararapes • PE',
+    location: 'Jaboatão dos Guararapes - PE',
     shortLocation: 'PE',
-    expertise: 'Produto + IA',
+    specialties: 'Produto • UX • Estratégia • Design',
     color: '#8b5cf6',
     bgColor: 'rgba(139,92,246,0.15)',
     ringColor: 'border-[#8b5cf6]/50',
@@ -36,10 +30,10 @@ const MEMBERS: MapMember[] = [
   },
   {
     id: 'rj',
-    name: 'Monique Cardoso',
-    location: 'Duque de Caxias • RJ',
+    name: 'Monique',
+    location: 'Duque de Caxias - RJ',
     shortLocation: 'RJ',
-    expertise: 'IA + Dados',
+    specialties: 'Inteligência Artificial • Dados • LLMs • Agentes de IA',
     color: '#c4b5fd',
     bgColor: 'rgba(196,181,253,0.15)',
     ringColor: 'border-[#c4b5fd]/50',
@@ -48,10 +42,10 @@ const MEMBERS: MapMember[] = [
   },
   {
     id: 'df',
-    name: 'Sonia Janara',
-    location: 'Brasília • DF',
+    name: 'Sonia',
+    location: 'Brasília - DF',
     shortLocation: 'DF',
-    expertise: 'Software + IA',
+    specialties: 'Engenharia de Software • Full Stack • Frontend • Backend',
     color: '#f0a0c0',
     bgColor: 'rgba(240,160,192,0.15)',
     ringColor: 'border-rose-400/50',
@@ -60,35 +54,21 @@ const MEMBERS: MapMember[] = [
   },
 ]
 
-const HIGHLIGHTS: MapHighlight[] = [
-  { icon: 'Users', title: '100% Feminina', description: 'Protagonismo em tecnologia e IA' },
-  {
-    icon: 'Compass',
-    title: 'Multirregional',
-    description: 'Conexão Jaboatão, Duque de Caxias & Brasília',
-  },
-  { icon: 'Rocket', title: 'Foco em MVP', description: 'Ideia para código em horas' },
-]
-
-function getHighlightIcon(iconName: string) {
-  switch (iconName) {
-    case 'Users':
-      return <Users className="w-5 h-5 text-[#a78bfa]" />
-    case 'Compass':
-      return <Compass className="w-5 h-5 text-[#c4b5fd]" />
-    case 'Rocket':
-      return <Rocket className="w-5 h-5 text-[#f0a0c0]" />
-    default:
-      return null
-  }
-}
-
 export function InteractiveMap() {
   const [activePin, setActivePin] = useState<string | null>(null)
   const [clickedPin, setClickedPin] = useState<string | null>(null)
   const { ref, isInView } = useInView()
 
   const handlePinClick = (id: string) => {
+    setClickedPin((prev) => (prev === id ? null : id))
+    setActivePin(id)
+  }
+
+  const handleCardHover = (id: string | null) => {
+    setActivePin(id)
+  }
+
+  const handleCardClick = (id: string) => {
     setClickedPin((prev) => (prev === id ? null : id))
     setActivePin(id)
   }
@@ -223,7 +203,7 @@ export function InteractiveMap() {
                     <p className="text-xs text-slate-400">{m.location}</p>
                   </div>
                   <p className="text-[10px] font-semibold mt-1.5" style={{ color: m.color }}>
-                    {m.expertise}
+                    {m.specialties}
                   </p>
                 </div>
               </div>
@@ -232,21 +212,41 @@ export function InteractiveMap() {
         </div>
       </div>
 
-      <p className="text-center text-sm text-slate-400 mt-4 mb-2">
-        Três regiões diferentes, uma equipe conectada por tecnologia e inovação.
-      </p>
-
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
-        {HIGHLIGHTS.map((h) => (
-          <div
-            key={h.title}
-            className="glass-card rounded-xl p-4 border border-violet-500/10 flex flex-col items-center text-center"
-          >
-            <div className="mb-2">{getHighlightIcon(h.icon)}</div>
-            <h4 className="text-sm font-bold text-white">{h.title}</h4>
-            <p className="text-xs text-slate-400 mt-1 leading-relaxed">{h.description}</p>
-          </div>
-        ))}
+        {MEMBERS.map((m) => {
+          const isActive = activePin === m.id || clickedPin === m.id
+          return (
+            <div
+              key={`member-card-${m.id}`}
+              className={`glass-card rounded-xl p-4 border cursor-pointer transition-all duration-300 ${
+                isActive
+                  ? `${m.ringColor} bg-white/[0.05] scale-[1.02]`
+                  : 'border-violet-500/10 hover:border-violet-500/25'
+              }`}
+              onMouseEnter={() => handleCardHover(m.id)}
+              onMouseLeave={() => handleCardHover(null)}
+              onClick={() => handleCardClick(m.id)}
+            >
+              <div className="flex items-center gap-2 mb-1.5">
+                <span
+                  className="w-2.5 h-2.5 rounded-full shrink-0 transition-all duration-300"
+                  style={{
+                    backgroundColor: m.color,
+                    boxShadow: isActive ? `0 0 8px ${m.color}` : 'none',
+                  }}
+                />
+                <h4 className="text-sm font-bold text-white truncate">{m.name}</h4>
+              </div>
+              <p className="text-xs text-slate-400 mb-2 flex items-center gap-1">
+                <span className="shrink-0">📍</span>
+                <span className="truncate">{m.location}</span>
+              </p>
+              <p className="text-[11px] font-semibold leading-relaxed" style={{ color: m.color }}>
+                {m.specialties}
+              </p>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
