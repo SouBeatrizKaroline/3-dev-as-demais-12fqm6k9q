@@ -79,6 +79,12 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
           )}
         </div>
 
+        {project.recognitionBadge && (
+          <div className="inline-flex items-center gap-1.5 bg-violet-500/15 border border-violet-500/40 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
+            <span>{project.recognitionBadge}</span>
+          </div>
+        )}
+
         <h3 className="text-2xl font-black text-white mb-2 font-display">{project.title}</h3>
         <p className="text-sm font-semibold text-[#00f0ff] mb-3">{project.description}</p>
         <p className="text-sm text-slate-300 leading-relaxed mb-6">{project.longDescription}</p>

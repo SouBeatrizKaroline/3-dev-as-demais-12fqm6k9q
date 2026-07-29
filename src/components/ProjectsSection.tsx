@@ -5,23 +5,23 @@ import { ProjectCaseModal } from '@/components/ProjectCaseModal'
 import { ProjectCard } from '@/components/ProjectCard'
 
 const PROJECT_ORDER = [
-  'destinai',
-  'reclapp',
-  'giro',
-  'infinitour',
-  'ium',
-  'potencia-hack',
-  'viga',
-  'greenhat',
-  'connectgreen',
-  'pegabot-extension',
-  'dionisa',
-  'earth-connections',
-  'lazurus',
-  'siscar',
-  'saude-express',
   'raizesgo',
   'frutos-do-cerrado',
+  'reclapp',
+  'greenhat',
+  'destinai',
+  'giro',
+  'ium',
+  'potencia-hack',
+  'infinitour',
+  'viga',
+  'pegabot-extension',
+  'lazurus',
+  'earth-connections',
+  'connectgreen',
+  'dionisa',
+  'siscar',
+  'saude-express',
 ]
 
 export function ProjectsSection() {

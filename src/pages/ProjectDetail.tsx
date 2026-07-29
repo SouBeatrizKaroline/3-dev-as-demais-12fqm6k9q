@@ -126,6 +126,11 @@ export default function ProjectDetail() {
               ))}
             </div>
           )}
+          {project.recognitionBadge && (
+            <div className="flex items-center gap-2 bg-violet-500/15 border border-violet-500/40 text-violet-300 text-sm font-bold px-4 py-2 rounded-full w-fit mb-6">
+              <span>{project.recognitionBadge}</span>
+            </div>
+          )}
           <div className="flex items-center gap-4 mb-4">
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
               {ICON_MAP[project.iconName] || <Sparkles className="w-8 h-8 text-[#00f0ff]" />}

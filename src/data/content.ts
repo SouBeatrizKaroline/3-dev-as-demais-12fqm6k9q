@@ -44,6 +44,7 @@ export interface Project {
   category: string
   iconName: string
   casePageRoute?: string
+  recognitionBadge?: string
 }
 
 export interface StatItem {
@@ -522,6 +523,7 @@ export const PROJECTS: Project[] = [
     metric: 'Plataforma Publicada',
     category: 'EdTech • Impacto Social',
     iconName: 'Heart',
+    recognitionBadge: '⭐ Projeto em continuidade',
   },
   {
     id: 'infinitour',
