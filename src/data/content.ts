@@ -381,41 +381,40 @@ export const PROJECTS: Project[] = [
   {
     id: 'reclapp',
     title: 'ReClapp',
-    description:
-      'Aplicativo voltado à sustentabilidade inspirado nos 7Rs da reciclagem, incentivando reutilização, descarte consciente e economia circular.',
+    description: 'MVP gamificado para incentivar reciclagem e educação ambiental',
     longDescription:
-      'Aplicativo mobile que gamifica a sustentabilidade inspirado nos 7Rs da reciclagem, conectando usuários a pontos de coleta e promovendo economia circular de forma engajadora.',
+      'Aplicativo gamificado criado para incentivar reciclagem, educação ambiental e compartilhamento de práticas sustentáveis por meio de desafios e colaboração entre usuários. MVP desenvolvido durante o Hack Frost NL 2.0 com foco em sustentabilidade, economia circular e experiência do usuário.',
     overview:
-      'ReClapp é um aplicativo mobile inspirado nos 7Rs da reciclagem que utiliza gamificação para incentivar reutilização, descarte consciente e economia circular, educando usuários de forma engajadora e rastreando impacto individual.',
+      'ReClapp é um MVP de aplicativo desenvolvido para incentivar práticas sustentáveis através de gamificação, educação ambiental e compartilhamento de conhecimento entre usuários. O protótipo foi criado durante o Hack Frost NL 2.0 com foco em simplicidade, engajamento e experiência do usuário, promovendo economia circular de forma acessível e colaborativa.',
     challenge:
-      'A falta de conscientização sobre os 7Rs da reciclagem e a ausência de ferramentas práticas para incentivar a reutilização e o descarte consciente dificultam a transição para uma economia circular.',
+      'A falta de conscientização sobre reciclagem e a ausência de ferramentas práticas que incentivem o compartilhamento de práticas sustentáveis dificultam a transição para uma economia circular. Muitas pessoas não sabem por onde começar ou sentem que suas ações individuais não geram impacto.',
     solution:
-      'Aplicativo mobile que aplica os princípios dos 7Rs da reciclagem através de gamificação, educando usuários sobre reutilização, descarte consciente e economia circular de forma engajadora e prática.',
+      'Um protótipo de aplicativo gamificado que combina desafios sustentáveis, sistema de EcoPoints e compartilhamento de dicas de reciclagem e reutilização. O MVP foi desenvolvido com foco em design de alta fidelidade, sem integrações com serviços públicos ou sistemas de reciclagem, atuando como uma ferramenta educacional e motivacional para práticas sustentáveis.',
     features: [
-      'Gamificação baseada nos 7Rs da reciclagem',
-      'Mapa de pontos de coleta e descarte consciente',
-      'Conteúdo educacional sobre economia circular',
-      'Rastreamento de impacto individual',
-      'Comunidade de trocas e reutilização',
+      'Compartilhamento de dicas sobre reciclagem',
+      'Publicação de ideias de reutilização (DIY)',
+      'Desafios sustentáveis com gamificação',
+      'Sistema de EcoPoints',
+      'Busca por materiais e conteúdos relacionados',
     ],
     teamRole:
-      'Beatriz liderou o design UX/UI e a estratégia de gamificação, Monique desenvolveu a lógica de pontuação e rastreamento de impacto, e Sonia implementou o aplicativo mobile e integrações.',
+      'O protótipo foi desenvolvido em equipe durante o Hack Frost NL 2.0, com foco em pesquisa, design de produto e experiência do usuário.',
     contributions: [
-      'Design UX/UI e estratégia de gamificação',
-      'Lógica de pontuação e rastreamento de impacto',
-      'Desenvolvimento de aplicativo mobile',
-      'Conteúdo educacional sobre economia circular',
-      'Integração com pontos de coleta',
+      'UX/UI focada em simplicidade e engajamento',
+      'Gamificação aplicada à sustentabilidade',
+      'Incentivo ao compartilhamento de conhecimento',
+      'Design colaborativo centrado no usuário',
+      'Protótipo de alta fidelidade',
     ],
     results:
-      '1º lugar no Hack Frost NL (2022), com solução reconhecida por unir educação ambiental e tecnologia de forma engajadora.',
+      '1º lugar no Hack Frost NL 2.0, com solução reconhecida por unir educação ambiental, gamificação e experiência do usuário em um MVP acessível e engajador.',
     learnings:
-      'Gamificação pode ser uma ferramenta poderosa para transformar hábitos sustentáveis em ações cotidianas, especialmente quando combinada com educação.',
-    award: '🥇 1º Lugar — Hack Frost NL (2022)',
+      'Gamificação pode ser uma ferramenta poderosa para transformar hábitos sustentáveis em ações cotidianas, especialmente quando combinada com educação e design centrado no usuário. A simplicidade do protótipo demonstrou que pequenos desafios podem gerar grande engajamento.',
+    award: '🏆 1º Lugar – Hack Frost NL 2.0',
     isAwarded: true,
-    tags: ['Sustentabilidade', 'Economia Circular', 'UX/UI', 'Mobile'],
+    tags: ['Figma', 'UX/UI', 'Sustentabilidade', 'Gamificação', 'Educação Ambiental'],
     metric: '1º Lugar',
-    category: 'Sustentabilidade',
+    category: 'GreenTech • Sustainability',
     iconName: 'Recycle',
   },
   {
@@ -620,41 +619,40 @@ export const PROJECTS: Project[] = [
   {
     id: 'greenhat',
     title: 'GreenHat',
-    description:
-      'Aplicativo criado para incentivar mulheres a investirem através de educação financeira e construção de comunidade.',
+    description: 'Protótipo educacional para inclusão feminina no universo das criptomoedas',
     longDescription:
-      'Aplicativo premiado no TechTogether Miami que combina educação financeira gamificada e comunidade para empoderar mulheres investidoras.',
+      'Protótipo de aplicativo educacional criado para incentivar mulheres a aprender sobre criptomoedas e desenvolver confiança antes de realizar seus primeiros investimentos. MVP desenvolvido durante o TechTogether Miami, focado em educação financeira, experiência do usuário e inclusão feminina no universo das criptomoedas.',
     overview:
-      'GreenHat é um aplicativo criado para incentivar mulheres a investirem através de educação financeira gamificada, ferramentas de investimento simplificadas e construção de comunidade, democratizando o acesso ao mundo dos investimentos.',
+      'GreenHat é um MVP de aplicativo educacional criado durante o TechTogether Miami, com o objetivo de incentivar mulheres a aprender sobre criptomoedas e desenvolver confiança antes de realizar seus primeiros investimentos. O protótipo foca em educação financeira, experiência do usuário e inclusão feminina no universo das criptomoedas, oferecendo uma jornada de aprendizagem acessível e intuitiva para iniciantes.',
     challenge:
-      'Mulheres enfrentam barreiras culturais e educacionais para começar a investir, com falta de ferramentas acessíveis e comunidades de suporte.',
+      'Mulheres enfrentam barreiras culturais, educacionais e de confiança para entrar no universo das criptomoedas e dos investimentos. A falta de ferramentas educacionais acessíveis e de ambientes acolhedores dificulta o primeiro passo, perpetuando a exclusão financeira e limitando a participação feminina nesse mercado.',
     solution:
-      'Aplicativo que combina educação financeira gamificada, ferramentas de investimento simplificadas e uma comunidade de mulheres investidoras.',
+      'Um protótipo de aplicativo educacional que combina conteúdo introdutório sobre criptomoedas, uma jornada de aprendizagem estruturada para iniciantes e uma interface intuitiva projetada para a experiência da usuária. O MVP foi desenvolvido com foco em design de alta fidelidade, sem funcionalidades de investimento reais, atuando como uma ponte educacional entre a curiosidade e a confiança para agir.',
     features: [
-      'Trilhas de educação financeira gamificadas',
-      'Simulador de investimentos para iniciantes',
-      'Comunidade de mulheres investidoras',
-      'Dashboard de portfólio simplificado',
-      'Notificações de oportunidades',
+      'Conteúdo introdutório sobre criptomoedas',
+      'Jornada educacional para iniciantes',
+      'Interface intuitiva para aprendizagem',
+      'Protótipo mobile de alta fidelidade',
+      'Fluxo de navegação focado na experiência da usuária',
     ],
     teamRole:
-      'Beatriz liderou o design UX/UI e a estratégia de produto, Monique desenvolveu o simulador e lógica financeira, e Sonia implementou o aplicativo e backend.',
+      'O protótipo foi desenvolvido em equipe durante o TechTogether Miami, com foco em pesquisa, design de produto e experiência do usuário.',
     contributions: [
-      'Design UX/UI e estratégia de produto',
-      'Simulador de investimentos para iniciantes',
-      'Trilhas de educação financeira gamificadas',
-      'Desenvolvimento de aplicativo e backend',
-      'Comunidade de mulheres investidoras',
+      'UX/UI voltada para inclusão financeira',
+      'Pesquisa sobre educação em investimentos',
+      'Protótipo de alta fidelidade',
+      'Design inspirado em plataformas de investimento',
+      'Experiência simplificada para iniciantes',
     ],
     results:
-      'Most Courageous Hack #1 no TechTogether Miami (2022), reconhecido por empoderar mulheres financeiramente.',
+      'Reconhecido como Most Courageous Hack #1 no TechTogether Miami, destacando-se pela coragem de abordar a inclusão financeira feminina no universo das criptomoedas através de um MVP educacional centrado na experiência do usuário.',
     learnings:
-      'Educação financeira combinada com comunidade pode quebrar barreiras culturais e democratizar o acesso a investimentos para mulheres.',
-    award: '🏅 Most Courageous Hack #1 — TechTogether Miami (2022)',
+      'Educação financeira combinada com design centrado no usuário pode ser uma ferramenta poderosa para quebrar barreiras culturais e democratizar o acesso a investimentos. O desenvolvimento de um MVP focado em aprendizagem demonstrou que a confiança é o primeiro passo antes da ação.',
+    award: '🏆 Winner – Most Courageous Hack #1 • TechTogether Miami',
     isAwarded: true,
-    tags: ['Finanças', 'Educação', 'Impacto Social'],
+    tags: ['Figma', 'UX/UI', 'FinTech', 'Educação Financeira', 'Prototipação'],
     metric: 'Most Courageous Hack',
-    category: 'Finanças & Educação',
+    category: 'FinTech • EdTech',
     iconName: 'TrendingUp',
   },
   {
