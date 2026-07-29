@@ -2,6 +2,8 @@ import { useEffect, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from '@/hooks/use-in-view'
 import { Button } from '@/components/ui/button'
+import { PROJECTS } from '@/data/content'
+import { ProjectLinks } from '@/components/ProjectLinks'
 import {
   ArrowLeft,
   Trophy,
@@ -27,6 +29,7 @@ import {
   TreePalm,
   ListChecks,
   Rocket,
+  Link2,
 } from 'lucide-react'
 
 const PROBLEMAS = [
@@ -197,6 +200,7 @@ function CaseCard({
 
 export default function ProjectFrutosDoCerrado() {
   const { ref, isInView } = useInView()
+  const project = PROJECTS.find((p) => p.id === 'frutos-do-cerrado')
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -236,6 +240,16 @@ export default function ProjectFrutosDoCerrado() {
         <div
           className={`container mx-auto max-w-4xl space-y-6 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
+          {project?.links && project.links.length > 0 && (
+            <CaseCard
+              icon={<Link2 className="w-4 h-4" />}
+              title="🔗 Links do Projeto"
+              color="text-[#a78bfa]"
+            >
+              <ProjectLinks links={project.links} />
+            </CaseCard>
+          )}
+
           <CaseCard icon={<Target className="w-4 h-4" />} title="O Desafio" color="text-[#00f0ff]">
             <p className="text-sm text-slate-300 leading-relaxed">
               Desenvolver uma solução tecnológica capaz de fortalecer comunidades quilombolas por

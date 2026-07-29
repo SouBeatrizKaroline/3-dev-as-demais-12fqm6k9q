@@ -45,6 +45,13 @@ export interface Project {
   iconName: string
   casePageRoute?: string
   recognitionBadge?: string
+  links?: ProjectLink[]
+}
+
+export interface ProjectLink {
+  title: string
+  icon: string
+  url: string
 }
 
 export interface StatItem {
@@ -437,6 +444,11 @@ export const PROJECTS: Project[] = [
     metric: '-40% Desperdício Agrosocial',
     category: 'Inteligência Artificial',
     iconName: 'Sprout',
+    links: [
+      { title: 'Pitch', icon: 'youtube', url: 'https://www.youtube.com/watch?v=3e69Hha1HJI' },
+      { title: 'Protótipo', icon: 'youtube', url: 'https://www.youtube.com/watch?v=ZQvmKHnbrgU' },
+      { title: 'Site', icon: 'globe', url: 'https://destinai.goskip.app/?v=ebe1efb' },
+    ],
   },
   {
     id: 'reclapp',
@@ -476,6 +488,13 @@ export const PROJECTS: Project[] = [
     metric: '1º Lugar',
     category: 'GreenTech • Sustainability',
     iconName: 'Recycle',
+    links: [
+      {
+        title: 'Devpost',
+        icon: 'globe',
+        url: 'https://devpost.com/software/reclapp/updates/318345',
+      },
+    ],
   },
   {
     id: 'giro',
@@ -524,6 +543,7 @@ export const PROJECTS: Project[] = [
     category: 'EdTech • Impacto Social',
     iconName: 'Heart',
     recognitionBadge: '💰 Projeto contemplado com investimento',
+    links: [{ title: 'Site', icon: 'globe', url: 'https://giralab.org.br/giro/' }],
   },
   {
     id: 'infinitour',
@@ -724,6 +744,13 @@ export const PROJECTS: Project[] = [
     metric: 'Most Courageous Hack',
     category: 'FinTech • EdTech',
     iconName: 'TrendingUp',
+    links: [
+      {
+        title: 'Devpost',
+        icon: 'globe',
+        url: 'https://devpost.com/software/greenhat?_gl=1*a7ff9p*_gcl_au*NzA1MTc5MTM1LjE3ODUyOTM1ODE.*_ga*OTM2NTI3MDI2LjE3ODUyOTM1ODE.*_ga_0YHJK3Y10M*czE3ODUyOTM1ODEkbzEkZzEkdDE3ODUyOTM2NTkkajU2JGwwJGgw',
+      },
+    ],
   },
   {
     id: 'connectgreen',
@@ -934,6 +961,23 @@ export const PROJECTS: Project[] = [
     metric: 'Global Nominee',
     category: 'ClimateTech • EdTech',
     iconName: 'Globe',
+    links: [
+      {
+        title: 'Página NASA Space Apps',
+        icon: 'globe',
+        url: 'https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/space6/?tab=project',
+      },
+      {
+        title: 'Demonstração',
+        icon: 'video',
+        url: 'https://www.youtube.com/watch?v=qtBHqOawj3A&feature=youtu.be',
+      },
+      {
+        title: 'Protótipo (Figma)',
+        icon: 'figma',
+        url: 'https://www.figma.com/proto/O0tmEgdtLDcPDi3cEEtTin/NASA-SPACE-APPS?node-id=155-107412&starting-point-node-id=155%3A111432',
+      },
+    ],
   },
   {
     id: 'saude-express',
@@ -973,6 +1017,7 @@ export const PROJECTS: Project[] = [
     metric: 'Redução de 35% no tempo de espera',
     category: 'HealthTech',
     iconName: 'Activity',
+    links: [{ title: 'GitHub', icon: 'github', url: 'https://github.com/Jhaysavi/Saude-Express' }],
   },
   {
     id: 'lazurus',
@@ -1042,6 +1087,15 @@ export const PROJECTS: Project[] = [
     category: 'SpaceTech • AI • Citizen Science',
     iconName: 'Orbit',
     casePageRoute: '/projetos/lazurus',
+    links: [
+      {
+        title: 'Página NASA Space Apps',
+        icon: 'globe',
+        url: 'https://www.spaceappschallenge.org/2025/find-a-team/lazaro/?tab=project',
+      },
+      { title: 'Demonstração', icon: 'video', url: 'https://www.youtube.com/watch?v=7KDECxJHwcE' },
+      { title: 'Site', icon: 'globe', url: 'https://lazurus.vercel.app/' },
+    ],
   },
   {
     id: 'raizesgo',
@@ -1116,6 +1170,7 @@ export const PROJECTS: Project[] = [
     category: 'GovTech • AgroTech • Marketplace',
     iconName: 'Trees',
     casePageRoute: '/projetos/raizesgo',
+    links: [{ title: 'Demonstração', icon: 'video', url: 'https://youtu.be/F920sSaajuY' }],
   },
   {
     id: 'frutos-do-cerrado',
@@ -1171,6 +1226,9 @@ export const PROJECTS: Project[] = [
     category: 'SocialTech • Sustentabilidade • Cultura',
     iconName: 'TreePalm',
     casePageRoute: '/projetos/frutos-do-cerrado',
+    links: [
+      { title: 'GitHub', icon: 'github', url: 'https://github.com/Jhaysavi/frutos-do-cerrado' },
+    ],
   },
 ]
 

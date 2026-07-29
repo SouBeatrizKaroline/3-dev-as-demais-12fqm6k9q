@@ -18,6 +18,7 @@ import {
   Sparkles,
   CheckCircle2,
 } from 'lucide-react'
+import { ProjectLinks } from '@/components/ProjectLinks'
 
 interface ProjectCaseModalProps {
   project: Project | null
@@ -51,6 +52,15 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
                 <span>{award}</span>
               </div>
             ))}
+          </div>
+        )}
+
+        {project.links && project.links.length > 0 && (
+          <div className="glass-card p-4 rounded-xl">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#a78bfa] flex items-center gap-2 mb-3">
+              🔗 Links do Projeto
+            </h4>
+            <ProjectLinks links={project.links} />
           </div>
         )}
 

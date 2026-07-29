@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useInView } from '@/hooks/use-in-view'
 import { Button } from '@/components/ui/button'
 import { PROJECTS } from '@/data/content'
+import { ProjectLinks } from '@/components/ProjectLinks'
 import {
   ArrowLeft,
   Trophy,
@@ -30,6 +31,7 @@ import {
   HeartPulse,
   Orbit,
   Trees,
+  Link2,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, ReactNode> = {
@@ -159,6 +161,16 @@ export default function ProjectDetail() {
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
+          {project.links && project.links.length > 0 && (
+            <CaseCard
+              icon={<Link2 className="w-4 h-4" />}
+              title="🔗 Links do Projeto"
+              color="text-[#a78bfa]"
+            >
+              <ProjectLinks links={project.links} />
+            </CaseCard>
+          )}
+
           <CaseCard icon={<Eye className="w-4 h-4" />} title="Visão Geral" color="text-[#00f0ff]">
             <p className="text-sm text-slate-300 leading-relaxed">{project.overview}</p>
           </CaseCard>
