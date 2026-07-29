@@ -459,40 +459,41 @@ export const PROJECTS: Project[] = [
     id: 'infinitour',
     title: 'Infinitour',
     description:
-      'Plataforma de turismo acessível desenvolvida para oferecer experiências inclusivas para pessoas com deficiência e públicos diversos.',
+      'Plataforma de turismo acessível desenvolvida para tornar informações históricas e culturais compreensíveis para visitantes de diferentes faixas etárias por meio de experiências multimodais. Protótipo criado durante o Hackatour Cataratas que adapta conteúdos turísticos utilizando linguagem adequada para crianças, jovens e adultos, oferecendo informações em texto e áudio.',
     longDescription:
-      'Plataforma de turismo acessível desenvolvida no Hackatour Cataratas, oferecendo roteiros inclusivos e informações de acessibilidade para pessoas com deficiência.',
+      'Plataforma de turismo acessível desenvolvida para tornar informações históricas e culturais compreensíveis para visitantes de diferentes faixas etárias por meio de experiências multimodais. Protótipo criado durante o Hackatour Cataratas que adapta conteúdos turísticos utilizando linguagem adequada para crianças, jovens e adultos, oferecendo informações em texto e áudio.',
     overview:
-      'Infinitour é uma plataforma de turismo acessível que centraliza informações de acessibilidade de destinos turísticos, oferece roteiros personalizados e conecta viajantes a experiências inclusivas para pessoas com deficiência e públicos diversos.',
+      'Infinitour é um protótipo desenvolvido durante o Hackatour Cataratas com o objetivo de tornar a experiência turística mais acessível por meio da adaptação da comunicação para diferentes públicos. A solução apresenta informações e histórias dos pontos turísticos utilizando linguagem adequada para crianças, adolescentes e adultos, oferecendo conteúdos em texto e áudio para ampliar o acesso ao conhecimento.',
     challenge:
-      'Pessoas com deficiência enfrentam barreiras significativas no turismo, desde a falta de informações de acessibilidade até a ausência de roteiros adaptados.',
+      'Muitas informações disponíveis em pontos turísticos utilizam uma linguagem única, que nem sempre atende visitantes de diferentes idades ou perfis. O desafio era criar uma experiência capaz de tornar conteúdos históricos e culturais mais acessíveis, compreensíveis e envolventes para públicos diversos.',
     solution:
-      'Plataforma web que centraliza informações de acessibilidade de destinos turísticos, oferece roteiros personalizados e conecta viajantes a experiências inclusivas.',
+      'Desenvolvemos um protótipo de plataforma que adapta conteúdos turísticos para diferentes faixas etárias, disponibilizando informações em múltiplos formatos, como texto e áudio, para proporcionar uma experiência mais inclusiva e educativa durante as visitas.',
     features: [
-      'Catálogo de destinos com informações de acessibilidade',
-      'Roteiros personalizados por tipo de necessidade',
-      'Avaliações de acessibilidade por usuários',
-      'Mapa interativo de atrações inclusivas',
-      'Integração com prestadores de serviço',
+      'Conteúdos adaptados para crianças, adolescentes e adultos',
+      'Informações em texto e áudio',
+      'Experiência de navegação intuitiva',
+      'Apresentação de histórias e curiosidades sobre os destinos',
+      'Protótipo de alta fidelidade',
     ],
     teamRole:
       'Beatriz liderou o design UX/UI com foco em acessibilidade, Monique desenvolveu o sistema de personalização de roteiros, e Sonia implementou a plataforma web e APIs.',
     contributions: [
-      'Design UX/UI com foco em acessibilidade',
-      'Sistema de personalização de roteiros',
-      'Plataforma web e APIs',
-      'Catálogo de destinos acessíveis',
-      'Avaliações de acessibilidade por usuários',
+      'Comunicação adaptada para diferentes faixas etárias',
+      'Experiência multimodal com texto e áudio',
+      'Design centrado na acessibilidade da informação',
+      'Interface intuitiva para diferentes perfis de usuários',
+      'Protótipo de alta fidelidade desenvolvido em Figma',
     ],
     results:
-      '2º lugar no Hackatour Cataratas (2022), destacando-se pela proposta de turismo inclusivo e acessível.',
+      'O Infinitour conquistou o 2º lugar no Hackatour Cataratas 2022, destacando-se pela proposta de tornar a comunicação turística mais acessível por meio da adaptação de conteúdos para diferentes públicos e faixas etárias.',
     learnings:
-      'Acessibilidade no turismo vai além de rampas — exige informação clara, roteiros adaptados e empatia na experiência do usuário.',
-    award: '🥈 2º Lugar — Hackatour Cataratas (2022)',
+      'O projeto demonstrou que acessibilidade também significa adaptar a comunicação e a forma como o conhecimento é apresentado. Desenvolver experiências inclusivas envolve considerar diferentes idades, níveis de compreensão e formas de consumir informação, tornando o turismo mais acolhedor para todos os visitantes.',
+    award: '🥈 2º Lugar – Hackatour Cataratas (2022)',
     isAwarded: true,
-    tags: ['Turismo', 'Acessibilidade', 'UX', 'Inclusão'],
+    tags: ['Turismo', 'UX/UI', 'Acessibilidade', 'Figma', 'Educação'],
+    technologies: ['Figma', 'UX/UI Design', 'Prototipação'],
     metric: '2º Lugar',
-    category: 'Turismo Acessível',
+    category: 'Tourism • Accessibility • EdTech',
     iconName: 'Plane',
   },
   {
