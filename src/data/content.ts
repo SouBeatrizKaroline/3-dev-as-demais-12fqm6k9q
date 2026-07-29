@@ -872,6 +872,60 @@ export const PROJECTS: Project[] = [
     iconName: 'HeartPulse',
   },
   {
+    id: 'os-greens',
+    title: '🎮 Os Greens e o Resgate do Sábado Animado',
+    description:
+      'Jogo desenvolvido durante a GameJamPlus 24/25 onde o jogador assume o controle de Lilo, um corajoso Green em uma missão para resgatar seus amigos e restaurar a magia do Sábado Animado.',
+    longDescription:
+      'Os Greens e o Resgate do Sábado Animado é um jogo desenvolvido durante a GameJamPlus 24/25. O jogador assume o controle de Lilo, um corajoso Green em uma missão para resgatar seus amigos, criaturas mágicas responsáveis por manter o Sábado Animado no ar. Durante a aventura, o jogador explora uma ilha cheia de desafios, enfrenta jacarés perigosos, supera armadilhas e desbloqueia novas fases ao resgatar cada Green. O objetivo é restaurar a magia do Sábado Animado e devolver a alegria das manhãs de sábado para todas as crianças.',
+    overview:
+      'Os Greens e o Resgate do Sábado Animado é um jogo de aventura desenvolvido durante a GameJamPlus 24/25. O jogador controla Lilo, um Green corajoso que precisa explorar uma ilha cheia de desafios, enfrentar jacarés perigosos, superar armadilhas e resgatar seus amigos — criaturas mágicas que mantêm o Sábado Animado no ar — para restaurar a magia e devolver a alegria das manhãs de sábado para todas as crianças.',
+    challenge:
+      'Criar um jogo completo, com narrativa envolvente, mecânicas de gameplay divertidas e design de fases desafiador, dentro do tempo limitado de uma game jam, garantindo uma experiência lúdica e imersiva para o público infantojuvenil.',
+    solution:
+      'Desenvolvemos um jogo de aventura em que o jogador controla Lilo em uma ilha repleta de desafios. A cada Green resgatado, novas fases são desbloqueadas, criando uma jornada progressiva de exploração, combate e superação de armadilhas, com o objetivo final de restaurar a magia do Sábado Animado.',
+    features: [
+      'Desenvolvimento de jogo para GameJamPlus 24/25',
+      'Criação de narrativa e experiência interativa',
+      'Desenvolvimento de mecânicas de gameplay',
+      'Design de fases e desafios',
+      'Construção de uma experiência lúdica e imersiva',
+    ],
+    teamRole:
+      'A equipe 3 Dev.as DemAIs atuou no desenvolvimento do jogo durante a GameJamPlus 24/25, com Beatriz liderando o design de produto e narrativa, Monique contribuindo com a lógica de gameplay, e Sonia implementando mecânicas e integrações técnicas.',
+    contributions: [
+      'Desenvolvimento de jogo para GameJamPlus 24/25',
+      'Criação de narrativa e experiência interativa',
+      'Desenvolvimento de mecânicas de gameplay',
+      'Design de fases e desafios',
+      'Construção de uma experiência lúdica e imersiva',
+    ],
+    results:
+      'Semifinalista Continental Brasil na categoria SBT da GameJamPlus 24/25, reconhecido pela criatividade, narrativa envolvente e experiência lúdica construída durante a competição.',
+    learnings:
+      'O desenvolvimento de jogos em game jams exige equilíbrio entre criatividade, escopo viável e execução técnica. A experiência demonstrou como narrativa, design de fases e mecânicas de gameplay podem se unir para criar uma experiência memorável em tempo recorde.',
+    award: '🏆 Semifinalista Continental Brasil – Categoria SBT',
+    isAwarded: true,
+    tags: ['Game Development', 'GameJamPlus', 'Jogos', 'Game Design', 'Narrativa Interativa'],
+    technologies: ['Game Development', 'Game Design', 'Prototipação', 'Narrativa Interativa'],
+    metric: 'Semifinalista',
+    category: 'Game Development / GameJamPlus 24/25',
+    iconName: 'Gamepad2',
+    links: [
+      {
+        title: '🎮 Jogue o jogo:',
+        icon: 'globe',
+        url: 'https://soubeatrizkaroline.itch.io/greens',
+      },
+      { title: '🎤 Pitch:', icon: 'youtube', url: 'https://www.youtube.com/watch?v=a_whtO1U2s4' },
+      {
+        title: '▶️ Demonstração:',
+        icon: 'youtube',
+        url: 'https://www.youtube.com/watch?v=wLFgBpOJBKA',
+      },
+    ],
+  },
+  {
     id: 'siscar',
     title: 'SisCAR+',
     description:
