@@ -15,7 +15,7 @@ import {
   Cpu,
   Eye,
   ListChecks,
-  Users,
+  Sparkles,
   CheckCircle2,
 } from 'lucide-react'
 
@@ -100,10 +100,17 @@ export function ProjectCaseModal({ project, open, onOpenChange }: ProjectCaseMod
           </div>
 
           <div className="glass-card p-4 rounded-xl">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-2 mb-2">
-              <Users className="w-4 h-4" /> Nossa Atuação Durante o Projeto
+            <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2 mb-3">
+              <Sparkles className="w-4 h-4" /> Destaques da Solução
             </h4>
-            <p className="text-sm text-slate-300 leading-relaxed">{project.teamRole}</p>
+            <ul className="space-y-2">
+              {project.contributions.map((contribution, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                  <span>{contribution}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="glass-card p-4 rounded-xl">

@@ -30,6 +30,7 @@ export interface Project {
   solution: string
   features: string[]
   teamRole: string
+  contributions: string[]
   results: string
   learnings: string
   award?: string
@@ -356,6 +357,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'A equipe 3 Dev.as DemAIs atuou em todas as frentes do projeto: Beatriz liderou o design de produto e estratégia, Monique desenvolveu os modelos de IA preditiva e pipelines de dados, e Sonia implementou a arquitetura full stack e integrações logísticas.',
+    contributions: [
+      'Pesquisa e validação de problema com produtores rurais',
+      'Design de produto e estratégia de UX',
+      'Modelos de IA preditiva para previsão de excedentes',
+      'Pipelines de dados e análise preditiva',
+      'Arquitetura full stack e integrações logísticas',
+    ],
     results:
       "Redução de até 40% no desperdício agrosocial. 3º lugar no Don't Skip Challenge como única equipe 100% feminina no pódio.",
     learnings:
@@ -389,6 +397,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e a estratégia de gamificação, Monique desenvolveu a lógica de pontuação e rastreamento de impacto, e Sonia implementou o aplicativo mobile e integrações.',
+    contributions: [
+      'Design UX/UI e estratégia de gamificação',
+      'Lógica de pontuação e rastreamento de impacto',
+      'Desenvolvimento de aplicativo mobile',
+      'Conteúdo educacional sobre economia circular',
+      'Integração com pontos de coleta',
+    ],
     results:
       '1º lugar no Hack Frost NL (2022), com solução reconhecida por unir educação ambiental e tecnologia de forma engajadora.',
     learnings:
@@ -422,6 +437,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz conduziu a pesquisa UX e design da plataforma, Monique desenvolveu o sistema de recomendação e curadoria, e Sonia implementou a arquitetura web e APIs.',
+    contributions: [
+      'Pesquisa UX e design da plataforma',
+      'Sistema de recomendação e curadoria',
+      'Arquitetura web e APIs',
+      'Catálogo colaborativo de artistas',
+      'Ferramentas de divulgação digital',
+    ],
     results:
       '1º lugar no GiraLab (2022), reconhecido por seu impacto social e uso da tecnologia para fortalecer a cultura decolonial.',
     learnings:
@@ -455,6 +477,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI com foco em acessibilidade, Monique desenvolveu o sistema de personalização de roteiros, e Sonia implementou a plataforma web e APIs.',
+    contributions: [
+      'Design UX/UI com foco em acessibilidade',
+      'Sistema de personalização de roteiros',
+      'Plataforma web e APIs',
+      'Catálogo de destinos acessíveis',
+      'Avaliações de acessibilidade por usuários',
+    ],
     results:
       '2º lugar no Hackatour Cataratas (2022), destacando-se pela proposta de turismo inclusivo e acessível.',
     learnings:
@@ -488,6 +517,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UI/UX e a pesquisa de usuários, Monique contribuiu com análise de dados e personas, e Sonia apoiou na prototipação técnica e validação.',
+    contributions: [
+      'Design UI/UX e pesquisa de usuários',
+      'Design system inclusivo e acessível',
+      'Protótipos de alta fidelidade',
+      'Análise de dados e personas',
+      'Testes de usabilidade com usuários reais',
+    ],
     results:
       '2º lugar no Hacka Pride (2023) na categoria UI/UX Design, reconhecido pela excelência em design inclusivo.',
     learnings:
@@ -521,6 +557,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UI/UX e a estratégia de produto, Monique contribuiu com análise de dados e validação, e Sonia implementou o frontend acessível.',
+    contributions: [
+      'Design UI/UX e estratégia de produto',
+      'Interface acessível seguindo WCAG',
+      'Análise de dados e validação',
+      'Frontend responsivo mobile-first',
+      'Foco em inclusão digital',
+    ],
     results:
       '2º lugar no Potência Hack (2023) na categoria UI/UX Design, destacando-se pela acessibilidade e impacto social.',
     learnings:
@@ -553,6 +596,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou a estratégia de comunicação e design, Monique desenvolveu o sistema de análise de conteúdo, e Sonia implementou a plataforma web.',
+    contributions: [
+      'Estratégia de comunicação inclusiva',
+      'Design e identidade visual',
+      'Sistema de análise de conteúdo',
+      'Plataforma web e ferramentas digitais',
+      'Diretório de iniciativas LGBTQIA+',
+    ],
     results:
       '3º lugar no Hacka Pride (2022), reconhecido por sua contribuição à comunicação inclusiva e ao fortalecimento da comunidade LGBTQIA+.',
     learnings:
@@ -586,6 +636,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e a estratégia de produto, Monique desenvolveu o simulador e lógica financeira, e Sonia implementou o aplicativo e backend.',
+    contributions: [
+      'Design UX/UI e estratégia de produto',
+      'Simulador de investimentos para iniciantes',
+      'Trilhas de educação financeira gamificadas',
+      'Desenvolvimento de aplicativo e backend',
+      'Comunidade de mulheres investidoras',
+    ],
     results:
       'Most Courageous Hack #1 no TechTogether Miami (2022), reconhecido por empoderar mulheres financeiramente.',
     learnings:
@@ -619,6 +676,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e a estratégia, Monique desenvolveu o sistema de matching e análise de dados, e Sonia implementou a plataforma web e APIs.',
+    contributions: [
+      'Design UX/UI e estratégia',
+      'Sistema de matching entre empresas e fornecedores',
+      'Análise de dados de sustentabilidade',
+      'Plataforma web e APIs',
+      'Portal educativo sobre energia limpa',
+    ],
     results:
       'Top 10 no iHack2Green (2022), destacando-se por conectar tecnologia e sustentabilidade na transição energética.',
     learnings:
@@ -652,6 +716,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz conduziu o design da extensão e UX, Monique desenvolveu o modelo de detecção e heurísticas, e Sonia implementou a extensão de navegador e integrações.',
+    contributions: [
+      'Design da extensão e UX',
+      'Modelo de detecção e heurísticas',
+      'Análise de padrões de comportamento suspeitos',
+      'Implementação de extensão de navegador',
+      'Sistema de alertas de desinformação',
+    ],
     results:
       'Menção Honrosa no Hackathon Pegabot (2022), reconhecido por combater desinformação com tecnologia acessível.',
     learnings:
@@ -684,6 +755,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI com foco em acessibilidade, Monique desenvolveu o sistema de conteúdo e recomendações, e Sonia implementou o aplicativo mobile.',
+    contributions: [
+      'Design UX/UI com foco em acessibilidade',
+      'Sistema de conteúdo e recomendações',
+      'Conteúdo educativo sobre saúde',
+      'Desenvolvimento de aplicativo mobile',
+      'Interface adaptada para terceira idade',
+    ],
     results:
       'Top 15 na Hackatona ADE Sampa (2022), reconhecido por abordar um tema negligenciado com empatia e tecnologia.',
     learnings:
@@ -717,6 +795,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e a estratégia de produto, Monique desenvolveu o agente de IA e processamento de linguagem natural, e Sonia implementou a plataforma web e integração com WhatsApp.',
+    contributions: [
+      'Design UX/UI e estratégia de produto',
+      'Agente de IA conversacional e PLN',
+      'Tradução de termos jurídicos e técnicos',
+      'Plataforma web e integração com WhatsApp',
+      'Orientações passo a passo para CAR',
+    ],
     results:
       'Atendimento 24/7 a produtores rurais, democratizando o acesso à informação ambiental e reduzindo barreiras burocráticas.',
     learnings:
@@ -733,7 +818,7 @@ export const PROJECTS: Project[] = [
     description:
       'Plataforma interativa baseada em dados abertos da NASA para conscientização e mitigação de mudanças climáticas.',
     longDescription:
-      'Aplicação web imersiva com visualizações de dados de satélite da NASA, projetada para engajar escolas e comunidades locais.',
+      'Aplicação web imersiva com visualizações de dados de satélite da NASA, projetada para engajar escolas e comunidades locais. Reconhecida como finalista regional no NASA Space Apps Challenge em Barueri/SP.',
     overview:
       'Earth Connections é uma plataforma interativa baseada em dados abertos da NASA que oferece visualizações imersivas de dados de satélite para conscientização sobre mudanças climáticas, engajando escolas e comunidades na identificação de ilhas de calor e riscos ambientais.',
     challenge:
@@ -749,13 +834,21 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e as visualizações, Monique desenvolveu o processamento de dados climáticos, e Sonia implementou a aplicação web e integração com APIs da NASA.',
+    contributions: [
+      'Design UX/UI e visualizações interativas de dados',
+      'Processamento de dados climáticos de satélite',
+      'Aplicação web e integração com APIs da NASA',
+      'Mapa de ilhas de calor urbanas',
+      'Módulo educativo para escolas e comunidades',
+    ],
     results:
-      'Finalistas globais no NASA Space Apps Challenge, com solução reconhecida por tornar dados climáticos complexos acessíveis e acionáveis.',
+      'Finalista regional no NASA Space Apps Challenge (Barueri/SP), com solução reconhecida por tornar dados climáticos complexos acessíveis e acionáveis.',
     learnings:
       'Visualização de dados eficaz pode transformar conjuntos massivos de informações científicas em ferramentas de conscientização e ação comunitária.',
-    isAwarded: false,
+    award: '⭐ Finalista Regional – NASA Space Apps Challenge (Barueri/SP)',
+    isAwarded: true,
     tags: ['NASA Open Data', 'Data Viz', 'Clima', 'Educação', 'React'],
-    metric: 'Finalista Global',
+    metric: 'Finalista Regional',
     category: 'ClimateTech',
     iconName: 'Globe',
   },
@@ -781,6 +874,13 @@ export const PROJECTS: Project[] = [
     ],
     teamRole:
       'Beatriz liderou o design UX/UI e a jornada do paciente, Monique desenvolveu os algoritmos de triagem e análise clínica, e Sonia implementou a API e o sistema backend.',
+    contributions: [
+      'Design UX/UI e jornada do paciente',
+      'Algoritmos de triagem e análise clínica',
+      'API e sistema backend',
+      'Dashboard de gestão de fluxo',
+      'Otimização de filas de atendimento',
+    ],
     results:
       'Redução de 35% no tempo de espera, com triagem primária inteligente otimizando o fluxo de pacientes.',
     learnings:
