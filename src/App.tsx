@@ -6,6 +6,7 @@ import Index from './pages/Index'
 import NotFound from './pages/NotFound'
 import ProjectLazurus from './pages/ProjectLazurus'
 import ProjectRaizesgo from './pages/ProjectRaizesgo'
+import ProjectFrutosDoCerrado from './pages/ProjectFrutosDoCerrado'
 import ProjectDetail from './pages/ProjectDetail'
 import Layout from './components/Layout'
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projetos/lazurus" element={<ProjectLazurus />} />
           <Route path="/projetos/raizesgo" element={<ProjectRaizesgo />} />
+          <Route path="/projetos/frutos-do-cerrado" element={<ProjectFrutosDoCerrado />} />
           <Route path="/projetos/:projectId" element={<ProjectDetail />} />
         </Route>
         <Route path="*" element={<NotFound />} />

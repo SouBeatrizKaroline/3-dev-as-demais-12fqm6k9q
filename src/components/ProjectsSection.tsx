@@ -21,6 +21,7 @@ const PROJECT_ORDER = [
   'siscar',
   'saude-express',
   'raizesgo',
+  'frutos-do-cerrado',
 ]
 
 export function ProjectsSection() {

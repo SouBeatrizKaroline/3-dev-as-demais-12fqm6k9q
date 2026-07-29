@@ -1115,6 +1115,61 @@ export const PROJECTS: Project[] = [
     iconName: 'Trees',
     casePageRoute: '/projetos/raizesgo',
   },
+  {
+    id: 'frutos-do-cerrado',
+    title: 'Frutos do Cerrado',
+    description:
+      'Plataforma digital para fortalecer comunidades quilombolas por meio da valorização do Cerrado, sustentabilidade, comercialização e acesso à informação.',
+    longDescription:
+      'Projeto vencedor do Hackathon Desafio Governo de Goiás, desenvolvido para promover a gestão sustentável dos recursos naturais, fortalecer comunidades quilombolas e ampliar o acesso ao mercado por meio de uma plataforma digital integrada. A solução reúne marketplace comunitário, calendário de safras, mapa interativo, alertas climáticos e conteúdos educativos, incentivando o desenvolvimento sustentável, a preservação do bioma Cerrado e a valorização dos conhecimentos tradicionais.',
+    overview:
+      'Frutos do Cerrado é uma plataforma digital que conecta comunidades quilombolas, consumidores, pesquisadores e apoiadores do Cerrado em um único ecossistema. A solução facilita a comercialização de produtos locais, promove educação ambiental, disponibiliza informações sobre safras, oferece alertas climáticos e incentiva práticas sustentáveis, fortalecendo a economia local e preservando os saberes tradicionais.',
+    challenge:
+      'Desenvolver uma solução tecnológica capaz de fortalecer comunidades quilombolas por meio da valorização da cultura local, preservação ambiental e ampliação das oportunidades de comercialização, utilizando ferramentas digitais acessíveis e sustentáveis.',
+    solution:
+      'O Frutos do Cerrado é uma plataforma digital criada para conectar comunidades quilombolas, consumidores, pesquisadores e apoiadores do Cerrado em um único ecossistema. A solução facilita a comercialização de produtos locais, promove educação ambiental, disponibiliza informações sobre safras, oferece alertas climáticos e incentiva práticas sustentáveis, fortalecendo a economia local e preservando os saberes tradicionais.',
+    features: [
+      'Calendário de Safras',
+      'Mapa Interativo',
+      'Marketplace Comunitário',
+      'Alertas Climáticos',
+      'Educação Ambiental',
+      'Cultura Quilombola',
+      'Produtores Locais',
+      'Informações sobre o Cerrado',
+    ],
+    teamRole:
+      'A equipe 3 Dev.as DemAIs atuou em todas as frentes do projeto: design de produto, pesquisa, desenvolvimento frontend e integração de conteúdos educativos.',
+    contributions: [
+      'Plataforma digital para fortalecer comunidades quilombolas',
+      'Marketplace comunitário para comercialização de produtos locais',
+      'Calendário de safras e mapa interativo',
+      'Alertas climáticos e educação ambiental',
+      'Valorização dos conhecimentos tradicionais',
+    ],
+    results:
+      'Projeto vencedor desenvolvido para fortalecer comunidades quilombolas, promover o uso sustentável dos recursos naturais, preservar o Cerrado e ampliar oportunidades de comercialização por meio de uma plataforma digital integrada.',
+    learnings:
+      'A tecnologia pode ser uma ferramenta poderosa para fortalecer comunidades tradicionais, preservar biomas e conectar produtores a novas oportunidades de mercado quando aliada à valorização cultural e ao desenvolvimento sustentável.',
+    award: '🏆 1º Lugar — Hackathon Desafio Governo de Goiás (2024)',
+    isAwarded: true,
+    tags: [
+      'React',
+      'Vite',
+      'CSS3',
+      'React Router',
+      'UX/UI',
+      'Marketplace',
+      'Sustentabilidade',
+      'Cartografia',
+      'Web Platform',
+    ],
+    technologies: ['React', 'React Router', 'Vite', 'CSS3', 'UX/UI', 'Figma'],
+    metric: '1º Lugar',
+    category: 'SocialTech • Sustentabilidade • Cultura',
+    iconName: 'TreePalm',
+    casePageRoute: '/projetos/frutos-do-cerrado',
+  },
 ]
 
 PROJECTS.forEach((p) => {

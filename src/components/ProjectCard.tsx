@@ -21,6 +21,7 @@ import {
   HeartPulse,
   Orbit,
   Trees,
+  TreePalm,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -40,6 +41,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   HeartPulse: <HeartPulse className="w-7 h-7 text-red-400" />,
   Orbit: <Orbit className="w-7 h-7 text-indigo-400" />,
   Trees: <Trees className="w-7 h-7 text-green-500" />,
+  TreePalm: <TreePalm className="w-7 h-7 text-amber-500" />,
 }
 
 interface ProjectCardProps {
