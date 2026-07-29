@@ -259,26 +259,29 @@ export const STATS: StatItem[] = [
   {
     id: '1',
     label: 'Hackathons Participados',
-    value: 15,
+    value: 50,
     suffix: '+',
     icon: 'Trophy',
-    description: 'Maratona de inovação no Brasil e no exterior',
+    description:
+      'Participação em mais de 50 hackathons nacionais e internacionais, desenvolvendo soluções em tecnologia, inovação e impacto social.',
   },
   {
     id: '2',
     label: 'Projetos Desenvolvidos',
     value: 12,
-    suffix: '',
+    suffix: '+',
     icon: 'Code',
-    description: 'Soluções de impacto prático validadas',
+    description:
+      'Mais de 12 projetos desenvolvidos, envolvendo tecnologia, inteligência artificial, produtos digitais e soluções para desafios reais.',
   },
   {
     id: '3',
     label: 'Premiações Conquistadas',
-    value: 4,
-    suffix: 'x',
+    value: 10,
+    suffix: '+',
     icon: 'Award',
-    description: 'Pódios em grandes competições tech',
+    description:
+      'Reconhecimento nacional e internacional em competições de tecnologia, inovação e desenvolvimento de soluções.',
   },
   {
     id: '4',
@@ -286,7 +289,8 @@ export const STATS: StatItem[] = [
     value: 7,
     suffix: '',
     icon: 'Sparkles',
-    description: 'Reconhecimento técnico e executivo',
+    description:
+      'Projetos finalistas em competições de inovação, com participação presencial e viagens para diferentes estados do Brasil para apresentar soluções.',
   },
   {
     id: '5',
@@ -294,7 +298,8 @@ export const STATS: StatItem[] = [
     value: 20,
     suffix: '+',
     icon: 'Cpu',
-    description: 'MVPs construídos em tempo recorde',
+    description:
+      'MVPs, protótipos e experiências digitais construídas durante hackathons e projetos de inovação.',
   },
   {
     id: '6',
@@ -302,7 +307,8 @@ export const STATS: StatItem[] = [
     value: 5000,
     suffix: '+',
     icon: 'Clock',
-    description: 'Dedicadas à resolução de problemas complexos',
+    description:
+      'Horas dedicadas ao desenvolvimento, pesquisa, prototipação e construção colaborativa de soluções tecnológicas.',
   },
   {
     id: '7',
@@ -310,7 +316,8 @@ export const STATS: StatItem[] = [
     value: 3,
     suffix: '',
     icon: 'MapPin',
-    description: 'Pernambuco, Rio de Janeiro e DF',
+    description:
+      'Equipe conectada entre diferentes regiões do Brasil, incluindo Pernambuco, Rio de Janeiro e Distrito Federal.',
   },
   {
     id: '8',
@@ -318,7 +325,8 @@ export const STATS: StatItem[] = [
     value: 20,
     suffix: '+',
     icon: 'Zap',
-    description: 'Ecossistema completo de IA, Web e Cloud',
+    description:
+      'Ecossistema de tecnologias envolvendo Inteligência Artificial, Desenvolvimento Web, Cloud, Dados, UX/UI e ferramentas de inovação.',
   },
 ]
 
