@@ -6,6 +6,12 @@ import { ForceMetaphor } from '@/components/ForceMetaphor'
 import { MapPin, Linkedin, Github, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+const MEMBER_SPECIALTIES: Record<string, string[]> = {
+  beatriz: ['Produto', 'UX', 'Estratégia', 'IA Aplicada'],
+  monique: ['Inteligência Artificial', 'Dados', 'Agentes de IA', 'Machine Learning'],
+  sonia: ['Full Stack', 'Front-end', 'Back-end', 'Arquitetura de Software'],
+}
+
 export function TeamSection() {
   const { ref, isInView } = useInView()
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
@@ -25,43 +31,56 @@ export function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {TEAM_MEMBERS.map((member, i) => (
             <article
               key={member.id}
-              className={`glass-card glass-card-hover card-3d-hover p-5 sm:p-6 rounded-2xl border-violet-500/8 group transition-all duration-500 ${
+              className={`glass-card glass-card-hover card-3d-hover p-5 sm:p-6 rounded-2xl border-violet-500/8 group flex flex-col transition-all duration-300 ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
-              <div className="relative mb-5 overflow-hidden rounded-xl mx-auto w-full max-w-[240px] aspect-square">
-                <div className="absolute inset-0 photo-ring rounded-xl p-[2px]">
-                  <div className="w-full h-full rounded-[10px] overflow-hidden">
-                    <img
-                      src={member.photoUrl}
-                      alt={`Foto de ${member.name}, especialista em ${member.role}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
-                    />
+              <div className="flex justify-center mb-5">
+                <div className="relative">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-[3px] photo-ring group-hover:scale-105 transition-transform duration-300 ease-out">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img
+                        src={member.photoUrl}
+                        alt={`Foto de ${member.name}, especialista em ${member.role}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="absolute top-3 right-3 bg-[#0a0b14]/80 backdrop-blur-md border border-violet-500/40 text-[#a78bfa] text-xs font-bold px-3 py-1 rounded-full">
-                  {member.badge}
+                  <div className="absolute top-0 right-0 bg-[#0a0b14]/90 backdrop-blur-md border border-violet-500/40 text-[#a78bfa] text-[10px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap shadow-md">
+                    {member.badge}
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1.5">
+              <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1.5 justify-center">
                 <MapPin className="w-3.5 h-3.5 text-[#c4b5fd] shrink-0" />
                 <span>{member.city}</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-1 text-center">
                 {member.name}
               </h3>
-              <p className="text-xs font-semibold text-[#a78bfa] mb-3 leading-relaxed">
-                {member.role}
+
+              <div className="flex flex-wrap gap-1.5 mb-3 justify-center">
+                {(MEMBER_SPECIALTIES[member.id] || member.tags.slice(0, 4)).map((spec) => (
+                  <span
+                    key={spec}
+                    className="text-[10px] font-mono font-semibold text-[#a78bfa] bg-[#8b5cf6]/8 border border-[#8b5cf6]/20 px-2.5 py-0.5 rounded-full"
+                  >
+                    {spec}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-4 text-center">
+                {member.bio}
               </p>
-              <p className="text-sm text-slate-300 leading-relaxed mb-4">{member.bio}</p>
 
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {member.tags.slice(0, 4).map((tech) => (

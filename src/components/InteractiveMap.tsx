@@ -1,17 +1,24 @@
 import { useState } from 'react'
-import { MapPin } from 'lucide-react'
+import { MapPin, Users, Compass, Rocket } from 'lucide-react'
 import { useInView } from '@/hooks/use-in-view'
 
 interface MapMember {
   id: string
   name: string
   location: string
+  shortLocation: string
+  expertise: string
   color: string
   bgColor: string
   ringColor: string
   svgX: number
   svgY: number
-  cardTransform: string
+}
+
+interface MapHighlight {
+  icon: string
+  title: string
+  description: string
 }
 
 const MEMBERS: MapMember[] = [
@@ -19,45 +26,77 @@ const MEMBERS: MapMember[] = [
     id: 'pe',
     name: 'Beatriz Karoline',
     location: 'Jaboatão dos Guararapes • PE',
+    shortLocation: 'PE',
+    expertise: 'Produto + IA',
     color: '#8b5cf6',
     bgColor: 'rgba(139,92,246,0.15)',
     ringColor: 'border-[#8b5cf6]/50',
     svgX: 490,
     svgY: 190,
-    cardTransform: 'translate(-80%, -145%)',
   },
   {
     id: 'rj',
     name: 'Monique Cardoso',
     location: 'Duque de Caxias • RJ',
+    shortLocation: 'RJ',
+    expertise: 'IA + Dados',
     color: '#c4b5fd',
     bgColor: 'rgba(196,181,253,0.15)',
     ringColor: 'border-[#c4b5fd]/50',
     svgX: 400,
     svgY: 340,
-    cardTransform: 'translate(-50%, 45%)',
   },
   {
     id: 'df',
     name: 'Sonia Janara',
     location: 'Brasília • DF',
+    shortLocation: 'DF',
+    expertise: 'Software + IA',
     color: '#f0a0c0',
     bgColor: 'rgba(240,160,192,0.15)',
     ringColor: 'border-rose-400/50',
     svgX: 330,
     svgY: 250,
-    cardTransform: 'translate(-100%, -50%)',
   },
 ]
 
+const HIGHLIGHTS: MapHighlight[] = [
+  { icon: 'Users', title: '100% Feminina', description: 'Protagonismo em tecnologia e IA' },
+  {
+    icon: 'Compass',
+    title: 'Multirregional',
+    description: 'Conexão Jaboatão, Duque de Caxias & Brasília',
+  },
+  { icon: 'Rocket', title: 'Foco em MVP', description: 'Ideia para código em horas' },
+]
+
+function getHighlightIcon(iconName: string) {
+  switch (iconName) {
+    case 'Users':
+      return <Users className="w-5 h-5 text-[#a78bfa]" />
+    case 'Compass':
+      return <Compass className="w-5 h-5 text-[#c4b5fd]" />
+    case 'Rocket':
+      return <Rocket className="w-5 h-5 text-[#f0a0c0]" />
+    default:
+      return null
+  }
+}
+
 export function InteractiveMap() {
   const [activePin, setActivePin] = useState<string | null>(null)
+  const [clickedPin, setClickedPin] = useState<string | null>(null)
   const { ref, isInView } = useInView()
+
+  const handlePinClick = (id: string) => {
+    setClickedPin((prev) => (prev === id ? null : id))
+    setActivePin(id)
+  }
 
   return (
     <div
       ref={ref}
-      className={`relative w-full bg-gradient-to-b from-[#12122a] to-[#0a0b14] rounded-2xl border border-violet-500/20 p-4 sm:p-6 shadow-2xl shadow-violet-950/30 transition-all duration-700 motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
+      className={`relative w-full bg-gradient-to-b from-[#12122a] to-[#0a0b14] rounded-2xl border border-violet-500/20 p-4 sm:p-6 shadow-2xl shadow-violet-950/30 transition-all duration-700 ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
@@ -116,49 +155,76 @@ export function InteractiveMap() {
               </linearGradient>
             </defs>
 
-            {MEMBERS.map((m) => (
-              <g
-                key={m.id}
-                className="cursor-pointer"
-                onMouseEnter={() => setActivePin(m.id)}
-                onMouseLeave={() => setActivePin(null)}
-              >
-                <circle cx={m.svgX} cy={m.svgY} r="14" fill={m.bgColor} />
-                <circle
-                  cx={m.svgX}
-                  cy={m.svgY}
-                  r="8"
-                  fill={m.color}
-                  className={activePin === m.id ? 'animate-pulse' : ''}
-                />
-                <circle cx={m.svgX} cy={m.svgY} r="3" fill="#ffffff" />
-              </g>
-            ))}
+            {MEMBERS.map((m) => {
+              const isActive = activePin === m.id || clickedPin === m.id
+              return (
+                <g
+                  key={m.id}
+                  className="cursor-pointer"
+                  onMouseEnter={() => setActivePin(m.id)}
+                  onMouseLeave={() => setActivePin(null)}
+                  onClick={() => handlePinClick(m.id)}
+                >
+                  <circle cx={m.svgX} cy={m.svgY} r="14" fill={m.bgColor} />
+                  <circle
+                    cx={m.svgX}
+                    cy={m.svgY}
+                    r="8"
+                    fill={m.color}
+                    className={isActive ? 'animate-pulse' : ''}
+                    style={isActive ? { filter: `drop-shadow(0 0 8px ${m.color})` } : {}}
+                  />
+                  <circle cx={m.svgX} cy={m.svgY} r="3" fill="#ffffff" />
+                </g>
+              )
+            })}
           </svg>
 
           {MEMBERS.map((m) => {
             const xPct = (m.svgX / 600) * 100
             const yPct = (m.svgY / 500) * 100
+            const isActive = activePin === m.id || clickedPin === m.id
             return (
               <div
-                key={`card-${m.id}`}
-                className="hidden md:block absolute z-20 pointer-events-none"
+                key={`pin-label-${m.id}`}
+                className="absolute z-10 pointer-events-none -translate-x-1/2 -translate-y-1/2"
+                style={{ left: `${xPct}%`, top: `${yPct + 7}%` }}
+              >
+                <span className="text-[9px] font-bold text-slate-400 select-none">
+                  📍 {m.shortLocation}
+                </span>
+              </div>
+            )
+          })}
+
+          {MEMBERS.map((m) => {
+            const xPct = (m.svgX / 600) * 100
+            const yPct = (m.svgY / 500) * 100
+            const isActive = activePin === m.id || clickedPin === m.id
+            if (!isActive) return null
+            return (
+              <div
+                key={`tooltip-${m.id}`}
+                className="absolute z-30 pointer-events-none"
                 style={{
                   left: `${xPct}%`,
                   top: `${yPct}%`,
-                  transform: m.cardTransform,
+                  transform: m.id === 'df' ? 'translate(-110%, -50%)' : 'translate(-50%, -135%)',
                 }}
               >
                 <div
-                  className={`glass-card backdrop-blur-md rounded-xl px-3 py-2 border ${m.ringColor} shadow-lg whitespace-nowrap transition-transform duration-300 ${
-                    activePin === m.id ? 'scale-105' : 'scale-100'
+                  className={`glass-card backdrop-blur-md rounded-xl px-4 py-3 border ${m.ringColor} shadow-lg whitespace-nowrap transition-all duration-200 ${
+                    isActive ? 'scale-105 opacity-100' : 'scale-95 opacity-0'
                   }`}
                 >
-                  <p className="text-xs font-bold text-white">{m.name}</p>
-                  <div className="flex items-center gap-1 mt-0.5">
-                    <MapPin className="w-2.5 h-2.5 shrink-0" style={{ color: m.color }} />
-                    <p className="text-[10px] text-slate-400">{m.location}</p>
+                  <p className="text-sm font-bold text-white">{m.name}</p>
+                  <div className="flex items-center gap-1 mt-1">
+                    <MapPin className="w-3 h-3 shrink-0" style={{ color: m.color }} />
+                    <p className="text-xs text-slate-400">{m.location}</p>
                   </div>
+                  <p className="text-[10px] font-semibold mt-1.5" style={{ color: m.color }}>
+                    {m.expertise}
+                  </p>
                 </div>
               </div>
             )
@@ -166,26 +232,19 @@ export function InteractiveMap() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-[#0a0b14]/80 backdrop-blur-md p-3 rounded-2xl border border-violet-500/10 z-10 text-center mt-4">
-        {MEMBERS.map((m) => (
+      <p className="text-center text-sm text-slate-400 mt-4 mb-2">
+        Três regiões diferentes, uma equipe conectada por tecnologia e inovação.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+        {HIGHLIGHTS.map((h) => (
           <div
-            key={`grid-${m.id}`}
-            className={`p-2.5 rounded-xl transition-all border cursor-pointer ${
-              activePin === m.id
-                ? `${m.ringColor} bg-white/5`
-                : 'border-transparent hover:bg-white/5'
-            }`}
-            onMouseEnter={() => setActivePin(m.id)}
-            onMouseLeave={() => setActivePin(null)}
+            key={h.title}
+            className="glass-card rounded-xl p-4 border border-violet-500/10 flex flex-col items-center text-center"
           >
-            <div className="text-sm font-bold text-white">{m.name}</div>
-            <div
-              className="text-[10px] flex items-center justify-center gap-1 mt-1"
-              style={{ color: m.color }}
-            >
-              <MapPin className="w-2.5 h-2.5 shrink-0" />
-              {m.location}
-            </div>
+            <div className="mb-2">{getHighlightIcon(h.icon)}</div>
+            <h4 className="text-sm font-bold text-white">{h.title}</h4>
+            <p className="text-xs text-slate-400 mt-1 leading-relaxed">{h.description}</p>
           </div>
         ))}
       </div>

@@ -3,8 +3,8 @@ import { useInView } from '@/hooks/use-in-view'
 const CIRCLES = [
   {
     name: 'Beatriz',
-    label: 'Produto',
-    items: ['UX', 'Estratégia', 'Design'],
+    label: 'Produto + IA',
+    items: ['Produto', 'UX', 'Estratégia', 'IA Aplicada'],
     border: 'border-violet-500/50',
     bg: 'bg-violet-500/10',
     text: 'text-violet-400',
@@ -12,8 +12,8 @@ const CIRCLES = [
   },
   {
     name: 'Monique',
-    label: 'Inteligência Artificial',
-    items: ['Análise de Dados', 'Agentes de IA', 'Machine Learning'],
+    label: 'IA + Dados',
+    items: ['Inteligência Artificial', 'Dados', 'Agentes de IA', 'Machine Learning'],
     border: 'border-pink-500/50',
     bg: 'bg-pink-500/10',
     text: 'text-pink-400',
@@ -21,8 +21,8 @@ const CIRCLES = [
   },
   {
     name: 'Sonia',
-    label: 'Engenharia de Software',
-    items: ['Full Stack', 'Front-end', 'Back-end'],
+    label: 'Software + IA',
+    items: ['Full Stack', 'Front-end', 'Back-end', 'Arquitetura de Software'],
     border: 'border-indigo-400/50',
     bg: 'bg-indigo-400/10',
     text: 'text-indigo-400',
@@ -73,12 +73,14 @@ export function ForceMetaphor() {
         className="text-center mt-6 transition-opacity duration-500"
         style={{ transitionDelay: '600ms', opacity: isInView ? 1 : 0 }}
       >
-        <div className="flex items-center justify-center gap-3 mb-2 flex-wrap">
+        <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
           <span className="text-sm font-bold text-violet-400">Produto</span>
           <span className="text-slate-500">+</span>
-          <span className="text-sm font-bold text-pink-400">Inteligência Artificial</span>
+          <span className="text-sm font-bold text-pink-400">IA</span>
           <span className="text-slate-500">+</span>
-          <span className="text-sm font-bold text-indigo-400">Engenharia de Software</span>
+          <span className="text-sm font-bold text-pink-400">Dados</span>
+          <span className="text-slate-500">+</span>
+          <span className="text-sm font-bold text-indigo-400">Software</span>
           <span className="text-slate-500">=</span>
           <span className="text-sm font-bold gradient-heading">Soluções Digitais</span>
         </div>
