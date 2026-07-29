@@ -3,26 +3,7 @@ import { useInView } from '@/hooks/use-in-view'
 import { PROJECTS, Project } from '@/data/content'
 import { ProjectCaseModal } from '@/components/ProjectCaseModal'
 import { ProjectCard } from '@/components/ProjectCard'
-
-const PROJECT_ORDER = [
-  'raizesgo',
-  'frutos-do-cerrado',
-  'reclapp',
-  'greenhat',
-  'destinai',
-  'giro',
-  'ium',
-  'potencia-hack',
-  'infinitour',
-  'viga',
-  'pegabot-extension',
-  'lazurus',
-  'earth-connections',
-  'connectgreen',
-  'dionisa',
-  'siscar',
-  'saude-express',
-]
+import { sortProjects } from '@/lib/project-sorting'
 
 export function ProjectsSection() {
   const { ref, isInView } = useInView()
@@ -34,9 +15,7 @@ export function ProjectsSection() {
     setModalOpen(true)
   }
 
-  const sortedProjects = [...PROJECTS].sort(
-    (a, b) => PROJECT_ORDER.indexOf(a.id) - PROJECT_ORDER.indexOf(b.id),
-  )
+  const sortedProjects = sortProjects(PROJECTS)
 
   return (
     <section id="projetos" className="py-24 bg-[#0f0f1a] relative">

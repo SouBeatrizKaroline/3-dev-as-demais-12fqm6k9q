@@ -523,7 +523,7 @@ export const PROJECTS: Project[] = [
     metric: 'Plataforma Publicada',
     category: 'EdTech • Impacto Social',
     iconName: 'Heart',
-    recognitionBadge: '⭐ Projeto em continuidade',
+    recognitionBadge: '💰 Projeto contemplado com investimento',
   },
   {
     id: 'infinitour',
