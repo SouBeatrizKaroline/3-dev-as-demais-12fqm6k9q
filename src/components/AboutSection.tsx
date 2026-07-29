@@ -42,7 +42,9 @@ export function AboutSection() {
               <div className="glass-card p-4 rounded-2xl border-white/5">
                 <Globe2 className="w-5 h-5 text-[#00f0ff] mb-2" />
                 <h4 className="text-xs font-bold text-white">Multirregional</h4>
-                <p className="text-[11px] text-slate-400 mt-1">Conexão Recife, Rio & Brasília</p>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Conexão Jaboatão, Duque de Caxias & Brasília
+                </p>
               </div>
               <div className="glass-card p-4 rounded-2xl border-white/5 col-span-2 sm:col-span-1">
                 <Zap className="w-5 h-5 text-purple-400 mb-2" />

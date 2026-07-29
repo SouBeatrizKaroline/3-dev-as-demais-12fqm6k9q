@@ -65,12 +65,12 @@ export function Footer() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-2 relative">
               <div className="flex items-center gap-2 bg-[#0f0f1a] px-4 py-2 rounded-xl border border-cyan-500/30 shadow-sm shadow-cyan-500/10">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#00f0ff] animate-ping" />
-                <span className="text-xs font-bold text-white">Recife / PE</span>
+                <span className="text-xs font-bold text-white">Jaboatão dos Guararapes / PE</span>
               </div>
               <div className="hidden sm:block flex-1 h-[2px] bg-gradient-to-r from-[#00f0ff] via-[#b300ff] to-[#00f0ff] opacity-60 animate-pulse" />
               <div className="flex items-center gap-2 bg-[#0f0f1a] px-4 py-2 rounded-xl border border-purple-500/30 shadow-sm shadow-purple-500/10">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#b300ff] animate-ping" />
-                <span className="text-xs font-bold text-white">Rio de Janeiro / RJ</span>
+                <span className="text-xs font-bold text-white">Duque de Caxias / RJ</span>
               </div>
               <div className="hidden sm:block flex-1 h-[2px] bg-gradient-to-r from-[#b300ff] via-[#00f0ff] to-[#b300ff] opacity-60 animate-pulse" />
               <div className="flex items-center gap-2 bg-[#0f0f1a] px-4 py-2 rounded-xl border border-emerald-500/30 shadow-sm shadow-emerald-500/10">
