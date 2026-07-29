@@ -500,38 +500,39 @@ export const PROJECTS: Project[] = [
     id: 'ium',
     title: 'ium',
     description:
-      'Projeto premiado na categoria UI/UX Design por oferecer uma experiência centrada no usuário e soluções inclusivas.',
+      'Aplicativo de acompanhamento desenvolvido para apoiar principalmente a população trans em sua jornada de afirmação de gênero, oferecendo uma experiência organizada, acolhedora e centrada no usuário. Projeto premiado na categoria UI/UX Design do Hacka Pride, com foco em inclusão, acessibilidade e criação de experiências digitais humanizadas.',
     longDescription:
-      'Solução de UI/UX Design premiada no Hacka Pride, focada em criar experiências inclusivas e centradas no usuário com design emocional e acessibilidade.',
+      'Aplicativo de acompanhamento desenvolvido para apoiar principalmente a população trans em sua jornada de afirmação de gênero, oferecendo uma experiência organizada, acolhedora e centrada no usuário. Projeto premiado na categoria UI/UX Design do Hacka Pride, com foco em inclusão, acessibilidade e criação de experiências digitais humanizadas.',
     overview:
-      'ium é um projeto premiado na categoria UI/UX Design que oferece uma experiência centrada no usuário e soluções inclusivas, com foco em design emocional, acessibilidade e jornadas acolhedoras para todos os públicos.',
+      'ium é um conceito de aplicativo desenvolvido durante o Hacka Pride 2023 para apoiar principalmente pessoas trans durante suas jornadas de afirmação de gênero. A solução foi pensada para oferecer uma experiência digital acolhedora, permitindo o acompanhamento organizado de informações relacionadas ao processo hormonal e aspectos individuais de cada usuário.',
     challenge:
-      'Aplicativos e plataformas frequentemente negligenciam a experiência de usuários de grupos diversos, resultando em interfaces excludentes e pouco intuitivas.',
+      'Pessoas trans podem enfrentar desafios relacionados ao acesso à informação, organização do acompanhamento pessoal e construção de uma jornada de afirmação de gênero mais segura e consciente. Muitas vezes, informações importantes ficam dispersas, dificultando o acompanhamento individual.',
     solution:
-      'Solução de UI/UX Design centrada no usuário, com foco em inclusão, design emocional e acessibilidade, oferecendo uma experiência fluida e acolhedora para todos os públicos.',
+      'Desenvolvemos uma proposta de aplicativo com foco em experiência do usuário, criando um ambiente digital inclusivo para organização e acompanhamento de informações pessoais relacionadas à jornada de afirmação de gênero. A solução busca unir tecnologia, empatia e design para criar uma experiência mais acolhedora e personalizada.',
     features: [
-      'Design system inclusivo e acessível',
-      'Pesquisa UX com grupos diversos',
-      'Protótipos de alta fidelidade',
-      'Testes de usabilidade com usuários reais',
-      'Componentes reutilizáveis e documentados',
+      'Acompanhamento de informações relacionadas ao processo hormonal',
+      'Organização de registros pessoais',
+      'Experiência personalizada para diferentes usuários',
+      'Interface inclusiva e humanizada',
+      'Design pensado para segurança e conforto do usuário',
     ],
     teamRole:
       'Beatriz liderou o design UI/UX e a pesquisa de usuários, Monique contribuiu com análise de dados e personas, e Sonia apoiou na prototipação técnica e validação.',
     contributions: [
-      'Design UI/UX e pesquisa de usuários',
-      'Design system inclusivo e acessível',
-      'Protótipos de alta fidelidade',
-      'Análise de dados e personas',
-      'Testes de usabilidade com usuários reais',
+      'Experiência digital criada com foco na população trans',
+      'Design emocional e humanizado',
+      'Interface inclusiva e acessível',
+      'Pesquisa e compreensão das necessidades dos usuários',
+      'Solução centrada em autonomia e organização pessoal',
     ],
     results:
-      '2º lugar no Hacka Pride (2023) na categoria UI/UX Design, reconhecido pela excelência em design inclusivo.',
+      'O ium conquistou o 2º lugar na categoria UI/UX Design do Hacka Pride 2023, sendo reconhecido pela criação de uma experiência digital inclusiva, empática e centrada nas necessidades da comunidade trans.',
     learnings:
-      'Design centrado no usuário não é apenas sobre estética — é sobre criar experiências que acolhem e empoderam todos os públicos.',
-    award: '🥈 2º Lugar — Hacka Pride (2023)',
+      'O desenvolvimento do ium reforçou a importância do design centrado nas pessoas, principalmente na criação de soluções para públicos historicamente pouco representados na tecnologia. O projeto demonstrou como UX pode ser uma ferramenta de inclusão, acolhimento e transformação social.',
+    award: '🥈 2º Lugar – Hacka Pride (2023)',
     isAwarded: true,
-    tags: ['UX', 'UI', 'Design', 'Inclusão'],
+    tags: ['UX', 'UI', 'Design', 'Saúde Digital', 'HealthTech', 'Inclusão', 'Design Social'],
+    technologies: ['UX Design', 'UI Design', 'Prototipação', 'Design Centrado no Usuário'],
     metric: '2º Lugar',
     category: 'UX/UI Design',
     iconName: 'Palette',
