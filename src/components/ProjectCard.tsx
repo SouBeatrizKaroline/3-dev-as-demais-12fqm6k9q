@@ -23,6 +23,9 @@ import {
   Trees,
   TreePalm,
   Gamepad2,
+  BrainCircuit,
+  CheckCircle2,
+  BadgeCheck,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -44,6 +47,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Trees: <Trees className="w-7 h-7 text-green-500" />,
   TreePalm: <TreePalm className="w-7 h-7 text-amber-500" />,
   Gamepad2: <Gamepad2 className="w-7 h-7 text-emerald-400" />,
+  BrainCircuit: <BrainCircuit className="w-7 h-7 text-[#a78bfa]" />,
 }
 
 interface ProjectCardProps {
@@ -90,6 +94,22 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
         <h3 className="text-2xl font-bold text-white mb-2 font-display">{project.title}</h3>
         <p className="text-sm font-semibold text-[#a78bfa] mb-3">{project.description}</p>
         <p className="text-sm text-slate-300 leading-relaxed mb-6">{project.longDescription}</p>
+        {project.validationLine && (
+          <div className="flex items-center gap-2 mb-4 text-xs text-emerald-400">
+            <BadgeCheck className="w-4 h-4 shrink-0" />
+            <span>{project.validationLine}</span>
+          </div>
+        )}
+        {project.cardFeatures && project.cardFeatures.length > 0 && (
+          <ul className="space-y-2 mb-6">
+            {project.cardFeatures.map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       <div>
@@ -105,7 +125,18 @@ export function ProjectCard({ project, index, isInView, onOpenModal }: ProjectCa
           ))}
         </div>
 
-        {project.casePageRoute ? (
+        {project.externalUrl ? (
+          <Button
+            asChild
+            aria-label={`Acessar ${project.title}`}
+            className="w-full gradient-btn text-xs font-bold py-3 min-h-[48px] rounded-xl flex items-center justify-center gap-2 cursor-pointer active:scale-95 transition-transform"
+          >
+            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4" />
+              Acessar Plataforma
+            </a>
+          </Button>
+        ) : project.casePageRoute ? (
           <Button
             asChild
             aria-label={`Ver case completo do projeto ${project.title}`}

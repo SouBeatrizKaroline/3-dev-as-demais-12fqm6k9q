@@ -3,10 +3,12 @@ import { Project } from '@/data/content'
 const YEAR_OVERRIDES: Record<string, number> = {
   reclapp: 2025,
   greenhat: 2021,
+  nortia: 2025,
 }
 
 function getAwardTier(project: Project): number {
   if (project.id === 'destinai') return 0
+  if (project.id === 'nortia') return 0
 
   const awards = project.awards ?? (project.award ? [project.award] : [])
   const text = awards.join(' ').toLowerCase()

@@ -47,6 +47,9 @@ export interface Project {
   casePageRoute?: string
   recognitionBadge?: string
   links?: ProjectLink[]
+  validationLine?: string
+  externalUrl?: string
+  cardFeatures?: string[]
 }
 
 export interface ProjectLink {
@@ -409,6 +412,53 @@ export const PHILOSOPHY: PhilosophyPillar[] = [
 ]
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'nortia',
+    title: 'North AI',
+    description: 'Process Intelligence Platform',
+    longDescription:
+      'A plataforma mapeia por você. Você decide o que automatizar. Identifique gargalos operacionais, calcule impactos financeiros e horas perdidas e gere aplicativos e agentes de IA com um roadmap estratégico completo — sem precisar de processos já mapeados ou integração complexa.',
+    overview:
+      'A plataforma mapeia por você. Você decide o que automatizar. Identifique gargalos operacionais, calcule impactos financeiros e horas perdidas e gere aplicativos e agentes de IA com um roadmap estratégico completo — sem precisar de processos já mapeados ou integração complexa.',
+    challenge:
+      'Identificar gargalos operacionais e calcular impactos financeiros sem processos já mapeados ou integração complexa.',
+    solution:
+      'Plataforma de inteligência de processos que mapeia automaticamente, calcula impactos financeiros e horas perdidas, e gera aplicativos e agentes de IA com roadmap estratégico completo.',
+    features: [
+      'Análise inteligente em segundos',
+      'Estimativas de ROI e roadmap dinâmico de execução',
+      'Plataforma segura para diagnóstico empresarial.',
+    ],
+    teamRole:
+      'A equipe 3 Dev.as DemAIs desenvolveu a plataforma North AI para diagnóstico empresarial automatizado.',
+    contributions: [
+      'Mapeamento automático de processos',
+      'Cálculo de impactos financeiros e horas perdidas',
+      'Geração de aplicativos e agentes de IA',
+      'Roadmap estratégico dinâmico de execução',
+    ],
+    results: 'Validado com 14 empresários no Adapta Summit · 12/14 resolveriam a dor.',
+    learnings:
+      'A combinação de inteligência de processos com IA generativa pode transformar a forma como empresas diagnosticam e resolvem gargalos operacionais.',
+    isAwarded: false,
+    tags: ['F', 'T', 'L', 'V'],
+    category: 'Process Intelligence Platform',
+    iconName: 'BrainCircuit',
+    validationLine: 'Validado com 14 empresários no Adapta Summit · 12/14 resolveriam a dor',
+    cardFeatures: [
+      'Análise inteligente em segundos',
+      'Estimativas de ROI e roadmap dinâmico de execução',
+      'Plataforma segura para diagnóstico empresarial.',
+    ],
+    externalUrl: 'https://nortia.goskip.app/app/dashboard',
+    links: [
+      {
+        title: 'Acessar Plataforma',
+        icon: 'globe',
+        url: 'https://nortia.goskip.app/app/dashboard',
+      },
+    ],
+  },
   {
     id: 'destinai',
     title: 'DestinAI',
@@ -1288,7 +1338,7 @@ export const PROJECTS: Project[] = [
 ]
 
 PROJECTS.forEach((p) => {
-  if (!p.casePageRoute) p.casePageRoute = `/projetos/${p.id}`
+  if (!p.casePageRoute && !p.externalUrl) p.casePageRoute = `/projetos/${p.id}`
 })
 
 export const CAPABILITIES: Capability[] = [
