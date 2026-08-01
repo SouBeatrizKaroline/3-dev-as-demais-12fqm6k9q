@@ -32,6 +32,7 @@ import {
   Orbit,
   Trees,
   Link2,
+  BadgeCheck,
 } from 'lucide-react'
 
 const ICON_MAP: Record<string, ReactNode> = {
@@ -152,6 +153,12 @@ export default function ProjectDetail() {
               </span>
             ))}
           </div>
+          {project.validationLine && (
+            <div className="flex items-center gap-2 mt-4 text-xs text-emerald-400">
+              <BadgeCheck className="w-4 h-4 shrink-0" />
+              <span>{project.validationLine}</span>
+            </div>
+          )}
         </div>
       </section>
 
@@ -201,6 +208,23 @@ export default function ProjectDetail() {
               ))}
             </ul>
           </CaseCard>
+
+          {project.cardFeatures && project.cardFeatures.length > 0 && (
+            <CaseCard
+              icon={<BadgeCheck className="w-4 h-4" />}
+              title="Benefícios"
+              color="text-emerald-400"
+            >
+              <ul className="space-y-2">
+                {project.cardFeatures.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </CaseCard>
+          )}
 
           <CaseCard icon={<Cpu className="w-4 h-4" />} title="Tecnologias" color="text-cyan-400">
             <div className="flex flex-wrap gap-2">

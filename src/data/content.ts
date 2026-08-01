@@ -450,7 +450,6 @@ export const PROJECTS: Project[] = [
       'Estimativas de ROI e roadmap dinâmico de execução',
       'Plataforma segura para diagnóstico empresarial.',
     ],
-    externalUrl: 'https://nortia.goskip.app/app/dashboard',
     links: [
       {
         title: 'Acessar Plataforma',
