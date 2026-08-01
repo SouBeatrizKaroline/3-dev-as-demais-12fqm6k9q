@@ -414,7 +414,7 @@ export const PHILOSOPHY: PhilosophyPillar[] = [
 export const PROJECTS: Project[] = [
   {
     id: 'nortia',
-    title: 'North AI',
+    title: 'Nortia',
     description: 'Process Intelligence Platform',
     longDescription:
       'A plataforma mapeia por você. Você decide o que automatizar. Identifique gargalos operacionais, calcule impactos financeiros e horas perdidas e gere aplicativos e agentes de IA com um roadmap estratégico completo — sem precisar de processos já mapeados ou integração complexa.',
@@ -441,7 +441,7 @@ export const PROJECTS: Project[] = [
     learnings:
       'A combinação de inteligência de processos com IA generativa pode transformar a forma como empresas diagnosticam e resolvem gargalos operacionais.',
     isAwarded: false,
-    tags: ['F', 'T', 'L', 'V'],
+    tags: ['Skip', 'Ethos'],
     category: 'Process Intelligence Platform',
     iconName: 'BrainCircuit',
     validationLine: 'Validado com 14 empresários no Adapta Summit · 12/14 resolveriam a dor',
